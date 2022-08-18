@@ -2,6 +2,7 @@
 
 # Deklarasikan gambar di bawah line ini, menggunakan pernyataan image.
 # cnth. image eileen happy = "eileen_happy.png"
+# commit by f0ursecond
 
 #transform
 transform long_shake:
