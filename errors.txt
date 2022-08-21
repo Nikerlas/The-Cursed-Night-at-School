@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 125: end of line expected.
-    show kevinserious with dissolve, darkened
-                                   ^
+File "game/script.rpy", line 988: end of line expected.
+    k "Jujur aku juga agak jengkel sama guru Kesiswaannya karena dia nganggep acara ini sepele"\
+                                                                                               ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Sun Aug 14 08:37:45 2022
+Sat Aug 20 23:30:41 2022
