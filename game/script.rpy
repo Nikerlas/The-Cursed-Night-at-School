@@ -1,7 +1,8 @@
-﻿# Kamu dapat taruh script game mu di file ini.
-
-# Deklarasikan gambar di bawah line ini, menggunakan pernyataan image.
-# cnth. image eileen happy = "eileen_happy.png"
+﻿init python:
+    def inventoryUpdate(st):
+        pass
+    def inventoryEvents(event, x, y, at):
+        pass
 
 #transform
 transform long_shake:
@@ -144,6 +145,13 @@ define kyc = Character("Kevin, Yeri, dan [name]")
 
  
 label start:
+
+    $config.rollback_enabled = False
+    $quick_menu = False
+    $inventory_SM = SpriteManager(update= inventoryUpdate, event= inventoryEvents)
+    $inventory_sprites = []
+    $inventory_items = []
+    $inventory_items_names= ["Diary 01"]
 
     scene bg black
     with dissolve

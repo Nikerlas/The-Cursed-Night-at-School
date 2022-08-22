@@ -256,6 +256,7 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
+            textbutton -("Inventory") action ShowMenu('inventory')
             textbutton _("Prefs") action ShowMenu('preferences')
 
 
@@ -284,6 +285,9 @@ style quick_button_text:
 ##
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
+
+screen inventory:
+    image ""
 
 screen navigation():
 
