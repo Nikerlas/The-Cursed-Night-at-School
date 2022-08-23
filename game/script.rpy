@@ -1400,5 +1400,6 @@ label chapter1_start:
         p "ehe"
 
     #ch1 selesai(?) (hore(?))
+    #tes
     
 return
