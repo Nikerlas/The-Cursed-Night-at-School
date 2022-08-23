@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 988: end of line expected.
-    k "Jujur aku juga agak jengkel sama guru Kesiswaannya karena dia nganggep acara ini sepele"\
-                                                                                               ^
+File "game/script.rpy", line 228: expected statement.
+    inventory.add(chocolate)
+                            ^
+
+File "game/script.rpy", line 229: expected statement.
+    inventory.add(chocolate)
+                            ^
+
+File "game/script.rpy", line 230: expected statement.
+    inventory.add(banana)
+                         ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Sat Aug 20 23:30:41 2022
+Tue Aug 23 22:25:39 2022

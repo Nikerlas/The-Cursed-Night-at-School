@@ -1,8 +1,91 @@
-﻿init python:
-    def inventoryUpdate(st):
-        pass
-    def inventoryEvents(event, x, y, at):
-        pass
+﻿#inventory
+init -1 python:
+    import renpy.store as store
+    import renpy.exports as renpy 
+    from operator import attrgetter 
+
+    inv_page = 0 
+    item = None
+    class Player(renpy.store.object):
+        def __init__(self, name):
+            self.name = name
+    class Item(store.object):
+        def __init__(self, name, image):
+            self.name = name
+            self.image = image
+    class Inventory(store.object):
+        def __init__ (self):
+            self.items = []
+        def add(self, item):
+            self.items.append(item)
+
+    style.tips_top = Style(style.default)
+    style.tips_top.size=14
+    style.tips_top.color="fff"
+    style.tips_top.outlines=[(3, "6b7eef", 0,0)]
+    style.tips_top.kerning = 5
+
+    style.tips_bottom = Style(style.tips_top)
+    style.tips_top.size=20
+    style.tips_bottom.outlines=[(0, "6b7eef", 1, 1), (0, "6b7eef", 2, 2)]
+    style.tips_bottom.kerning = 2
+    
+    style.button.background=Frame("gui/frame.png",25,25)
+    style.button.yminimum=52
+    style.button.xminimum=52
+    style.button_text.color="000"
+
+    showitems = True
+
+screen inventory_button:
+    textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.95,.04)
+
+screen inventory_screen:
+    add "gui/inventory/inventory.png"
+    modal True
+
+    hbox align (.95,.04) spacing 20:
+        textbutton "Close Inventory" action [Hide("Inventory_screen"), Show("Inventory_button"), Return(None)]
+    $ x = 515
+    $ y = 25
+    $ i = 0 
+    $ sorted_items = sorted(inventory.items, key=attrgetter('name'), reverse=True)
+    $ next_inv_page = inv_page + 1
+    if next_inv_page > int(len(inventory.items)/9):
+        $ next_inv_page = 0
+    for item in sorted_items:
+        if i+1 <= (inv_page+1)*9 and i+1>inv_page*9:
+            $ x += 190
+            if i%3==0:
+                $ y += 170
+                $ x = 515
+            $ pic = item.image
+            $ my_tooltip = "tooltip_inventory_" + pic.replace("gui/inventory/inv_", "").replace(".png", "")
+            imagebutton idle pic hover pic xpos x ypos y action [Hide("gui_tooltip"), Show("inventory_button"), SetVariable("item", item), Hide("inventory_screen")] hovered [Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=693) ] unhovered [Hide("gui_tooltip")] at inv_eff 
+            
+            $ i += 1
+            if len(inventory.items)>9:
+                textbutton _("Next Page") action [SetVariable('inv_page', next_inv_page), Show("inventory_screen")] xpos .475 ypos .83
+
+screen gui_tooltip (my_picture="", my_tt_xpos=58, my_tt_ypos=687):
+    add my_picture xpos my_tt_xpos ypos my_tt_ypos
+
+init -1:
+    transform inv_eff: # too lazy to make another version of each item, we just use ATL to make hovered items super bright
+        zoom 0.5 xanchor 0.5 yanchor 0.5
+        on idle:
+            linear 0.2 alpha 1.0
+        on hover:
+            linear 0.2 alpha 2.5
+
+    image information = Text("INFORMATION", style="tips_top")
+    #Tooltips-inventory:
+    image tooltip_inventory_chocolate=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("Generic chocolate to heal\n40 points of health.", style="tips_bottom"))
+    image tooltip_inventory_banana=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("A healthy banana full of potassium! You can also use it as ammo for your guns! O.O Recharges 20 bullets.", style="tips_bottom"))
+    image tooltip_inventory_gun=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An gun that looks like something a cop would\ncarry around. Most effective on humans.", style="tips_bottom"))
+    image tooltip_inventory_laser=LiveComposite((665, 73), (3,0), ImageReference("information"), (3,30), Text("An energy gun that shoots photon beams.\nMost effective on aliens.", style="tips_bottom"))
+    
+    
 
 #transform
 transform long_shake:
@@ -139,22 +222,23 @@ define c_whisper = Character("[name]", what_size=18)
 #Mix
 define kyc = Character("Kevin, Yeri, dan [name]")
 
+#-------->
+#GAME START
+#-------->
 
- 
-# Game dimulai disini.
-
- 
 label start:
-
-    $config.rollback_enabled = False
-    $quick_menu = False
-    $inventory_SM = SpriteManager(update= inventoryUpdate, event= inventoryEvents)
-    $inventory_sprites = []
-    $inventory_items = []
-    $inventory_items_names= ["Diary 01"]
-
     scene bg black
     with dissolve
+
+    python:
+        chocolate = Item("Chocolate", image="gui/inventory/inv_chocolate.png")
+        banana = Item("Banana", image="gui/inventory/inv_banana.png")    
+        inventory = Inventory()
+        inventory.add(chocolate)
+        inventory.add(chocolate)
+        inventory.add(banana)
+
+    show screen inventory_button
 
     #field name
     python:
@@ -767,9 +851,7 @@ label start:
         "Ada satu buku yang terjatuh karena aku mengambil buku tersebut."
         "Buakkkk!!!!"
         "Buku tersebut terjatuh dilantai."
-        "Cover buku itu sangat menarik perhatianku."
-        "Aku mengambil buku itu dari lantai."
-        "Saat aku ingin mengambil buku tersebut ada seseorang yang menepuk pundakku."
+        "Buku itu terjatuh dalam keadaan terbuka dan di dalamnya terdapat secarik kertas"
 
         u 'Hei...[name].'
 
@@ -1410,4 +1492,10 @@ label chapter1_start:
     #ch1 selesai(?) (hore(?))
     #tes
     
-return
+    return
+
+label variabels:
+    $ Inventory[0] = Items("Diary", 1, 1, 0, 0)
+    
+    return 
+ 
