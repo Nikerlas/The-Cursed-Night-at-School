@@ -2,17 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 228: expected statement.
-    inventory.add(chocolate)
-                            ^
-
-File "game/script.rpy", line 229: expected statement.
-    inventory.add(chocolate)
-                            ^
-
-File "game/script.rpy", line 230: expected statement.
-    inventory.add(banana)
-                         ^
+File "game/event.rpy", line 3: invalid syntax
+        def __init__(self. name, value, weight, NoOwned, ID):
+                          ^
+    
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Tue Aug 23 22:25:39 2022
+Wed Aug 24 09:10:55 2022
