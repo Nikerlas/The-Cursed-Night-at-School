@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/event.rpy", line 3: invalid syntax
-        def __init__(self. name, value, weight, NoOwned, ID):
-                          ^
-    
+File "game/script.rpy", line 1540: expected statement.
+    :
+    ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Wed Aug 24 09:10:55 2022
+Thu Aug 25 08:48:21 2022
