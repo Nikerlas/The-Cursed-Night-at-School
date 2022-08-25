@@ -257,6 +257,7 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Inventory")action ShowMenu("inventory_screen")
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -284,9 +285,6 @@ style quick_button_text:
 ##
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
-
-screen inventory:
-    image ""
 
 screen navigation():
 
@@ -1661,3 +1659,92 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+init -1 python:
+    import renpy.store as store
+    import renpy.exports as renpy 
+    from operator import attrgetter 
+
+    inv_page = 0 
+    item = None
+    class Player(renpy.store.object):
+        def __init__(self, name):
+            self.name = name
+    class Item(store.object):
+        def __init__(self, name, image):
+            self.name = name
+            self.image = image
+    class Inventory(store.object):
+        def __init__ (self):
+            self.items = []
+        def add(self, item):
+            self.items.append(item)
+
+    style.tips_top = Style(style.default)
+    style.tips_top.size=14
+    style.tips_top.color="fff"
+    style.tips_top.outlines=[(3, "6b7eef", 0,0)]
+    style.tips_top.kerning = 5
+
+    style.tips_bottom = Style(style.tips_top)
+    style.tips_top.size=20
+    style.tips_bottom.outlines=[(0, "6b7eef", 1, 1), (0, "6b7eef", 2, 2)]
+    style.tips_bottom.kerning = 2
+    
+    style.button.background=Frame("gui/frame.png",25,25)
+    style.button.yminimum=52
+    style.button.xminimum=52
+    style.button_text.color="500"
+
+    showitems = True
+
+screen inventory_screen:
+    add "gui/inventory/inventory.png"
+    modal False
+
+    hbox align (.95,.04) spacing 20:
+        textbutton "Close Inventory" action [ Hide("inventory_screen"), Return(None)]
+    $ x = 665
+    $ y = -40
+    $ i = 0 
+    $ sorted_items = sorted(inventory.items, key=attrgetter('image'), reverse=False)
+    $ next_inv_page = inv_page + 1
+    if next_inv_page > int(len(inventory.items)/9):
+        $ next_inv_page = 0
+    for item in sorted_items:
+        if i+1 <= (inv_page+1)*9 and i+1>inv_page*9:
+            $ x += 300
+            if i%3==0:
+                $ y += 260
+                $ x = 665
+            $ pic = item.image
+            $ my_tooltip = "tooltip_inventory_" + pic.replace("gui/inventory/inv_", "").replace(".png", "")
+            imagebutton idle pic hover pic xpos x ypos y action [Hide("gui_tooltip"), SetVariable("item", item),] hovered [Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=920) ] unhovered [Hide("gui_tooltip")] at inv_eff 
+            
+            $ i += 1
+            if len(inventory.items)>9:
+                textbutton _("Next Page") action [SetVariable('inv_page', next_inv_page), Show("inventory_screen")] xpos .475 ypos .83
+
+screen gui_tooltip (my_picture="", my_tt_xpos=58, my_tt_ypos=1500):
+    add my_picture xpos my_tt_xpos ypos my_tt_ypos
+
+init -1:
+    transform inv_eff: # too lazy to make another version of each item, we just use ATL to make hovered items super bright
+        zoom 0.5 xanchor 0.5 yanchor 0.5
+        on idle:
+            linear 0.2 alpha 1.0
+        on hover:
+            linear 0.2 alpha 2.5
+
+    image information = Text("DIARY")
+    #Tooltips-inventory:
+    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary05=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary06=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary07=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary08=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary09=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    

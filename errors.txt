@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1540: expected statement.
-    :
-    ^
+File "game/screens.rpy", line 212: invalid syntax
+    screen inventory_button:
+            ^
+    
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Thu Aug 25 08:48:21 2022
+Thu Aug 25 22:09:14 2022
