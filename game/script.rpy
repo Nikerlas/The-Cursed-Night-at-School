@@ -1542,7 +1542,124 @@ label chapter1_start:
         "Bagaimana jika cerita tersebut NYATA?"
 
     #ch1 selesai(?) (hore(?))
-    #tes
+
+    #-----------------
+    #CHAPTER 2 OPEN
+    #-----------------
+
+        scene inclass
+        "KRINGGGGGGGGGGGGGG"
+        "Jam telah menunjukkan pukul 3 sore."
+        "Pelajaran hari ini telah selesai."
+        "Aku, Zaky, dan Kevin keluar menuju lorong depan kelas."
+
+        scene corridor
+
+        show zakytalk with dissolve
+
+        z "*Huft* capek banget dah hari ini."
+        hide zakytalk
+        show idlezakytalk
+        p "Iya nih, hari ini banyak banget materi prakteknya."
+        hide idlezakytalk
+        show zakysad at short_shake, center
+        z "Bener banget!"
+        z "Udah praktek membelah kodok, membuat es krim, sama berdialog pakai Bahasa Jepang."
+        show zakysad with move:
+            xalign 0.8
+            yalign 1.0
+        hide zakysad 
+        show idlezakysad:
+            xalign 0.8
+            yalign 1.0
+        show kevintalk with dissolve:
+            xalign 0.2
+            yalign 1.0
+            
+        k "Udah, gapapa."
+        hide kevintalk
+        show kevinsmile:
+            xalign 0.2
+            yalign 1.0
+        k "Lagipula pada bisa menjalaninya kan?"
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.2
+            yalign 1.0
+        hide idlezakysad
+        show zakysad:
+            xalign 0.8
+            yalign 1.0
+        z "Iya sih, tapi capek tau."
+        hide zakysad
+        show idlezakysad:
+            xalign 0.8
+            yalign 1.0
+        p "Hahaha, daripada ngeluh terus."
+    menu:
+        "Mending kita ke kantin dulu bentar.":
+            jump chap2kantin_yes
+        "Mending kita menemui Citra sama Yeri.":
+            jump chap2kantin_no
+
+    label chap2kantin_yes:
+        $ menu_flag = True
+        hide idlezakysad
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+        z "Oh iya, gimana tuh Kevin?"
+        hide zakytalk
+        hide idlekevinsmile
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+        k "Ayok dah, kita ke kantin bentar."
+        hide kevintalk
+        hide idlekevintalk
+        hide idlezakytalk
+        with dissolve
+        "Kita bertiga mulai pergi kekantin."
+        scene canteen
+        show kevintalk with dissolve
+        k "Kita ke kantin mau ngapain?"
+        hide kevintalk with dissolve
+        show zakytalk with dissolve
+        z "Ya buat jajan, masak mau nginep disini."
+        hide zakytalk with dissolve
+        show kevintalk with dissolve
+        k "Oh, yaudah."
+        k "Agak cepetan ya!"
+        hide kevintalk with dissolve    
+        p "Oke!"
+        hide idlekevintalk with dissolve
+        "Kami bertiga langsung menuju tempat penjaga kantin untuk membeli beberapa jajanan."
+        "Tetapi..."
+        "Entah kenapa suasana semakin sepi."
+        
+
+        
+
+        jump chap2kantin_done
+
+    label chap2kantin_no:
+        $ menu_flag = False
+        "INI KETEMU"
+        "YERI DAN CITRA"
+        jump chap2kantin_done
+
+            
+
+
+
+
+
+
+
+
     
     return
 
