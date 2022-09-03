@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1743, in script
-    jump chap2kantin_done
-ScriptError: could not find label 'chap2kantin_done'.
+  File "game/script.rpy", line 2569, in script
+    jump jokes4_c
+ScriptError: could not find label 'jokes4_c'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1743, in script
-    jump chap2kantin_done
+  File "game/script.rpy", line 2569, in script
+    jump jokes4_c
   File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 1974, in execute
     rv = renpy.game.script.lookup(target)
   File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'chap2kantin_done'.
+ScriptError: could not find label 'jokes4_c'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.1.22070801
 The Cursed Night at School 1.0
-Tue Aug 30 11:08:23 2022
+Thu Sep  1 07:50:04 2022
