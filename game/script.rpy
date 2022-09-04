@@ -41,6 +41,7 @@ image bg hallway2 = "images/bg/corridor2.jpg"
 image bg aclass = "images/bg/inclass.jpg"
 image bg library = "images/bg/perpus.png"
 image bg canteen = "images/bg/canteen.jpg"
+image bg osisdepan = "images/bg/bg osisdepan.jpg"
 #END BG
 
 #IMG CHARA
@@ -50,7 +51,7 @@ image zakyhappy = "images/zaky/talk/ZakyHappy.png"
 image zakyhappy2 = "images/zaky/talk/ZakyHappy2.png"
 image zakynormal = "images/zaky/talk/ZakyNormal.png"
 image zakysad = "images/zaky/talk/ZakySad.png"
-image zakySmile = "images/zaky/talk/ZakySmile.png"
+image zakysmile = "images/zaky/talk/ZakySmile.png"
 image zakytalk = "images/zaky/talk/ZakyTalk.png"
 image zakyworry = "images/zaky/talk/ZakyWorry.png"
 #--------> idle
@@ -141,7 +142,8 @@ define p_shout = Character("[name]", what_size=50)
 define p_whisper = Character("[name]", what_size=18)
 #Mix
 define kyc = Character("Kevin, Yeri, dan [name]")
-define zc_shout = Character("Zaky dan [name]", what_size=50)
+define zc = Character("[name] dan Zaky")
+define zc_shout = Character("[name] dan Zaky", what_size=50)
 #PENJAGA KANTIN
 define pk = Character("Penjaga Kantin")
 #SECRET
@@ -2349,6 +2351,189 @@ label chapter1_start:
         jump imo1_done
     label imo1_done:
 
+        scene bg osisdepan with dissolve
+        python:
+            renpy.notify("Depan Ruang OSIS")
+        "Akhirnya kita bertiga sampai ke didepan ruang OSIS."
+        "Selama perjalanan tadi diriku selalu membayangkan apa yang diceritakan Kevin."
+        "Disini diriku bertemu dengan Citra dan Yeri yang sedang berada didepan ruangan OSIS."
+
+        show zakyhappy at long_shake, center
+        z_shout "AKHIRNYAAAAAAAA"
+        z "Sampai juga disini."
+        hide zakyhappy
+        show yerinormal with dissolve
+        y "Kenapa dah?"
+        hide yerinormal
+        show zakynormal with dissolve
+        z "Ceritanya panjang banget."
+        hide zakynormal
+        show yerinormal with dissolve
+        y "Apa? Aku penasaran banget."
+        show yerinormal with move:
+            xalign 0.2
+            yalign 1.0
+        hide yerinormal
+        show idleyerinormal:
+            xalign 0.2
+            yalign 1.0
+        show citra with dissolve:
+            xalign 0.8
+            yalign 1.0
+        c "Kok kalian seperti orang kebingungan gitu."
+        c "Sama kalian keringetan gitu."
+        hide idleyerinormal
+        show yerinormal:
+            xalign 0.2
+            yalign 1.0
+        y "Iya nih, cerita aja."
+        hide yerinormal
+        show yerismile:
+            xalign 0.2
+            yalign 1.0
+        y "Tetap kudengerin kok meskipun panjang ceritanya."
+        hide yerismile
+        show idleyerismile:
+            xalign 0.2
+            yalign 1.0
+    menu:
+        "Tadi tuh Kevin cerita kejadian aneh sama ada kejadian aneh.":
+            jump mcstroy1_a
+        "Engga ada apa-apa sih.":
+            jump mcstroy1_b
+    label mcstroy1_a:
+        p "Tadi tuh Kevin cerita kejadian aneh sama ada kejadian aneh."
+        p "Nah Kevin cerita kalau Penjaga Kantin pernah melihat sesuatu yang tidak masuk akal."
+        p "Lalu, tadi dikantin tuh an-"
+
+        hide idleyerismile
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Apa? Cerita hantu kayak si Zaky tadi?"
+        hide idleyericheerful
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHAHAHA"
+        y "Zaky sama Kevin engga ada bedanya."
+        y "Suka cerita yang aneh-aneh."
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        c "Memangnya gimana sih?"
+        c "Kalian sampai buat kalian jadi orang kebingungan."
+        hide idleyericheerful
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHAHAHA"
+        y "Sudahlah aneh-aneh aja kalian bertiga ini."
+        y "Yok masuk keruangan."
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        p "Tapi, tadi tuh dikantin an-"
+        hide idleyericheerful
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHAHAHA"
+        y "Sudah-sudah capek ketawa aku melihat kalian."
+        y "Ayo, masuk keruangan."
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        c "Iya nih, udah ada beberapa anggota yang datang."
+        c "Katanya mau diselesaiin hari ini."
+        hide citra
+        hide idleyericheerful
+        with dissolve
+
+        show kevinsmile with dissolve
+
+        k "Ya sudah yuk."
+        k "Engga usah dipikirin yang tadi ya."
+
+        hide kevinsmile with dissolve
+        show zakynormal with dissolve
+        z "Tapi..."
+        z "Ya udah deh, yok [name] masuk keruangan."
+        hide zakynormal 
+        show idlezakynormal
+        p "Oke deh masuk aja lah."
+        hide idlezakynormal with dissolve
+        jump mcstroy1_done
+    label mcstroy1_b:
+        p "Engga ada apa-apa sih."
+        p "Cuma tadi Kevin cerita sesuatu yang lumayan serem sama tadi kita mengalami kejadian yang cukup aneh."
+        p "Tapi kejadian tadi cuma kebetulan saja kok."
+
+        hide idleyerismile
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Kejadian apa sih?"
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        p "Tadi kan kita ke kantin suasananya tu sunyi dan sepi gitu."
+        p "Jadi ya mungkin itu cuma kebetulan."
+        hide idleyericheerful
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Cuma gitu aja."
+        hide yericheerful
+        show yerismile:
+            xalign 0.2
+            yalign 1.0
+        y "Emang Kevin cerita apaan?"
+        hide yerismile
+        show idleyerismile:
+            xalign 0.2
+            yalign 1.0
+        p "Katanya Penjaga Kantin pernah mengalami kejadian yang aneh gitu."
+        hide idleyerismile
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Kevin mau jadi kayak Zaky kah?"
+        y "Suka cerita aneh-aneh."
+        hide citra
+        hide yericheerful
+        with dissolve
+        show kevinsmile with dissolve
+        k "Aku cuma menceritakan yang diceritain sama Penjaga Kantin kok."
+        k "Sudah-sudah lupakan aja kejadian tadi."
+        k "Ayo masuk ke ruangan."
+        hide kevinsmile with dissolve
+        show yerihappy with dissolve
+        y "Ya sudah ayo masuk."
+        hide yerihappy with dissolve
+        show citra with dissolve
+        c "Iya ayo, udah ada beberapa anggota kita yang udah dateng nih."
+        c "Katanya mau diselesaikan hari ini juga."
+        hide citra with dissolve
+        show kevinsmile with dissolve
+        k "Yo [name] sama Zaky masuk."
+        hide kevinsmile with dissolve
+        show zakysmile at short_shake, center
+
+        zc "Ayo!"
+
+        hide zaky smile with dissolve
+        jump mcstroy1_done
+    label mcstroy1_done:
+
         jump chap2kantin_done
 #------------------------------------------------------
     label chap2kantin_no:
@@ -3050,24 +3235,210 @@ label chapter1_start:
         "“Apa kamu melihatku?“ Kata-kata tersebut masih terngiang dikepalaku."
         "Apa maksudnya semua ini?"
         "Padahal dihari biasa diriku tidak pernah merasakan hal-hal aneh seperti tadi."
-     
-    label chap2kantin_done:
 
-        scene bg club with dissolve
+        scene bg osisdepan with dissolve
         python:
-            renpy.notify("Ruang OSIS")
-        "Akhirnya kita bertiga sampai ke ruang OSIS."
-        "Gegara mengalami kejadian seperti tadi kita dengan secepat kilat sampai ke ruang OSIS."
-        "Disini diriku bertemu dengan Citra dan Yeri."
+            renpy.notify("Depan Ruang OSIS")
+        "Akhirnya kita bertiga sampai ke didepan ruang OSIS."
+        "Gegara mengalami kejadian seperti tadi kita dengan secepat kilat sampai sini."
+        "Disini diriku bertemu dengan Citra dan Yeri yang sedang berada didepan ruangan OSIS."
 
         show zakyhappy at long_shake, center
         z_shout "AKHIRNYAAAAAAAA"
         z "Sampai juga disini."
-        hide zakyhappy
-        show yerinormal
+        hide zakyhappy with dissolve
+        show yerinormal with dissolve
         y "Kenapa dah?"
+        hide yerinormal with dissolve
+        show zakynormal with dissolve
+        z "Ceritanya panjang banget."
+        hide zakynormal with dissolve
+        show yerinormal with dissolve
+        y "Apa? Aku penasaran banget."
+        show yerinormal with move:
+            xalign 0.2
+            yalign 1.0
+        hide yerinormal
+        show idleyerinormal:
+            xalign 0.2
+            yalign 1.0
+        show citra with dissolve:
+            xalign 0.8
+            yalign 1.0
+        c "Kok kalian seperti habis lari atau gimana gitu sih."
+        c "Kayak keringetan gitu."
+        hide idleyerinormal
+        show yerinormal:
+            xalign 0.2
+            yalign 1.0
+        y "Iya nih, cerita aja."
+        hide yerinormal
+        show yerismile:
+            xalign 0.2
+            yalign 1.0
+        y "Tetap kudengerin kok meskipun panjang ceritanya."
+        hide yerismile
+        show idleyerismile:
+            xalign 0.2
+            yalign 1.0
+    menu:
+        "Sebenernya ada kajadian janggal sih.":
+            jump mcstroy2_a
+        "Engga ada apa-apa sih.":
+            jump mcstroy2_b
+    label mcstroy2_a:
+        p "Sebenernya ada kejadian janggal sih."
+        hide idleyerismile
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Kayak apa tuh? Hantu?"
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        p "Tadi tuh aku lihat cewe-"
+        hide idleyericheerful
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Masih keinget perkataannya Zaky kah?"
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+    menu:
+        "Bukan begitu.":
+            jump mctell_a
+        "Dengerin dulu.":
+            jump mctell_b
+    label mctell_a:
+        p "Bukan begitu."
+        p "Tadi tuh aku li-"
+        jump mctell_done
+    label mctell_b:
+        p "Dengerin dulu tadi"
+        p "Tadi tuh aku li-"
+        jump mctell_done
+    label mctell_done:
+        hide idleyericheerful
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Udah ah capek."
+        y "Kalian ini ada-ada aja, mending langsung masuk aja ke ruangan."
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        c "Iya ayo, udah ada beberapa anggota kita yang udah datanag."
+        c "Katanya mau diselesaikan hari ini juga."
+        hide idleyericheerful
+        hide citra
+        with dissolve
+        show kevinsmile with dissolve
+        k "Iya, ayo."
+        k "[name], Zaky. Tidak usah dipikirin lagi ya kejadian tadi."
+        k "Mungkin itu cuma kebetulan aja."
+        hide kevinsmile with dissolve
+        show zakysad with dissolve
+        z "Tapi kan-"
+        hide zakysad with dissolve
+        show kevinsmile with dissolve
+        k "Udah, gapapa oke?"
+        hide kevinsmile
+        show idlekevinsmile
+        p "Iya oke deh."
+        p "Zaky, kamu engga usah mikirin hal itu lagi."
+        p "Semakin dipikir semakin takut kamu nanti."
+        hide idlekevinsmile with dissolve
+        show zakysad with dissolve
+        z "Oke oke, trying my best."
+        hide zakysad with dissolve
+        show kevinsmile with dissolve
+        k "Nah gitu dong, baguslah kalau begitu"
+        k "Yok masuk."
+        jump mcstroy2_done
+    label mcstroy2_b:
+        p "Engga ada apa-apa sih."
+        hide idleyerismile
+        show yericheerful:
+            xalign 0.2
+            yalign 1.0
+        y "Beneran nih engga bohong?"
+        hide yericheerful
+        show idleyericheerful:
+            xalign 0.2
+            yalign 1.0
+        c "Beneran nih?"
+        c "Kalian tu kayak orang ketakutan."
+        c "Jujur aja."
 
-            
+        p "Engga ada apa-apa kok."
+        p "Kita cuma ada kejadian aneh aja tadi."
+        p "Tapi itu cuma halusinasi."
+
+        hide idleyericheerful
+        show yerinormal:
+            xalign 0.2
+            yalign 1.0
+        y "Kejadian apaan sih?"
+        hide yerinormal
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Kalau kalian ketakutan gegara cerita Zaky tadi lucu sih."
+        y "Aku bakalan ketawa banget."
+        hide yerinormal
+        show yericheerful at long_shake:
+            xalign 0.2
+            yalign 1.0
+        y_shout "HAHAHAHAHAHAHAHA"
+        y "Wajah kalian kayak orang panik sama bingung."
+        hide yerinormal
+        show idleyerinormal:
+            xalign 0.2
+            yalign 1.0
+        P "Sudah-sudah tadi cuma halusinasi palingan."
+        p "Ayo, masuk sekarang!"
+        
+        c "Yaudah ayo, udah ada beberapa anggota yang udah datang."
+        c "Katanya mau diselesaikan hari ini juga."
+
+        hide citra 
+        hide idleyerinormal
+        with dissolve
+
+        show kevinhappy with dissolve
+        k "Ayo masuk."
+        k "Ayo [name] sama Zaky."
+        hide kevinhappy with dissolve
+        show zakysmile with dissolve
+
+        z "Ya udah deh."
+        z "Ayo masuk [name]."
+        jump mcstroy2_done
+    label mcstroy2_done:
+    label chap2kantin_done:
+        scene bg club with dissolve
+        python:
+            renpy.notify("Ruang OSIS")
+        "Rapat akhirnya dimulai."
+        "Saat rapat membahas akan banyak hal."
+        "Seperti apa saja yang dibutuhkan saat merayakan Ulang Tahun sekolah ini."
+        "Rapat ini bisa dibilang berjalan cukup lama."
+        "Karena harus selesai pada hari ini juga."
+        "Maka dari itu, rapat baru selesai pukul 19.00."
+        "Padahal ada yang pernah bilang bahwa jangan disekolah ini jika hari udah MULAI MALAM."
+        show kevinsmile with dissolve
+
+        k "Oke kerja bagus buat kalian semua."
+        k "Berkat kalian semua rapat kali ini berjalan dengan sukses."
+         
     return
 
 label variabels:
