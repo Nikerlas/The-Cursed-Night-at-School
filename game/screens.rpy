@@ -1698,12 +1698,42 @@ init -1 python:
 
     showitems = True
 
+screen diary:
+    add "gui/diary.png"
+
+    hbox:
+
+        hbox align (.95,.04) spacing 20:
+            textbutton "Return" action [Hide('diary'), Return(None)]
+
+        $ x = 625
+        $ y = 300
+        $ pic = item.image
+        add pic xpos x ypos y zoom 1.5 
+
+
 screen inventory_screen:
     add "gui/inventory/inventory.png"
     modal False
 
-    hbox align (.95,.04) spacing 20:
-        textbutton "Close Inventory" action [ Hide("inventory_screen"), Return(None)]
+    if quick_menu:
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.5
+            yalign 1.0
+
+            textbutton _("Back") action Rollback()
+            textbutton _("History") action ShowMenu('history')
+            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Auto") action Preference("auto-forward", "toggle")
+            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Q.Save") action QuickSave()
+            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Prefs") action ShowMenu('option')
+            textbutton "Inventory" action [Hide("inventory_screen"), Return(None)]
+
     $ x = 665
     $ y = -40
     $ i = 0 
@@ -1719,7 +1749,7 @@ screen inventory_screen:
                 $ x = 665
             $ pic = item.image
             $ my_tooltip = "tooltip_inventory_" + pic.replace("gui/inventory/inv_", "").replace(".png", "")
-            imagebutton idle pic hover pic xpos x ypos y action [Hide("gui_tooltip"), SetVariable("item", item),] hovered [Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=920) ] unhovered [Hide("gui_tooltip")] at inv_eff 
+            imagebutton idle pic hover pic xpos x ypos y action ShowMenu('diary'), [Hide("gui_tooltip"), SetVariable("item", item),] hovered [Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=920) ] unhovered [Hide("gui_tooltip")] at inv_eff 
             
             $ i += 1
             if len(inventory.items)>9:
