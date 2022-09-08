@@ -248,7 +248,7 @@ label start:
 
 
     "Aku menuju ke ruang kelasku."
-    "Saat di pertengahan perjalanan aku bertemu Yeri lalu menyapanya."
+    "Saat di pertengahan perjalanan aku dan Kevin bertemu Yeri lalu menyapanya."
 
     show idleyerinormal with dissolve
 
@@ -262,7 +262,8 @@ label start:
     hide yerihappy
     show idleyerihappy
 
-    p 'Baik kok. Aku ke kelas duluan dulu ya!'
+    p 'Baik kok.'
+    p "Aku dan Kevin ke kelas duluan dulu ya!"
     
     hide idleyerihappy
     show yerihappy
@@ -299,18 +300,20 @@ label start:
 
     p 'Iya... Santai aja. Aku inget kok.'
 
-    hide idlezakytalk with dissolve
+    hide idlezakyworry with dissolve
 
     "Tidak lama kemudian guru pun masuk kedalam ruangan untuk memulai pelajaran di pagi yang cerah ini."
+
 
     scene bg hallway with dissolve
     python:
         renpy.notify("Lorong Sekolah")
 
     "Bel istirahat pun berbunyi."
-    "Lalu beberapa saat kemudian Zaky, Yeri, dan Kevin menghampiriku didepan kelasku."
+    "Lalu beberapa saat kemudian Yeri menghampiriku didepan kelasku."
+    "Aku, Zaky, dan Kevin langsung keluar dari ruang kelas dan menghampiri posisi Yeri."
 
-    show kevintalk with dissolve:
+    show idlekevintalk with dissolve:
         xalign 0.0
         yalign 1.0
 
@@ -322,23 +325,37 @@ label start:
         xalign 1.0
         yalign 1.0
 
-    z 'Hei [name], yuk ke kantin. Mau ga?' 
-
-    hide kevintalk
-    show idlekevintalk:
-        xalign 0.0
-        yalign 1.0
-
     hide idleyerismile
-    show yerismile at short_shake:
+    show yerismile:
         xalign 0.5
         yalign 1.0
 
-    y 'Iya nih... mau ga?'
+    y 'Hei [name], Kevin, Zaky yuk ke kantin. Mau ga?' 
+
+    hide idlekevintalk
+    show kevintalk:
+        xalign 0.0
+        yalign 1.0
 
     hide yerismile
     show idleyerismile:
         xalign 0.5
+        yalign 1.0
+    k "Kalau aku serah sih."
+    hide kevintalk
+    show idlekevintalk:
+        xalign 0.0
+        yalign 1.0
+    hide idlezakyhappy
+    show zakyhappy:
+        xalign 1.0
+        yalign 1.0
+    z 'Aku oke aja.'
+    z "Kalau [name] mau ga?"
+
+    hide zakyhappy
+    show idlezakyhappy:
+        xalign 1.0
         yalign 1.0
     
     p 'Boleh saja sih... Tapi...'
@@ -756,15 +773,21 @@ label start:
         "Citra menunjuk buku diatas pojok kanan."
 
         menu:
-            "Kan kamu bisa ambil sendiri.":
-                jump choice5_done
+            "Oke deh!":
+                jump choice5_a
             "Engga ah.":
-                jump choice5_done
-                
-                label choice5_done:
-
+                jump choice5_b
+        label choice5_a:
+        p "Oke deh!"
+        p "Bentar ya."
+        c "Iya!"
+        jump choice5_done  
+        label choice5_b:
+        p "Engga ah."
         c 'Ya ampun... Itu tinggi banget. Ambilin donk.' 
         p 'Iya deh iya.'
+        jump choice5_done
+        label choice5_done:
 
         hide citra with dissolve
 
@@ -792,10 +815,12 @@ label start:
         "Citra pergi meninggalkanku untuk mencari tempat duduk yang nyaman."
         "Aku mulai mencari buku untuk dibaca."
         "Aku telah menemukan buku yang ingin kubaca."
+        "Buku tersebut ialah novel misteri yang judulnya cukup menarik perhatianku."
+        "Dan juga cover buku itu cukup menarik bila diperhatikan."
         "Saat aku ingin mengambil buku tersebut."
-        "Ada satu buku yang terjatuh karena aku mengambil buku tersebut."
+        "Ada satu buku aneh yang terjatuh."
         "Buakkkk!!!!"
-        "Buku tersebut terjatuh dilantai."
+        "Buku aneh tersebut terjatuh dilantai."
         "Buku itu terjatuh dalam keadaan terbuka dan di dalamnya terdapat secarik kertas."
 
         python:
@@ -1197,11 +1222,12 @@ label chapter1_start:
     y "Heee..."
     y "Gimana tuh rumorya??"
     y "Paling paling cuma pohon keramat atau kamar mandi terkutuk kan..."
-   
-    "Pembicaraan ini semakin menjauh dari pembahasan rapat."
-
     hide yeritalk
     hide idlezakytalk
+    with dissolve
+    "Pembicaraan ini semakin menjauh dari pembahasan rapat."
+    "Justru malah membahas tentang hal-hal yang diluar rapat."
+
 
     show zakyworry at long_shake:
         xalign 0.5
@@ -1264,7 +1290,7 @@ label chapter1_start:
     hide zakytalk 
     with dissolve
 
-    "Tiba-tiba Yeri tertawa dengan keras lagi..."
+    "Tiba-tiba Yeri tertawa dengan keras lagi."
 
     show yericheerful at long_shake, center
 
@@ -1363,7 +1389,7 @@ label chapter1_start:
 
         show yericheerful with dissolve
 
-        y "Bener juga yak, hantu itu tidak nyata..."
+        y "Bener juga yak, hantu itu tidak nyata."
 
         hide yericheerful
         show yerihappy at long_shake, center
@@ -1373,7 +1399,7 @@ label chapter1_start:
         hide yerihappy with dissolve
         show zakyhappy with dissolve
 
-        z "Kalian semua pemberani ya..."
+        z "Kalian semua pemberani ya."
         z "Aku nonton film horror, 3 hari gabisa tidur dengan tenang."
 
         hide zakyhappy
@@ -1388,7 +1414,7 @@ label chapter1_start:
         show yericheerful at long_shake, center
 
         y "Iyep.. betulll"
-        y "Hantu itu tidak nyata, kayak husbuku aja..."
+        y "Hantu itu tidak nyata, kayak husbuku aja."
         hide yericheerful
         show idleyericheerful
         p "Hahahaha"
@@ -1415,7 +1441,7 @@ label chapter1_start:
         hide yeriangry2 with dissolve
         show citra with dissolve
 
-        c "Udah, sabar Yeri..."
+        c "Udah, sabar Yeri."
         c "[name] kan cuma bercanda."
 
         hide citra with dissolve
@@ -1427,24 +1453,24 @@ label chapter1_start:
         show kevintalk with dissolve
 
         k "Btw..."
-        k "Perasaan tadi kita lagi membahas rapat Osis dah..."
+        k "Perasaan tadi kita lagi membahas rapat Osis dah."
         k "Kenapa pembahasannya jadi kemana-mana?"
         hide kevintalk
         show idlekevintalk
-        p "Iya juga..."
+        p "Iya juga."
         p "Jadi gimana? Rapatnya jadi jam 4 sore nanti?"
         hide idlekevintalk
         show kevintalk
         k "Iya, jangan sampe lupa... apalagi cabut."
         hide kevintalk
         show idlekevintalk
-        p "Gaakan cabut aku..."
-        p "Tah aku kan anaknya si paling rajin hehe"
+        p "Gaakan cabut aku."
+        p "Tah aku kan anaknya si paling rajin hehe."
 
         hide idlekevintalk
         show yerinormal at long_shake, center
 
-        y "Iyadeh si paling rajin..."
+        y "Iyadeh si paling rajin."
 
         show yerinormal with move:
             xalign 0.2
@@ -1461,13 +1487,13 @@ label chapter1_start:
 
         c "Hahaha."
         c "Eh Yer, sebelum rapat nanti kita ketemuan dulu di depan perpus yaa"
-        c "Aku ada urusan, jadi tolong temani aku.."
+        c "Aku ada urusan, jadi tolong temani aku."
         hide idleyerinormal
         show yericheerful at long_shake:
             xalign 0.2
             yalign 1.0
 
-        y "Oke gas..."
+        y "Oke gas."
         hide yericheerful
         show yerismile:
             xalign 0.2
@@ -1528,7 +1554,7 @@ label chapter1_start:
         show idleyericheerful:
             xalign 0.2
             yalign 1.0
-        c "Aduh maaf Yer..."
+        c "Aduh maaf Yer."
         c "Karena ulangannya susah pas aku sudah selesai seketika langsung lupa semua..."
         hide idleyericheerful
         show yerisad at short_shake:
@@ -1549,7 +1575,7 @@ label chapter1_start:
         "Hal tersebut menandakan untuk segera masuk ke kelas masing-masing."
         #bel
         show kevintalk with dissolve
-        k "Udah bel tuh, mending kita masuk kelas aja.."
+        k "Udah bel tuh, mending kita masuk kelas aja."
         k "Ayo [name] kita ke kelas."
         hide kevintalk
         show idlekevintalk
@@ -1563,7 +1589,7 @@ label chapter1_start:
         p "Halah, manja banget lu."
         hide idlezakytalk
         show zakytalk at short_shake, center
-        z_shout "Bodoamat lah..."
+        z_shout "Bodoamat lah."
         hide zakytalk
         show idlezakytalk
         p "ehe"
@@ -3319,7 +3345,7 @@ label chapter1_start:
         p "Tadi tuh aku li-"
         jump mctell_done
     label mctell_b:
-        p "Dengerin dulu tadi"
+        p "Dengerin dulu."
         p "Tadi tuh aku li-"
         jump mctell_done
     label mctell_done:
@@ -3334,7 +3360,7 @@ label chapter1_start:
         show idleyericheerful:
             xalign 0.2
             yalign 1.0
-        c "Iya ayo, udah ada beberapa anggota kita yang udah datanag."
+        c "Iya ayo, udah ada beberapa anggota kita yang udah datang."
         c "Katanya mau diselesaikan hari ini juga."
         hide idleyericheerful
         hide citra
@@ -3403,7 +3429,7 @@ label chapter1_start:
         show idleyerinormal:
             xalign 0.2
             yalign 1.0
-        P "Sudah-sudah tadi cuma halusinasi palingan."
+        p "Sudah-sudah tadi cuma halusinasi palingan."
         p "Ayo, masuk sekarang!"
         
         c "Yaudah ayo, udah ada beberapa anggota yang udah datang."
@@ -3438,7 +3464,352 @@ label chapter1_start:
 
         k "Oke kerja bagus buat kalian semua."
         k "Berkat kalian semua rapat kali ini berjalan dengan sukses."
-         
+
+        hide kevinsmile with dissolve
+        show citra with dissolve
+
+        c "Terima kasih juga Kevin."
+        c "Kamu bisa dengan mudah menjelaskan kepada semua anggotamu dengan baik."
+        hide citra with dissolve
+        show kevinsmile with dissolve
+
+        k "Ehehehe, iya terima kasih ya Citra."
+        k "Ini mah masih bisa berani bilang ke semua pengurus OSIS disini."
+        hide kevinsmile
+        show kevintalk
+        k "Minggu depan besok saat aku membuka opening ceremony untuk ulang tahun sekolah itu aku agak kurang berani."
+        hide kevintalk with dissolve
+        show yerinormal with dissolve
+        y "Emang kenapa? Takut?"
+        hide yerinormal with dissolve
+        show kevinsmile with dissolve
+        k "Iya, dikit sih."
+        k "Karena itu pertama kalinya aku bisa public speaking ke banyak orang."
+        show kevinsmile with move:
+            xalign 0.2
+            yalign 1.0
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.2
+            yalign 1.0
+        show zakysmile at short_shake:
+            xalign 0.8
+            yalign 1.0
+        z "Wah, keren sih kalau kamu bisa public speaking dengan lancar minggu depan nanti."
+        hide zakysmile
+        show idlezakysmile:
+            xalign 0.8
+            yalign 1.0
+        p "Iya nih, semoga bisa lancar ya ngomongnya."
+        hide idlekevinsmile
+        show kevinsmile:
+            xalign 0.2
+            yalign 1.0
+        k "Iya terima kasih ya [name] atas dukunganmu."
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.2
+            yalign 1.0
+    menu:
+        "Iya sama-sama.":
+            jump talking1_a
+        "Iya oke!":
+            jump talking1_b
+    label talking1_a:
+        p "Iya sama-sama."
+        jump talking1_done
+    label talking1_b:
+        p "Iya oke."
+        jump talking1_done
+    label talking1_done:
+        hide idlekevinsmile
+        show kevinsmile:
+            xalign 0.2
+            yalign 1.0
+        k "Kalau kamu dukung gini aku jadi semakin semangat."
+        hide kevinsmile
+        hide idlezakysmile
+        with dissolve
+        show yeritsundere1 at short_shake, center
+        y "Ehem..."
+        hide yeritsundere1
+        show yerishy
+        y "Engga makasih ke aku juga nih?"
+        hide yerishy
+        show yerismile
+        y "Aku tadi membantu banyak banget lho saat rapat."
+        show yerismile with move:
+            xalign 0.2
+            yalign 1.0
+        hide yerismile
+        show idleyerismile:
+            xalign 0.2
+            yalign 1.0
+        show kevinsmile with dissolve:
+            xalign 0.8
+            yalign 1.0
+        k "Iya, justru aku mau mengucapkan makasih kepada kalian semua."
+        k "Karena kalian udah bisa bantu aku banget."
+        k "Rapat kali ini sukses juga berkat kalian semua."
+        k "Tanpa kalian semua, aku tidak bisa seberani ini."
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.8
+            yalign 1.0
+        hide idleyerismile
+        show yerismile:
+            xalign 0.2
+            yalign 1.0
+        y "Iya, sama-sama Kevin."
+        y "Kan kita sudah solid dari kecil."
+        y "Jadi saat salah satu dari kita butuh pertolongan."
+        y "Kami semua siap membantu."
+        hide yerismile
+        show idleyerismile:
+            xalign 0.2
+            yalign 1.0
+        hide idlekevinsmile
+        show kevinsmile:
+            xalign 0.8
+            yalign 1.0
+        k "Iya deh iya."
+        k "Sekarang, ayo beresin lagi ruangan OSIS ini."
+        k "Sehabis dipakai rapat jadi agak berantakan gini."
+        k "Sama sekalian buat bersih-bersih ruang OSIS."
+        k "Karena sebenarnya sudah cukup lama juga kita tidak bersihin ruangan ini."
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.8
+            yalign 1.0
+        p "Oke deh!"
+        hide idlekevinsmile
+        hide idleyerismile
+        with dissolve
+        "Saat ini hanya tersisa kita berlima diruang OSIS ini."
+        "Anggota-anggota lain sudah mulai untuk beranjak pulang karena jam sudah menunjukkan pukul 19.10."
+        "Kita berlima mulai bersih-bersih ruangan OSIS ini seperti yang telah diperintahkan oleh Kevin."
+        "Ruangan OSIS ini sudah cukup lama tidak dibersihkan."
+        "Bisa dibilang sudah sekitar 3-4 bulan tidak dibersihkan."
+        "Oleh karena itu, kita berlima membersihkan ruangan ini agar lebih enak untuk dipandang dan digunakan."
+        "Setelah memakan waktu sekitar 20-30 menit."
+        "Kita berlima telah selesai membersihkan ruangan OSIS."
+        "Dan jam saat ini telah menunjukkkan pukul 19.38."
+
+        show zakyhappy at short_shake, center
+        z "Akhirnya selesai juga."
+        z "Asli dah capek banget coy."
+        hide zakyhappy with dissolve
+        show citra at short_shake, center
+        c "Iya bener nih!"
+        c "Capek banget *hiks*."
+        c "Kakiku sampai lemas begini."
+        hide citra
+        show citra at short_shake, center
+        c "Ahahahahaha."
+        hide citra 
+        show yerisad with dissolve
+        y "Kok aku malah ngantuk ya sekarang."
+        hide yerisad
+        show yerinormal
+        y "Apa mungkin gegara ruangan ini sudah dibersihkan ya."   
+        y "Jadi terasa nyaman banget."
+        show yerinormal with move:
+            xalign 0.2
+            yalign 1.0
+        hide yerinormal
+        show idleyerinormal:
+            xalign 0.2
+            yalign 1.0
+        show kevintalk with dissolve:
+            xalign 0.8
+            yalign 1.0
+        k "Duh, jangan sampai nginep disini ya."   
+        k "Nanti petugas satpam datang kesini dan memarahi kita."
+        hide idleyerinormal
+        hide kevintalk 
+        with dissolve
+        show zakytalk with dissolve
+           
+        z "Paling engga akan datang satpamnya."
+        z "Kan dia engga berani datang ke sekolah jam segini."
+        hide zakytalk
+        show zakyworry
+        z "..."
+        z "Kesekolah..."
+        z "Jam segini..."
+        hide zakyworry
+        show zakynormal at long_shake, center   
+        z_shout "LAH IYA JUGA YAKKKKKKK!"
+        hide zakynormal
+        show zakysad at long_shake, center
+        z_shout "PULANG AJA YUK SEKARANG."
+        z "Tiba-tiba kok aku ketakutan ya."
+        z "Rasanya kok aku ngantuk banget yak."
+        hide zakysad with dissolve
+        "Zaky tertidur."
+    menu:
+        "...":
+            jump talking2_a
+        "...":
+            jump talking2_b
+    label talking2_a:
+        p "..."
+        jump talking2_done
+    label talking2_b:
+        p "..."
+        jump talking2_done
+    label talking2_done:
+        
+        show kevinhappy at short_shake, center
+        k "HAHAHAHAHA."
+        k "Bisa gitu ya."
+        hide kevinhappy with dissolve
+        show yerihappy at short_shake, center
+        y "HAHAHAHAHA."
+        y "Lucu juga si Zaky ini."
+        hide yerihappy with dissolve
+        show kevinhappy with dissolve
+        k "Ada-ada aja nih Zaky."
+        hide kevinhappy
+        show kevinserious
+        k "Tapi kok bener juga yah."
+        k "Rasanya ngantuk banget nih."
+        k "Kok aneh yah..."
+        k "Tiba-tiba... bisa ngantuk... begini..."
+        hide kevinserious with dissolve
+        "Kevin tertidur."
+    menu:
+        "...":
+            jump talking3_a
+        "Sepertinya ada yang aneh.":
+            jump talking3_b
+    label talking3_a:
+        p "..."
+        show yerinormal with dissolve
+        y "Ni anak juga sama aja ya."
+        hide yerinormal 
+        show idleyerinormal
+        p "Ini kok ada yang aneh ya."
+        hide idleyerinormal
+        show yerinormal
+        y "Aneh kenapa? Mereka emang kecapean kali."
+        hide yerinormal with dissolve
+        jump talking3_done
+    label talking3_b:
+        p "Sepertinya ada yang aneh."
+        show yerinormal with dissolve
+        y "Aneh kenapa? Mereka emang kecapean kali."
+        hide yerinormal with dissolve
+        jump talking3_done
+    label talking3_done:
+        show citra with dissolve
+        c "Kayaknya bukan karena mereka kecapean deh, Yer."
+        hide citra with dissolve
+        show yerinormal with dissolve
+        y "Terus karena apa?"
+        hide yerinormal with dissolve
+        show citra with dissolve
+        c "Kayaknya sih karena ada sesuatu diruangan ini."
+        c "Yang bisa membuat orang ter-"
+        hide citra with dissolve
+        hide idleyerinormal
+        with dissolve
+        "Citra tertidur."
+    menu:
+        "...":
+            jump talking4_a
+        "INI SUDAH ANEH CEPAT LARI!":
+            jump talking4_b
+    label talking4_a:
+        p "..."
+        show yeriscared at short_shake, center
+        y "..."
+        hide yeriscared
+        show idleyeriscared
+        p "LARI!!!"
+        hide idleyeriscared
+        jump talking4_done
+    label talking4_b:
+        p "INI SUDAH ANEH CEPAT LARI!"
+        show yeriscared at short_shake, center
+        y "..."
+        hide yeriscared
+        show idleyeriscared
+        p "LARI!!!"
+        hide idleyeriscared
+        jump talking4_done
+    label talking4_done:
+        show yeriscared at short_shake, center
+        y "Aku ingin lari..."
+        y "Tapi aku engga kuat..."
+        y "Lagi..."
+        hide yeriscared with dissolve
+        "Yeri tertidur."
+        p "Sialan, aku harus lari secepatnya."
+        "Aku ingin membuka pintu ruangan OSIS."
+        "Tiba-tiba aku mengantuk."
+        scene bg black with dissolve
+        p "..."
+        p "..."
+        p "..."
+    menu:
+        "Sial! Kenapa semua ini terjadi.":
+            jump talking5_a
+        "Aku harus tetap terbangun.":
+            jump talking5_b
+    label talking5_a:
+        p  "Sial! Kenapa semua ini terjadi."
+    menu:
+        "Siapa yang melakukan semua ini?":
+            jump talking7_a
+        "Aku harus tetap terbangun.":
+            jump talking7_b
+    label talking7_a:
+        p  "Siapa yang melakukan semua ini?"
+        jump talking7_done
+    label talking7_b:
+        p "Aku harus tetap terbangun."
+        p "Sial! Sulit sekali untuk terbangun dari kantuk ini."
+        jump talking7_done
+    label talking7_done:
+        jump talking5_done
+    label talking5_b:
+        p "Aku harus tetap terbangun."
+        p "Sial! Sulit sekali untuk terbangun dari kantuk ini."
+    menu:
+        "Sial! Kenapa semua ini terjadi.":
+            jump talking6_a
+        "Siapa yang melakukan semua ini?.":
+            jump talking6_b
+    label talking6_a:
+        p  "Sial! Kenapa semua ini terjadi."
+        jump talking6_done
+    label talking6_b:
+        p "Siapa yang melakukan semua ini?"
+        jump talking6_done
+    label talking6_done:
+        jump talking5_done
+    label talking5_done:
+    
+        p "Apa yang sudah terjadi aku tidak paham."
+        p "Ah, sialan!"
+        p "Apa jangan-jangan rumor itu?"
+        p "Atau apa?"
+        p "..."
+    menu:
+        "Tolong hentikan semua ini.":
+            jump talking8_a
+        "Kumohon sudah cukup.":
+            jump talking8_b
+    label talking8_a:
+        p  "Tolong hentikan semua ini."
+        jump talking8_done
+    label talking8_b:
+        p "Kumohon sudah cukup."
+        jump talkin8_done
+    label talking8_done:
+        p "..."
+        p "Selesai sudah semua ini."
     return
 
 label variabels:
