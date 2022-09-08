@@ -1706,10 +1706,10 @@ screen diary:
         hbox align (.95,.04) spacing 20:
             textbutton "Return" action [Hide('diary'), Return(None)]
 
-        $ x = 625
-        $ y = 300
+        $ x = 475
+        $ y = 200
         $ pic = item.image
-        add pic xpos x ypos y zoom 1.5 
+        add pic xpos x ypos y zoom 2.5 
 
 
 screen inventory_screen:
