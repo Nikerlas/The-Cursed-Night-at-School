@@ -2,23 +2,9 @@
 errors listed below, and try again.
 
 
-The label talking6_a is defined twice, at File "game/script.rpy", line 3782:
-    label talking6_a:
-and File "game/script.rpy", line 3802:
-    label talking6_a:
-
-
-The label talking6_b is defined twice, at File "game/script.rpy", line 3785:
-    label talking6_b:
-and File "game/script.rpy", line 3805:
-    label talking6_b:
-
-
-The label talking6_done is defined twice, at File "game/script.rpy", line 3788:
-    label talking6_done:
-and File "game/script.rpy", line 3808:
-    label talking6_done:
-
+File "game/screens.rpy", line 1758: 'pic' is not a keyword argument or valid child for the imagebutton statement.
+    imagebutton pic xpos x ypos y zoom -1 action ShowMenu('diary'), [Hide("gui_tooltip"), SetVariable("item", item),] hovered [Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=920) ] unhovered [Hide("gui_tooltip")] at inv_eff 
+                   ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Thu Sep  8 08:48:50 2022
+Tue Sep 13 18:19:57 2022

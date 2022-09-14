@@ -256,7 +256,7 @@ screen quick_menu():
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Prefs") action ShowMenu('option')
             textbutton _("Inventory")action ShowMenu("inventory_screen")
 
 
@@ -1671,7 +1671,7 @@ init -1 python:
         def __init__(self, name):
             self.name = name
     class Item(store.object):
-        def __init__(self, name, image):
+        def __init__(self, name, image, images):
             self.name = name
             self.image = image
     class Inventory(store.object):
@@ -1701,15 +1701,17 @@ init -1 python:
 screen diary:
     add "gui/diary.png"
 
+    tag menu
+
     hbox:
 
         hbox align (.95,.04) spacing 20:
-            textbutton "Return" action [Hide('diary'), Return(None)]
+            textbutton "Return" action ShowMenu('inventory_screen'), [Hide("diary")]
 
         $ x = 475
         $ y = 200
         $ pic = item.image
-        add pic xpos x ypos y zoom 2.5 
+        add pic xpos x ypos y zoom 2.5
 
 
 screen inventory_screen:

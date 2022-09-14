@@ -110,7 +110,24 @@ image idleyeritsundere2 = "images/yeri/idle/YeriTsundere2.png"
 #-------->
 
 #CITRA
-image citra = "images/citra/Citra.png"
+#--------> talk
+image citranormal = "images/citra/talk/CitraNormal.png"
+image citrahappy = "images/citra/talk/CitraHappyl.png"
+image citrahappy2 = "images/citra/talk/CitraHappy2.png"
+image citrastartled = "images/citra/talk/CitraStartled.png"
+image citrairritated = "images/citra/talk/CitraIrritated.png"
+image citratalk = "images/citra/talk/CitraTalk.png"
+image citrascared = "images/citra/talk/CitraScared.png"
+image citrasmile = "images/citra/talk/CitraSmile.png"
+#--------> idle
+image idlecitranormal = "images/citra/idle/CitraNormal.png"
+image idlecitrahappy = "images/citra/idle/CitraHappyl.png"
+image idlecitrahappy2 = "images/citra/idle/CitraHappy2.png"
+image idlecitrastartled = "images/citra/idle/CitraStartled.png"
+image idlecitrairritated = "images/citra/idle/CitraIrritated.png"
+image idlecitratalk = "images/citra/idle/CitraTalk.png"
+image idlecitrascared = "images/citra/idle/CitraScared.png"
+image idlecitrasmile = "images/citra/idle/CitraSmile.png"
 
 
 
@@ -3816,4 +3833,3 @@ label variabels:
     $ Inventory[0] = Items("Diary", 1, 1, 0, 0)
     
     return 
- 
