@@ -5,63 +5,59 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 170, in <module>
     $ ui.interact()
-  File "game/screens.rpy", line 1704, in execute
-    screen diary:
-  File "game/screens.rpy", line 1704, in execute
-    screen diary:
-  File "game/screens.rpy", line 1709, in execute
-    hbox:
-  File "game/screens.rpy", line 1716, in execute
-    $ pic = item.images
-  File "game/screens.rpy", line 1716, in <module>
-    $ pic = item.images
-AttributeError: 'Item' object has no attribute 'images'
+  File "game/screens.rpy", line 1715, in execute
+    screen inventory_screen:
+  File "game/screens.rpy", line 1715, in execute
+    screen inventory_screen:
+  File "game/screens.rpy", line 1740, in execute
+    $ sorted_items = sorted(inventory.items, key=attrgetter('image'), reverse=False)
+  File "game/screens.rpy", line 1740, in <module>
+    $ sorted_items = sorted(inventory.items, key=attrgetter('image'), reverse=False)
+NameError: name 'inventory' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "renpy/common/00gamemenu.rpy", line 170, in script
     $ ui.interact()
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1131, in execute
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
   File "renpy/common/00gamemenu.rpy", line 170, in <module>
     $ ui.interact()
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\ui.py", line 299, in interact
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in interact_core
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
     root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
     d.visit_all(callback, seen)
   [Previous line repeated 1 more time]
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 451, in visit_all
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
     callback(self)
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in <lambda>
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
     root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 462, in per_interact
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
     self.update()
-  File "C:\Users\Nicho\Downloads\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 653, in update
+  File "C:\Users\Admin\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
     self.screen.function(**self.scope)
-  File "game/screens.rpy", line 1704, in execute
-    screen diary:
-  File "game/screens.rpy", line 1704, in execute
-    screen diary:
-  File "game/screens.rpy", line 1709, in execute
-    hbox:
-  File "game/screens.rpy", line 1716, in execute
-    $ pic = item.images
-  File "game/screens.rpy", line 1716, in <module>
-    $ pic = item.images
-AttributeError: 'Item' object has no attribute 'images'
+  File "game/screens.rpy", line 1715, in execute
+    screen inventory_screen:
+  File "game/screens.rpy", line 1715, in execute
+    screen inventory_screen:
+  File "game/screens.rpy", line 1740, in execute
+    $ sorted_items = sorted(inventory.items, key=attrgetter('image'), reverse=False)
+  File "game/screens.rpy", line 1740, in <module>
+    $ sorted_items = sorted(inventory.items, key=attrgetter('image'), reverse=False)
+NameError: name 'inventory' is not defined
 
 Windows-10-10.0.19044 AMD64
-Ren'Py 8.0.1.22070801
+Ren'Py 8.0.3.22090405
 The Cursed Night at School 1.0
-Tue Sep 13 18:21:58 2022
+Thu Sep 15 08:10:52 2022
