@@ -42,10 +42,15 @@ image bg aclass = "images/bg/inclass.jpg"
 image bg library = "images/bg/perpus.png"
 image bg canteen = "images/bg/canteen.jpg"
 image bg osisdepan = "images/bg/bg osisdepan.jpg"
+#BG RESMI
+image bg schoolyard morning = "images/bg/bg schoolyard morning.png"
+image bg hallway morning = "images/bg/bg hallway morning.png"
+image bg classroom morning = "images/bg/bg classroom morning.png"
+image bg canteen morning = "images/bg/bg canteen morning.png"
 #END BG
 
 #IMG CHARA
-#ZAKY
+#ZAKY di mirror anjer
 #--------> talk
 image zakyhappy = "images/zaky/talk/ZakyHappy.png"
 image zakyhappy2 = "images/zaky/talk/ZakyHappy2.png"
@@ -78,7 +83,7 @@ image idlekevinsmile = "images/kevin/idle/KevinSmile.png"
 image idlekevincheerful = "images/kevin/idle/KevinCheerful.png"
 #-------->
 
-#YERI
+#YERI di resize anjir kegeden
 #--------> talk
 image yeriangry1 = "images/yeri/talk/YeriAngry.png"
 image yeriangry2 = "images/yeri/talk/YeriAngry2.png"
@@ -112,7 +117,7 @@ image idleyeritsundere2 = "images/yeri/idle/YeriTsundere2.png"
 #CITRA
 #--------> talk
 image citranormal = "images/citra/talk/CitraNormal.png"
-image citrahappy = "images/citra/talk/CitraHappyl.png"
+image citrahappy = "images/citra/talk/CitraHappy.png"
 image citrahappy2 = "images/citra/talk/CitraHappy2.png"
 image citrastartled = "images/citra/talk/CitraStartled.png"
 image citrairritated = "images/citra/talk/CitraIrritated.png"
@@ -121,15 +126,13 @@ image citrascared = "images/citra/talk/CitraScared.png"
 image citrasmile = "images/citra/talk/CitraSmile.png"
 #--------> idle
 image idlecitranormal = "images/citra/idle/CitraNormal.png"
-image idlecitrahappy = "images/citra/idle/CitraHappyl.png"
+image idlecitrahappy = "images/citra/idle/CitraHappy.png"
 image idlecitrahappy2 = "images/citra/idle/CitraHappy2.png"
 image idlecitrastartled = "images/citra/idle/CitraStartled.png"
 image idlecitrairritated = "images/citra/idle/CitraIrritated.png"
 image idlecitratalk = "images/citra/idle/CitraTalk.png"
 image idlecitrascared = "images/citra/idle/CitraScared.png"
 image idlecitrasmile = "images/citra/idle/CitraSmile.png"
-
-
 
 #END IMG CHARA
 
@@ -207,7 +210,7 @@ label start:
 
     p 'Hello Kevin. Bagaimana kabarmu?'
 
-    hide idlekevinserious
+    hide idlekevinserious 
 
     show kevincheerful at short_shake, center
 
@@ -234,7 +237,7 @@ label start:
 
     k 'Ahahaha... Maaf aku cuma bercanda tadi.'
 
-    scene bg schoolyard with dissolve
+    scene bg schoolyard morning with dissolve
     python:
         renpy.notify("Halaman Sekolah")
 
@@ -259,7 +262,7 @@ label start:
     k 'Heleh ahahahaha.'
 
     hide kevin
-    scene bg hallway with dissolve
+    scene bg hallway morning with dissolve
     python:
         renpy.notify("Lorong Sekolah")
 
@@ -289,7 +292,7 @@ label start:
 
     hide yerihappy with dissolve
 
-    scene bg aclass with dissolve
+    scene bg classroom morning with dissolve
     python:
         renpy.notify("Kelas 2-A")
 
@@ -535,7 +538,7 @@ label start:
                     "Tiba-tiba Kevin memanggilku dengan keras dan itu membuatku terkejut." 
                     "Ternyata aku tertinggal jauh dari mereka. Lalu, aku menyusul mereka dengan cepat." 
 
-                    scene bg canteen with dissolve
+                    scene bg canteen morning with dissolve
                     python:
                         renpy.notify("Kantin")
 
@@ -667,7 +670,7 @@ label start:
             "Saat Kevin telah duduk."
             "Datanglah Citra dan Zaky."
 
-            show citra with dissolve:
+            show citrahappy with dissolve:
                 xalign 0.3
                 yalign 1.0 
             show zakyhappy at right with dissolve:
@@ -677,7 +680,7 @@ label start:
             c "Nyahaloo..."
             z "Halo halo"
 
-            hide citra
+            hide citrahappy
             hide zakyhappy
             with dissolve
 
@@ -778,13 +781,25 @@ label start:
 
         u '"Halo..."'
 
-        show citra with dissolve
+        show idlecitrasmile with dissolve
 
         "Ternyata itu Citra." 
 
-        p 'Ahhh Citra. Ada apa?' 
+        p 'Ahhh Citra. Ada apa?'
+        
+        hide idlecitrasmile
+        show citrahappy2 at short_shake, center
+
         c 'Aku boleh minta tolong ga?' 
+
+        hide citrahappy2
+        show idlecitrasmile
+
         p 'Minta tolong apa?'
+
+        hide idlecitrasmile
+        show citrasmile
+
         c 'Tolong ambilin buku itu donk.' 
 
         "Citra menunjuk buku diatas pojok kanan."
@@ -795,39 +810,93 @@ label start:
             "Engga ah.":
                 jump choice5_b
         label choice5_a:
+
+        hide citrasmile
+        show idlecitrasmile
+
         p "Oke deh!"
         p "Bentar ya."
-        c "Iya!"
-        jump choice5_done  
-        label choice5_b:
-        p "Engga ah."
-        c 'Ya ampun... Itu tinggi banget. Ambilin donk.' 
-        p 'Iya deh iya.'
-        jump choice5_done
-        label choice5_done:
 
-        hide citra with dissolve
+        hide idlecitrasmile
+        show citrahappy
+
+        c "Iya!"
+
+        hide citrahappy
+        show idlecitrahappy
 
         "Aku mengambilkan buku tersebut."
         "Ternyata buku itu adalah buku novel romance yang akhir-akhir ini terkenal dikalangan remaja."
         "Saat aku memberikan buku tersebut kepada Citra."
         "Dirinya agak malu-malu."
 
-        show citra with dissolve
+        hide idlecitrahappy
+        show citrahappy2 at short_shake, center
+
+        jump choice5_done  
+
+        label choice5_b:
+
+        p "Engga ah."
+
+        hide citrasmile
+        show citrairritated at short_shake, center
+
+        c 'Ya ampun... Itu tinggi banget. Ambilin donk.' 
+
+        hide citrairritated
+        show idlecitrairritated
+
+        p 'Iya deh iya.'
+
+        "Aku mengambilkan buku tersebut."
+        "Ternyata buku itu adalah buku novel romance yang akhir-akhir ini terkenal dikalangan remaja."
+        "Saat aku memberikan buku tersebut kepada Citra."
+        "Dirinya agak malu-malu."
+
+        hide idlecitrairritated
+        show citrahappy2 at short_shake, center
+
+        jump choice5_done
+        
+        label choice5_done:
 
         c 'Makasih ya!' 
+
+        hide citrahappy2
+        show idlecitrahappy2
+
         p 'Iya okay...'
+
+        hide idlecitrahappy2
+        show citratalk
+
         c 'Btw... kamu ikut rapat nanti sore ngga?'
+
+        hide citratalk
+        show idlecitranormal 
+
         p 'Mungkin iya sih... Kan itu wajib untuk anggota OSIS.'
         p 'Emang kamu ga mau ikut?'
-        c 'Bukan begitu.'
 
+        hide idlecitranormal
+        show citratalk
+
+        c 'Bukan begitu.' 
         c 'Aku hanya bertanya saja.'
+
+        hide citratalk
+        show idlecitranormal
+
         p 'Baiklah... Btw buku yang kamu baca itu lumayan terkenal ya.'
+
+        hide idlecitranormal
+        show citrasmile
+
         c 'Iya sih bener... Aku mau baca dulu ya...'
         p 'Oke deh...'
 
-        hide citra with dissolve
+        hide citrasmile with dissolve
         
         "Citra pergi meninggalkanku untuk mencari tempat duduk yang nyaman."
         "Aku mulai mencari buku untuk dibaca."
@@ -849,20 +918,27 @@ label start:
 
         u 'Hei...[name].'
 
-        show citra with dissolve
+        show idlecitranormal with dissolve
 
         "Ah... ternyata itu Citra."
         p 'Ada apa Cit?'
-        c 'Kamu mau ikut ke kantin ga?'
-        p 'Eh...'
 
-        hide citra with dissolve
+        hide idlecitranormal
+        show citratalk
+
+        c 'Kamu mau ikut ke kantin ga?'
+
+        hide citratalk
+        show idlecitranormal
+
+        p 'Eh...'  
 
         "Ternyata Citra mengajak diriku ke kantin."
         "Aku bingung ingin ikut atau tidak."
         "Padahal beberapa waktu lalu aku menolak ajakan Kevin, Zaky, dan Yeri."
         
-        show citra with dissolve
+        hide idlecitranormal
+        show citratalk
         c 'Gimana? Mau ikut?'
 
         menu:
@@ -876,32 +952,58 @@ label start:
 
        
         c 'Ayo donk ikut... Jangan lama-lama mikirnya.'
+
+        hide citratalk
+        show idlecitranormal
+
         p 'Tapi tuh, beberapa waktu yang lalu aku diajak ke kantin sama Kevin, Zaky, dan Yeri.'
         p 'Tapi aku menolaknya.' 
+
+        hide idlecitranormal
+        show citratalk
+
         c 'Kok gitu? Kenapa kamu menolaknya?'
+
+        hide citratalk
+        show idlecitranormal
+
         p 'Ya... karena aku males buat ikut.'
+
+        hide idlecitranormal
+        show citratalk
+
         c 'Nah... Yok ikut sekalian.'
         c 'Nanti sekalian juga untuk membahas masalah rapat nanti sore.' 
 
-        hide citra with dissolve
+        hide citratalk
+        show idlecitranormal
 
         "Aku kebingungan ingin mengikutinya atau tidak."
         "Ya... mungkin ikut bukan sesuatu yang buruk."
 
-        show citra with dissolve
+        hide idlecitranormal
+        show citratalk
 
         c 'Gimana?'
+
+        hide citratalk
+        show idlecitranormal
+
         p 'Iya deh iya...'
+
+        hide idlecitranormal
+        show citrahappy at short_shake, center
+
         c 'Nah gitu donk...'
 
-        hide citra with dissolve
+        hide citrahappy with dissolve
 
         "Aku mengembalikan buku yang kuambil dari ke rak buku."
         "Citra mulai meninggalkan ruangan perpustakaan."
         "Lalu, aku ikut meninggalkan ruangan perpustakaan dan mengikuti Citra."
 
         #kantin
-        scene bg canteen with dissolve
+        scene bg canteen morning with dissolve
         python:
             renpy.notify("Kantin")
 
@@ -941,7 +1043,8 @@ label start:
         show kevincheerful at left with dissolve:
             xalign 0.0
             yalign 1.0
-        show citra at center with dissolve:
+        
+        show idlecitranormal at center with dissolve:
              
         show idlezakynormal at right with dissolve:
             xalign 0.9
@@ -967,7 +1070,9 @@ label start:
         show idlezakynormal at right:
             xalign 0.9
             yalign 1.0
+        show citratalk
         c "Tadi [name] bareng sama aku dari perpustakaan."
+        hide citratalk
         hide idlezakynormal
         show zakytalk at right:
             xalign 0.9
@@ -991,7 +1096,7 @@ label start:
         k "Begitu ya..."
 
         hide kevinhappy
-        hide citra 
+        hide idlecitranormal
         hide idlezakynormal
         with dissolve
         
@@ -1037,13 +1142,13 @@ label chapter1_start:
     y "sebenarnya aku males banget buat ikut rapat."
 
     hide yeriangry2 with dissolve
-    show citra with dissolve
+    show citrahappy with dissolve
 
     c "Hahaha, sabar Yeri.."
     c "Emang resikonya ikut organisasi tu ya gini."
     c "Pulangnya telat mulu."
 
-    hide citra with dissolve
+    hide citrahappy with dissolve
     show yeritalk at short_shake, center
 
     y "Iyadeh iya, Silahkan kalau mau dilanjut Vin.."
@@ -1068,7 +1173,7 @@ label chapter1_start:
     show yerinormal with dissolve:
         xalign 0.2
         yalign 1.0
-    show citra with dissolve:
+    show citratalk with dissolve:
         xalign 0.8
         yalign 1.0
 
@@ -1079,8 +1184,8 @@ label chapter1_start:
         yalign 1.0
     c "Iya nih, dari jam 4 sore sampai jam 8 malam itu lama banget."
 
-    hide citra
-    hide idleyerinormal 
+    hide citratalk
+    hide idleyerinormal  
     with dissolve
 
     show zakyhappy with dissolve
@@ -1133,11 +1238,11 @@ label chapter1_start:
 
     hide yeriangry2 with dissolve
 
-    show citra with dissolve
+    show citratalk with dissolve
 
     c "Hey Yeri..." 
     c "Jangan keras keras nanti kedengeran guru lain gimana?"
-    show citra with move:
+    show citratalk with move:
         xalign 0.3
         yalign 1.0
     
@@ -1147,7 +1252,7 @@ label chapter1_start:
     z "Iya nih..." 
     z "Yeri kalo ngomong kadang ga dipikir dulu dua kali."
 
-    hide citra
+    hide citratalk
     hide zakytalk
     with dissolve
 
@@ -1193,7 +1298,7 @@ label chapter1_start:
     hide idlekevinhappy
     with dissolve
 
-    show zakyhappy with dissolve
+    show zakysad with dissolve
 
     z "Eh kamu jangan bilang gitu di sekolah ini..."
     z "Nanti kamu didatengin hantu beneran lo."
