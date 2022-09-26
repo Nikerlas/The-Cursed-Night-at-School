@@ -1,8 +1,4 @@
-﻿#inventory
-
-    
-
-#transform
+﻿#transform
 transform long_shake:
     ease .06 yoffset 24
     ease .06 yoffset -24
@@ -44,27 +40,57 @@ image bg canteen = "images/bg/canteen.jpg"
 image bg osisdepan = "images/bg/bg osisdepan.jpg"
 #BG RESMI
 image bg schoolyard morning = "images/bg/bg schoolyard morning.png"
+image bg schoolyard noon = "images/bg/bg schoolyard noon.png"
+image bg schoolyard afternoon = "images/bg/bg schoolyard adternoon.png"
+image bg schoolyard dimension = "images/bg/bg schoolyard dimension.png"
+
 image bg hallway morning = "images/bg/bg hallway morning.png"
+image bg hallway noon = "images/bg/bg hallway noon.png"
+image bg hallway afternoon = "images/bg/bg hallway afternoon.png"
+image bg hallway dimension = "images/bg/bg hallway dimension.png"
+
 image bg classroom morning = "images/bg/bg classroom morning.png"
+image bg classroom noon = "images/bg/bg classroom noon.png"
+image bg classroom afternoon = "images/bg/bg classroom afternoon.png"
+image bg classroom dimension = "images/bg/bg classroom dimension.png"
+
 image bg canteen morning = "images/bg/bg canteen morning.png"
+image bg canteen noon = "images/bg/bg canteen noon.png"
+image bg canteen dimension = "images/bg/bg canteen dimension.png"
+
+image bg scene morning = "images/bg/bg scene morning.png"
+image bg scene noon = "images/bg/bg scene noon.png"
+image bg scene afternoon = "images/bg/bg scene afternoon.png"
+image bg scene dimension = "images/bg/bg scene dimension.png"
+
 #END BG
 
 #IMG CHARA
-#ZAKY di mirror anjer
+#ZAKY
 #--------> talk
+image zakyangry = "images/zaky/talk/ZakyAngry.png"
 image zakyhappy = "images/zaky/talk/ZakyHappy.png"
 image zakyhappy2 = "images/zaky/talk/ZakyHappy2.png"
+image zakyhesitant = "images/zaky/talk/ZakyHesitant.png"
 image zakynormal = "images/zaky/talk/ZakyNormal.png"
 image zakysad = "images/zaky/talk/ZakySad.png"
+image zakyscary = "images/zaky/talk/ZakyScary.png"
+image zakyscared = "images/zaky/talk/ZakyScared.png"
 image zakysmile = "images/zaky/talk/ZakySmile.png"
+image zakysuprised = "images/zaky/talk/ZakySurprised.png"
 image zakytalk = "images/zaky/talk/ZakyTalk.png"
 image zakyworry = "images/zaky/talk/ZakyWorry.png"
 #--------> idle
+image idlezakyangry = "images/zaky/idle/ZakyAngry.png"
 image idlezakyhappy = "images/zaky/idle/ZakyHappy.png"
 image idlezakyhappy2 = "images/zaky/idle/ZakyHappy2.png"
+image idlezakyhesitant = "images/zaky/idle/ZakyHesitant.png"
 image idlezakynormal = "images/zaky/idle/ZakyNormal.png"
 image idlezakysad = "images/zaky/idle/ZakySad.png"
+image idlezakyscary = "images/zaky/idle/ZakyScary.png"
+image idlezakyscared = "images/zaky/idle/ZakyScared.png"
 image idlezakysmile = "images/zaky/idle/ZakySmile.png"
+image idlezakysurprised = "images/zaky/idle/ZakySurprised.png"
 image idlezakytalk = "images/zaky/idle/ZakyTalk.png"
 image idlezakyworry = "images/zaky/idle/ZakyWorry.png"
 
