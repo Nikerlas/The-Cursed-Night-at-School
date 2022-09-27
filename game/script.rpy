@@ -58,10 +58,10 @@ image bg canteen morning = "images/bg/bg canteen morning.png"
 image bg canteen noon = "images/bg/bg canteen noon.png"
 image bg canteen dimension = "images/bg/bg canteen dimension.png"
 
-image bg scene morning = "images/bg/bg scene morning.png"
-image bg scene noon = "images/bg/bg scene noon.png"
-image bg scene afternoon = "images/bg/bg scene afternoon.png"
-image bg scene dimension = "images/bg/bg scene dimension.png"
+image bg way morning = "images/bg/bg scene morning.png"
+image bg way noon = "images/bg/bg scene noon.png"
+image bg way afternoon = "images/bg/bg scene afternoon.png"
+image bg way dimension = "images/bg/bg scene dimension.png"
 
 #END BG
 

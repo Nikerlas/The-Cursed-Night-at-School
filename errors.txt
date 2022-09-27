@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1177: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    xalign 0.8
-    ^
+File "game/script.rpy", line 61: expected '=' not found.
+    image bg scene morning = "images/bg/bg scene morning.png"
+             ^
+
+File "game/script.rpy", line 62: expected '=' not found.
+    image bg scene noon = "images/bg/bg scene noon.png"
+             ^
+
+File "game/script.rpy", line 63: expected '=' not found.
+    image bg scene afternoon = "images/bg/bg scene afternoon.png"
+             ^
+
+File "game/script.rpy", line 64: expected '=' not found.
+    image bg scene dimension = "images/bg/bg scene dimension.png"
+             ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090405
-Fri Sep 16 08:36:57 2022
+Tue Sep 27 08:09:32 2022
