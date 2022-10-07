@@ -1329,12 +1329,12 @@ label chapter1_start:
     z "Eh kamu jangan bilang gitu di sekolah ini..."
     z "Nanti kamu didatengin hantu beneran lo."
 
-    show zakyhappy with move:
+    show zakysad with move:
         xalign 0.8
         yalign 1.0
 
-    hide zakyhappy
-    show idlezakyhappy:
+    hide zakysad
+    show idlezakysad:
         xalign 0.8
         yalign 1.0
 
@@ -1345,7 +1345,7 @@ label chapter1_start:
     y "Dih... mana ada hantu di sekolah ini..." 
     y "lagipula aku ga percaya sama hal hal begituan."
 
-    hide idlezakyhappy
+    hide idlezakysad
     show zakytalk:
         xalign 0.8
         yalign 1.0
