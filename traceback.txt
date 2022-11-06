@@ -1,33 +1,22 @@
-﻿sI'm sorry, but an uncaught exception occurred.
+﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 164, in script
-    image satpam = ""
-  File "game/script.rpy", line 164, in script
-    image satpam = ""
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 4068, in script
+    jump talkin8_done
+ScriptError: could not find label 'talkin8_done'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\bootstrap.py", line 274, in bootstrap
-    renpy.main.main()
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/script.rpy", line 164, in script
-    image satpam = ""
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/script.rpy", line 164, in script
-    image satpam = ""
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1234, in execute
-    renpy.exports.image(self.imgname, img)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\exports.py", line 327, in image
-    d = renpy.easy.displayable(d)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\easy.py", line 112, in displayable
-    raise Exception("An empty string cannot be used as a displayable.")
-Exception: An empty string cannot be used as a displayable.
+  File "game/script.rpy", line 4068, in script
+    jump talkin8_done
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'talkin8_done'.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.1.22070801
 The Cursed Night at School 1.0
-Fri Oct  7 23:36:26 2022
+Sat Nov  5 20:18:25 2022

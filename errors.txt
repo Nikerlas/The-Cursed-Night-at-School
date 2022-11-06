@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1485: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    yaling 1.0
-              ^
+File "game/script.rpy", line 4107: expected statement.
+    Kevin mulai sadar dan membuka matanya
+                                         ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Sat Oct  8 08:04:09 2022
+Sun Nov  6 21:43:58 2022
