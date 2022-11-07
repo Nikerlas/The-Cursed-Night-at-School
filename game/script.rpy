@@ -169,26 +169,26 @@ image satpam_b = "images/npc/satpam_a.png"
 #YERI
 define y = Character('Yeri')
 define y_shout = Character("Yeri", what_size=50)
-define y_whisper = Character("Yeri", what_size=18)
+define y_whisper = Character("Yeri", what_size=22)
 #ZAKY
 define z = Character('Zaky')
 define z_shout = Character("Zaky", what_size=50)
-define z_whisper = Character("Zaky", what_size=18)
+define z_whisper = Character("Zaky", what_size=22)
 #KEVIN
 define k = Character('Kevin')
 define k_shout = Character("Kevin", what_size=50)
-define k_whisper = Character("Kevin", what_size=18)
+define k_whisper = Character("Kevin", what_size=22)
 #CITRA
 define c = Character('Citra')
 define c_shout = Character("Citra", what_size=50)
-define c_whisper = Character("Citra", what_size=18)
+define c_whisper = Character("Citra", what_size=36)
 #MC
 define u = Character('???')
-define u_shout = Character("???", what_size=40)
-define u_whisper = Character("???", what_size=18)
+define u_shout = Character("???", what_size=50)
+define u_whisper = Character("???", what_size=22)
 define p = Character('[name]')
 define p_shout = Character("[name]", what_size=50)
-define p_whisper = Character("[name]", what_size=18)
+define p_whisper = Character("[name]", what_size=22)
 #Mix
 define kyc = Character("Kevin, Yeri, dan [name]")
 define zc = Character("[name] dan Zaky")
@@ -1777,6 +1777,11 @@ label chapter1_start:
             yalign 1.0
         y "Yaaah ga asik."
         hide yerisad
+
+        show idleyerisad:
+            xalign 0.7
+            yalign 1.0
+
         hide idlecitrahappy
         with dissolve
 
@@ -4145,7 +4150,7 @@ label chapter3_start:
     p "Kamu gapapa? Kamu terluka?"
     p "Ada yang sakit ngga?"
 
-    show yerihappy 
+    show yerihappy at long_shake, center
 
     y "Iyaa, gapapa kok"
 
@@ -4184,6 +4189,141 @@ label chapter3_start:
     p "Hei, ayo bangun"
     c "...."
 
+    "Sebenarnya Citra sudah sadarkan diri dari tidurnya"
+    "Tetapi Citra sengaja masih pingsan karena yang berusaha membangunkannya itu [name]"
+
+    p "Kok ga bangun-bangun ya.."
+
+    "Aku mulai panik"
+    "Lalu aku mencoba mendekatkan telinga ke wajah Citra untuk mengecek dia masih bernafas atau tidak"
+    "Saat telingaku dekat dengan mulut Citra"
+    "Tiba-tiba..."
+
+    c_whisper "Hai [name]"
+    p_shout "HAAAAAA!!!"
+
+    "Aku terkejut"
+
+    p "HEII, UDAH BANGUN DARITADI KAH?"
+
+    show citrahappy at long_shake, center
+    c "Ngga kok, aku barusan bangun"
+    c "Cuma pas tau yang ada di depanku itu kamu jadi aku pura-pura pingsan deh"
+
+    hide citrahappy
+    show idlecitrahappy
+
+    p "Ih, ga lucu tau bercandanya"
+    
+    hide idlecitrahappy
+    show citrahappy
+    
+    c "Iya iyaa, aku minta maaf"
+
+    hide citrahappy
+    show idlecitrahappy
+
+    p "Iya gapapa, yang penting kamu masi hidup"
+
+    hide idlecitrahappy
+    show citratalk
+
+    c "Tapi ini.. dimana?"
+
+    hide citratalk
+    show idlecitratalk
+
+    p "Kita masih di ruang OSIS"
+    p "Tapi kayaknya kita udah ga di bumi lagi deh"
+
+    hide idlecitratalk
+    show citrascared
+
+    c "Oh iya, kok suasananya agak nyeremin yak"
+
+    hide citrascared
+    show idlecitrascared
+
+    p "Iya, aku juga saat bangun tiba-tiba seperti ini suasananya"
+
+    hide idlecitrascared
+    show citratalk
+
+    c "Atau mungkin kita berada di alam lain.."
+    c "Tiba-tiba aku kepikiran sesuatu"
+
+    hide citratalk
+    show idlecitratalk
+
+    p "Apa?"
+
+    "Citra mengecek waktu di jam tangannya"
+
+    python:
+        renpy.notify("Pukul 21.08")
+    
+    hide idlecitratalk
+    show citratalk
+
+    c "Ini, ngecek jam"
+    c "Ternyata masih berjalan seperti normal"
+
+    hide citratalk
+    show idlecitratalk
+
+    p "Hmmm... Agak aneh yaa"
+    p "Kalo waktu masih berjalan normal, berarti kita masih di Bumi ya?"
+
+    hide idlecitratalk
+    show citrahappy
+
+    c "Iya bener banget"
+
+    hide citrahappy
+    show citratalk
+
+    c "Jadi sebenarnya kita ada dimana?"
+
+    hide citratalk with dissolve
+
+    z_shout "HUAAAA!!! AKU GAMAU MASUK NERAKAA!!"
+
+    "Tiba-tiba Zaky teriak"
+
+    show kevinserious at long_shake, center
+
+    k "Hei, kita tidak di neraka dasar bodoh"
+
+    show kevinserious with move:
+        xalign 0.01
+        yalign 1.0
+
+    hide kevinserious
+    show idlekevinserious:
+        xalign 0.01
+        yalign 1.0
+
+    show yerihappy:
+        xalign 0.5
+        yalign 1.0
+
+    y "Iya nih, kayanya neraka ga kaya gini deh"
+
+    show yerihappy with move:
+        xalign 0.3
+        yalign 1.0
+
+    hide yerihappy
+    show idleyerihappy:
+        xalign 0.3
+        yalign 1.0
+
+    show zakyworry at long_shake, center:
+        xalign 0.7
+        yalign 1.0
+
+    z "Kalau ini bukan neraka, lalu ini dimana?"
+    z_shout "INI DIMANA??"
     return
 
 label variabels:

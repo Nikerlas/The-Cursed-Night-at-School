@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 4107: expected statement.
-    Kevin mulai sadar dan membuka matanya
-                                         ^
+File "game/script.rpy", line 4326: end of line expected.
+    z_shout "INI DIMANA??"00
+                          ^
 
-Ren'Py Version: Ren'Py 8.0.1.22070801
-Sun Nov  6 21:43:58 2022
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Mon Nov  7 12:36:27 2022
