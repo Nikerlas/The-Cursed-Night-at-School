@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 4326: end of line expected.
-    z_shout "INI DIMANA??"00
-                          ^
+File "game/script.rpy", line 4468: expected statement.
+    label_yeri:
+              ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Nov  7 12:36:27 2022
+Tue Nov  8 14:33:57 2022

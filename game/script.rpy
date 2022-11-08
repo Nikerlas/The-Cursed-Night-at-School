@@ -4319,11 +4319,157 @@ label chapter3_start:
         yalign 1.0
 
     show zakyworry at long_shake, center:
-        xalign 0.7
+        xalign 1.0
         yalign 1.0
 
     z "Kalau ini bukan neraka, lalu ini dimana?"
     z_shout "INI DIMANA??"
+
+    hide zakyworry
+    show idlezakyworry:
+        xalign 1.0
+        yalign 1.0
+
+    show citratalk with dissolve:
+        xalign 0.65
+        yalign 1.0
+
+    c "Tenang dulu Zaky, kita gatau ini ada dimana"
+    c "Tapi yang penting kita semua bisa selamat"
+
+    hide citratalk
+    show idlecitratalk:
+        xalign 0.65
+        yalign 1.0
+
+    hide idleyerihappy
+    show yeritalk:
+        xalign 0.3
+        yalign 1.0
+
+    y "Iya kita selamat semua, syukurlah"
+    y "Tapi selanjutnya apa?"
+
+    hide yeritalk
+    show idleyeritalk:
+        xalign 0.3
+        yalign 1.0
+
+    hide idlekevinserious
+    show kevinserious:
+        xalign 0.01
+        yalign 1.0
+
+    k "Sementara kita cari tau terlebih dahulu disekitar sini"
+    k "Mungkin ada sesuatu yang berbeda disini"
+
+    hide kevinserious
+    show idlekevinserious:
+        xalign 0.01
+        yalign 1.0
+
+    hide idlezakyworry
+    show zakyworry:
+        xalign 1.0
+        yalign 1.0
+
+    z "Aku takut kalau kita berpencar"
+    z "Jadi jangan berpencar ya"
+
+    hide zakyworry
+    show idlezakyworry:
+        xalign 1.0
+        yalign 1.0
+
+    hide idleyeritalk
+    show yeritalk:
+        xalign 0.3
+        yalign 1.0
+
+    y "Iyaa, gaakan berpencar kok"
+
+    hide yeritalk
+    show idleyeritalk:
+        xalign 0.3
+        yalign 1.0
+
+    hide idlecitratalk
+    show citratalk:
+        xalign 0.65
+        yalign 1.0
+
+    c "Yaudah sekarang kita cari-cari dulu petunjuk yang ada disini"
+    c "Kalau menemukan sesuatu kabari kita ya"
+
+    hide citratalk
+    show idlecitratalk:
+        xalign 0.65
+        yalign 1.0
+
+    hide idlezakyworry
+    show zakytalk:
+        xalign 1.0
+        yalign 1.0
+
+    z "Okedeh"
+
+    hide zakytalk
+    hide idlecitratalk
+    hide idleyeritalk
+    hide idlekevinserious
+    with dissolve
+
+    "Aku melihat selembar kertas di salah satu laci di meja.."
+
+    p "Guys.."
+    p "Aku menemukan sesuatu"
+
+    show kevinserious with dissolve
+
+    k "Mana coba kulihat?"
+
+    hide kevinserious
+
+    "Kita berlima membaca surat yang ada di kertas itu"
+
+    show citrascared
+
+    c "Kira-kira ini dari siapa ya?"
+
+    hide citrascared
+
+    show kevinserious
+
+    k "hmmm"
+    k "Yodah, bagus deh kalau bisa ketemu petunjuk"
+    k "Yok cari lagi"
+
+    hide kevinserious
+    show yeritalk
+
+    y "Okedeh.."
+
+    hide yeritalk
+
+    "Sembari kita mencari clue, aku bingung mau cari petunjuk apa lagi"
+
+    menu:
+        "Menghampiri Kevin":
+            jump label_kevin
+
+        "Menghampiri Yeri":
+            jump label_yeri
+
+    label label_kevin:
+        show kevintalk
+
+        k "Gimana? Udah ketemu petunjuk lain?"
+
+    label label_yeri:
+        show yeritalk
+
+        y "Hmm... Kita sebenarnya ada dimana ya?"
+
     return
 
 label variabels:
