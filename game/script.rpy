@@ -4465,6 +4465,31 @@ label chapter3_start:
 
         k "Gimana? Udah ketemu petunjuk lain?"
 
+        hide kevintalk
+        show idlekevintalk
+
+        p "Belum, aku bingung"
+
+        hide idlekevintalk
+        show kevintalk
+
+        k "Bingung kenapa?"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Aku bingung, apalagi yang kucari disini"
+
+        show idlekevintalk with move:
+            xalign 0.3
+            yalign 1.0
+        show zakytalk:
+            xalign 0.7
+            yalign 1.0
+
+        z "Iya bener banget, aku pun juga ga menemukan satupun clue disini"
+        z "Dan disini semakin menyeramkan"
+
     label label_yeri:
         show yeritalk
 
