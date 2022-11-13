@@ -4489,6 +4489,41 @@ label chapter3_start:
 
         z "Iya bener banget, aku pun juga ga menemukan satupun clue disini"
         z "Dan disini semakin menyeramkan"
+        z "Bagaimana caranya agar kita bisa keluar dari sini"
+        z "Aku ingin cepat cepat pulang"
+
+        hide zakytalk 
+        show idlezakytalk:
+            xalign 0.7
+            yalign 1.0
+
+        p "Iya sama, tapi kalau kita pergi dari tempat ini"
+        p "Takutnya terjadi apa-apa ke kita"
+
+        hide idlekevintalk
+        show kevintalk:
+            xalign 0.3
+            yalign 1.0
+
+        k "Iya sementara coba kita cari dulu apa yang terjadi disini"
+
+        hide kevintalk
+        hide idlezakytalk
+        with dissolve
+
+        show zakyscared at long_shake,center
+
+        z "Apa jangan-jangan kita sedang bermimpi?"
+
+        "Zaky menampar dirinya"
+
+        hide zakyscared
+        show kevinserious
+
+        k "Hei kau ini kenapa"
+
+        show zakytalk
+
 
     label label_yeri:
         show yeritalk
