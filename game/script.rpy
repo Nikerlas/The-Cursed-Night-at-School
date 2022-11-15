@@ -28,7 +28,6 @@ init python:
     renpy.music.register_channel("noise")
 
 #BG
-image bg club = "images/bg/bg club.png"
 image bg black = "images/bg/bg black.png"
 image bg district = "images/bg/scene.jpg"
 image bg schoolyard = "images/bg/outschool.jpg"
@@ -39,6 +38,9 @@ image bg library = "images/bg/perpus.png"
 image bg canteen = "images/bg/canteen.jpg"
 image bg osisdepan = "images/bg/bg osisdepan.jpg"
 #BG RESMI
+image bg council normal= "images/bg/councilnormal.png"
+image bg councildimension= "images/bg/bg osis.png"
+
 image bg schoolyard morning = "images/bg/bg schoolyard morning.png"
 image bg schoolyard noon = "images/bg/bg schoolyard noon.png"
 image bg schoolyard afternoon = "images/bg/bg schoolyard afternoon.png"
@@ -4080,6 +4082,8 @@ label chapter1_start:
 #CHAPTER 3 OPEN
 #-----------------
 label chapter3_start:
+    scene bg councildimension with dissolve
+
     python:
         renpy.notify("Pukul 21.00")
         
@@ -4229,7 +4233,7 @@ label chapter3_start:
     show citratalk
 
     c "Tapi ini.. dimana?"
-
+    
     hide citratalk
     show idlecitratalk
 
@@ -4481,10 +4485,10 @@ label chapter3_start:
         p "Aku bingung, apalagi yang kucari disini"
 
         show idlekevintalk with move:
-            xalign 0.3
+            xalign 0.2
             yalign 1.0
         show zakytalk:
-            xalign 0.7
+            xalign 0.8
             yalign 1.0
 
         z "Iya bener banget, aku pun juga ga menemukan satupun clue disini"
@@ -4494,7 +4498,7 @@ label chapter3_start:
 
         hide zakytalk 
         show idlezakytalk:
-            xalign 0.7
+            xalign 0.8
             yalign 1.0
 
         p "Iya sama, tapi kalau kita pergi dari tempat ini"
@@ -4502,7 +4506,7 @@ label chapter3_start:
 
         hide idlekevintalk
         show kevintalk:
-            xalign 0.3
+            xalign 0.2
             yalign 1.0
 
         k "Iya sementara coba kita cari dulu apa yang terjadi disini"
@@ -4516,13 +4520,193 @@ label chapter3_start:
         z "Apa jangan-jangan kita sedang bermimpi?"
 
         "Zaky menampar dirinya"
-
+        
+        show kevinserious:
+            xalign 0.2
+            yalign 1.0
+        
         hide zakyscared
-        show kevinserious
+        show idlezakyscared:
+            xalign 0.8
+            yalign 1.0
 
         k "Hei kau ini kenapa"
 
-        show zakytalk
+        hide kevinserious
+        show idlekevinserious:
+            xalign 0.2
+            yalign 1.0
+        
+        hide zakyscared
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        z "Aku kira ini hanyalah mimpi"
+
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        p "Bukan bodoh, mimpi tidak mungkin senyata ini"
+        p "Oiya, aku lupa bilang"
+
+        hide idlekevinserious
+        show kevintalk:
+            xalign 0.2
+            yalign  1.0
+
+        k "Apa [name]"
+
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        p "Tadi Citra mengecek jam tangannya"
+        p "Dan ternyata waktu disini masih berjalan normal, kukira waktu disini itu terhenti"
+        p "Jadi sepertinya kita ini masi di bumi, bukan alam lain"
+
+        hide idlezakytalk
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        z "Seriusan lu? coba aku cek"
+
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        python:
+            renpy.notify("Pukul 21.31")
+        
+        "Zaky melihat jam tangannya"
+
+        hide idlezakytalk
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+        
+        z "Ah iya, jam disini masi berputar"
+        
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevintalk
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+        
+        k "Hmmm menarik"
+        
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        p "Dan ada satu hal lagi yang mau aku sampaikan ke kalian"
+
+        hide idlekevintalk
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        k "Apa itu?"
+
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        p "Saat aku membangunkan Yeri"
+        p "Dia sepertinya tidak terlalu panik"
+        
+        hide idlekevintalk
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        k "Maksudnya?"
+
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+        
+        p "Tadi saat aku membangunkan Yeri, dia tidak bertanya kita dimana"
+        p "seakan-akan dia sudah pernah ke tempat ini dan sudah tau keadaannya"
+
+        hide idlezakytalk
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        z "Mana ada, ga mungkin lah"
+
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevintalk
+        show kevinserious:
+            xalign 0.2
+            yalign 1.0
+
+        k "Iya ada benarnya, mana mungkin Yeri sudah pernah mengalaminya"
+        k "Mungkin Yeri sedang memikirkan sesuatu"
+        
+        hide kevinserious
+        show idlekevinserious:
+            xalign 0.2
+            yalign 1.0
+
+        p "Iya sih, mungkin kamu benar"
+        p "Tapi, tolong jangan beritahu ini ke Yeri ya"
+
+        hide idlekevinserious
+        show kevinsmile at short_shake,center :
+            xalign 0.2
+            yalign 1.0
+
+        k "Haha, memangnya kenapa?"
+
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.2
+            yalign 1.0
+
+        p "Iyaa... aku takut saja kalu misal dia tau lalu tersinggung"
+        
+        hide idlezakytalk
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevinsmile
+        show kevinsmile:
+            xalign 0.2
+            yalign 1.0
+            
+        z "Iya, kami janji ga bilang ini ke Yeri kok"
+        k "Kami janji kok"
+
+        hide kevinsmile
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        k "Eh..."
+        k "Yeri ada dimana?"
+
+
+
+
 
 
     label label_yeri:
