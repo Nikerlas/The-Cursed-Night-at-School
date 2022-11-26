@@ -194,6 +194,7 @@ define p_whisper = Character("[name]", what_size=22)
 #Mix
 define kyc = Character("Kevin, Yeri, dan [name]")
 define zc = Character("[name] dan Zaky")
+define yc = Character("Yeri dan Citra")
 define zc_shout = Character("[name] dan Zaky", what_size=50)
 #PENJAGA KANTIN
 define pk = Character("Penjaga Kantin")
@@ -4082,7 +4083,8 @@ label chapter1_start:
 #CHAPTER 3 OPEN
 #-----------------
 label chapter3_start:
-    scene bg councildimension with dissolve
+
+    scene bg osis with dissolve
 
     python:
         renpy.notify("Pukul 21.00")
@@ -4092,23 +4094,29 @@ label chapter3_start:
 
     "Disaat itu aku masih setengah sadar"
     "Aku melihat siluet seorang wanita berjalan ke arahku"
+    
+    # edit mba e 
+    
     "Namun sebelum dia sampai aku kembali tidak sadarkan diri"
+
+    scene bg black with dissolve
 
     python:
         renpy.notify("Pukul 21.05")
 
-    "Disaat itu aku bangun dari tidurnya itu"
-    "Dan posisi dia masih sama, begitu pula dengan yang lain"
+    "Disaat itu aku bangun dari tidurku"
     "Kevin, Zaky, Yeri, dan Citra masih belum sadarkan diri"
+
+    scene bg osis with dissolve
 
     p "Ini diman-"
 
-    "Aku sadar bahwa dia masih diruang OSIS"
+    "Aku sadar bahwa aku masih diruang OSIS"
 
     p "Kok aku bisa tidur disini yaa.."
 
     "Aku mulai duduk dan melihat sekitar"
-    "Dan dia melihat teman-temannya yang masih tidak sadarkan diri"
+    "Dan aku melihat yang lain masih tidak sadarkan diri"
 
     p_shout "KEVIN, YERI, CITRA, ZAKY"
 
@@ -4445,6 +4453,9 @@ label chapter3_start:
     show kevinserious
 
     k "hmmm"
+
+    # sedang dipikirkan
+
     k "Yodah, bagus deh kalau bisa ketemu petunjuk"
     k "Yok cari lagi"
 
@@ -4465,7 +4476,7 @@ label chapter3_start:
             jump label_yeri
 
     label label_kevin:
-        show kevintalk
+        show kevintalk with dissolve
 
         k "Gimana? Udah ketemu petunjuk lain?"
 
@@ -4537,7 +4548,7 @@ label chapter3_start:
             xalign 0.2
             yalign 1.0
         
-        hide zakyscared
+        hide idlezakyscared
         show zakytalk:
             xalign 0.8
             yalign 1.0
@@ -4700,19 +4711,367 @@ label chapter3_start:
         show kevintalk:
             xalign 0.2
             yalign 1.0
+            
+        hide zakytalk with dissolve
 
         k "Eh..."
         k "Yeri ada dimana?"
 
+        hide kevintalk with dissolve
 
+        scene bg black with dissolve
+        
+        "Aku, Kevin, dan Zaky sedang mencari Yeri dan Citra"
 
+        scene bg classroom dimension with dissolve
+        
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
 
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+            
+        python:
+            renpy.notify("Kelas (21.40)")
+            
+        k "Sekarang ayo kita cari di ruang ini"
 
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+            
+        hide idlezakytalk
+        show zakyworry:
+            xalign 0.8
+            yalign 1.0
+
+        z "Duh, mereka dimana ya"
+        z "Udah 10 menit kita mencari tapi masih belum ketemu"
+
+        hide zakyworry
+        show idlezakyworry:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevintalk
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+            
+        k "Mungkin mereka di ruang ini.. "
+
+        hide idlezakyworry
+        hide kevintalk
+        with dissolve
+
+        "Kita mencari di ruangan tersebut, tetapi Citra dan Yeri juga tidak ada diruangan itu"
+
+        show zakyworry:
+            xalign 0.8
+            yalign 1.0
+
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        z "Duh... dimana sih mereka"
+
+        hide zakyworry
+        show idlezakyworry:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevintalk
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        k "Sabar, yok cari di ruangan lain"
+
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        hide idlezakyworry
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        z "Lu udah bilang sabar berapa kali, Vin"
+        z "Capek gue tuh..."
+
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        p "Iya habis ini sekolah kan besar banget yak"
+        p "Jadi yaa kita harus mencari di semua ruangan, mungkin"
+
+        hide idlezakytalk
+        show zakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        z "Dahlah, kalo gini caranya gue misah aja"
+        z "Gue yang cari sendiri"
+
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevintalk
+        show kevinserious at long_shake, center:
+            xalign 0.2
+            yalign 1.0
+
+        k "Eh jangan dong"
+
+        hide kevinserious
+        show kevintalk at short_shake, center:
+            xalign 0.2
+            yalign 1.0
+
+        k "Oke, gini aja deh"
+        k "Kita cari sekali lagi di lorong ini deh"
+        k "Kan sisa 2 ruangan tuh, kita cari disana. Oke?"
+
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+
+        p "Iya oke deh, Zaky gimana?"
+
+        "Wajah Zaky tampak kesal dengan Kevin" 
+
+        hide idlezakytalk
+        show zakyangry:
+            xalign 0.8
+            yalign 1.0
+
+        z "Iya yodah deh"
+
+        hide zakyangry
+        show idlezakyangry:
+            xalign 0.8
+            yalign 1.0
+
+        hide idlekevintalk
+        show kevinhappy:
+            xalign 0.2
+            yalign 1.0
+
+        k "Nah sip kalo begitu. Sekarang ayo kita cari"
+
+        hide kevinhappy
+        hide idlezakyangry
+        with dissolve
+
+        "Kami mencari di lorong itu."
+        "tetapi tetap tidak ada satupun orang"       
+
+        show kevintalk
+
+        k "Ini ruangan terakhir di lorong ini"
+        k "Semoga bisa menemukan mereka"
+
+        hide kevintalk
+
+        "Aku dan Kevin memasuki ruangan tersebut"
+
+        show kevintalk
+
+        k "Kok mereka juga ngga ada di sini ya?"
+        k "Kalau begini mustahil untuk menemukan mereka"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Jadi gimana? mau turun ke lantai 2?"
+        p "Siapa tau mereka ada di sa-"
+
+        "Aku menemukan secarik kertas lagi"
+
+        p "Hei, aku melihat secarik kertas lagi disini"
+        p "Lagi-lagi kertas dan tulisannya sama"
+        p "Seperti ditulis oleh satu orang"
+
+        hide idlekevintalk
+        show kevintalk
+
+        k "Lagi? Sebelumnya kamu pernah menemukan kertas seperti ini?"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Iya beberapa kali"
+
+        hide idlekevintalk
+        show kevintalk
+
+        k "Apa isi kertas tersebut"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Entahlah, aku juga belum paham"
+        p "Kalo aku baca-baca sih isinya seperti diary dari penulisnya"
+
+        hide idlekevintalk
+        show kevintalk
+
+        k "Tentang apa?"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Tentang kehidupannya... yang cukup buruk"
+
+        hide idlekevintalk
+        show kevinserious
+
+        k "Buruk? Kenapa bisa buruk?"
+
+        hide kevinserious
+        show idlekevinserious
+
+        p "Iya habis kalau dibaca sepertinya dia sering dipukuli oleh ayahnya sendiri"
+        p "karena pulang ke rumah sedikit terlambat"
+
+        hide idlekevinserious
+        show kevinserious
+
+        k "Kok kejam ya ayahnya"
+
+        hide kevinserious
+        show idlekevinserious
+
+        p "Iya bacanya saja aku ikut sedih"
+
+        hide idlekevinserious
+        show kevintalk
+
+        k "Itu diarynya siapa sih, ada namanya ngga?"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Gaada sih, udah beberapa kali menemukan kertasnya tapi gaada namanya"
+
+        hide idlekevintalk
+        show kevintalk
+
+        k "Aku penasaran siapa yang menulis, kalo bisa aku akan bantu dia"
+        k "Ya kan Zaky"
+
+        hide kevintalk
+        show idlekevintalk
+
+        p "Lah Zaky mana?"
+
+        hide idlekevintalk
+        show kevinserious
+
+        k "HAH??"
+
+        python:
+            renpy.notify('Pukul 21.55')
+
+        k "Kok Zaky bisa hilang sih"
+
+        hide kevinserious
+        show idlekevinserious
+
+        p "Yaa aku juga gatau dong.. kita masuk kesini bareng"
+
+        
 
     label label_yeri:
         show yeritalk
 
         y "Hmm... Kita sebenarnya ada dimana ya?"
+
+        p "Kenapa Yeri?"
+
+        y "Tempat ini membuatku cemas."
+
+        c "Iya, aku juga."
+        c "Entah kenapa setiap melihat sisi tempat yang gelap disini membuatku merinding."
+
+        y "Emang kenapa cit?"
+
+        c "Iya takut aja, entah kenapa."
+        
+        y "Jangan-jangan kamu penakut ya?"
+
+        c "Dih, emang kamu ngga?"
+
+        y "Hehehehe, ngga dong."
+        y "Seorang yeri kok penakut."
+
+        "Mereka berdua sedang asyik berdebat siapa yang penakut."
+        "Tiba-tiba terdengar suara."
+        #Suara klontang
+
+        #Gambar shake yeri ketakutan tanpa kata-kata 
+
+        p "Dih, cuma gituan doang kaget hahaha."
+
+        y "Ih [name] jangan ngejek ya!"
+
+        c "Hahaha, aku tadi juga kaget kok."
+
+        p "Berarti kalian semua penakut ya."
+
+        yc "IHHHHH [name]."
+
+        p "Hahaha, aku cuma bercanda aja."
+        p "Maafin aku ya."
+
+        y "Ngga mau ah, kamu jahat."
+
+        c "Hahaha, rasain tuh [name]."
+        c "Ngga dimaafin haha."
+
+        p "Aku cuma bercanda aja tadi."
+
+        c "Tetapi, kalau dipikir-pikir, suara tadi asalnya darimana ya?"
+
+        y "Eh, iya juga."
+        y "Mau kuperiksa tapi aku agak takut."
+        y "[name], mau gak nemenin aku buat ngecek sumber suara tadi?"
+
+        p "Hahaha, kenapa sih, apa yang ditakutin?"
+
+        c "Takutnya bukan karena hantu."
+        c "Tetapi, takut kalau keselamatan kita terancam."
+        c "Soalnya kan kita gatau ada dimana sekarang."
+
+        p "Iya deh, aku coba cek sendiri aja."
+
+        "Diriku mulai berjalan keluar ruangan."
+        "Tetapi saat aku telah berjalan 2-3 langkah."
+        "Citra menarik bajuku seakan menahanku untuk keluar."
+
+        y "Ih, aku ikut dong."
+        y "Aku agak takut tetapi aku juga penasaran dengan suara tadi."
+
+        c "Eh sebentar, mending kita ajak yang lain juga."
+
+        y "Ayo Citra, biarin aja yang lain."
+
+        c "..."
+        c "Iya deh iya"
+
+        c "Duh merepotkan aja, yasudah ayo!"
+
+        "Kita bertiga pergi keluar bersama-sama dari ruangan tersebut"
 
     return
 
