@@ -4990,7 +4990,7 @@ label chapter3_start:
 
         p "Yaa aku juga gatau dong.. kita masuk kesini bareng"
 
-        
+        hide idlekevinserious
 
     label label_yeri:
         show yeritalk
