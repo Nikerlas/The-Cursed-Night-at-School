@@ -6036,7 +6036,7 @@ label chapter3_start:
                 show yerinormal
                 y "Boleh aja sih."
                 hide yerinormal
-                show yeriscared at shake, center
+                show yeriscared at short_shake, center
                 y "Tapi aku agak takut kalau sendirian."
                 hide yeriscared
                 show idleyeriscared
@@ -6045,14 +6045,14 @@ label chapter3_start:
                 p "Engga ada makhluk tadi kok."
                 p "Mungkin sih."
                 hide idleyeriscared
-                show yeriscared at shake, center
+                show yeriscared at short_shake, center
                 "Yeri tampak sedikit ketakutan."
                 hide yeriscared
                 show idleyeriscared
                 p "Yaudah gini saja."
                 p "Kita cari barengan saja ya."
                 hide idleyeriscared
-                show yerihappy at shake, center
+                show yerihappy at short_shake, center
                 y "Oke!"
                 hide yerihappy
                 show idleyerihappy
@@ -6154,12 +6154,12 @@ label chapter3_start:
                 hide yerinormal
                 show idleyerinormal
                 menu: 
-                    "Apa maksud dari bunga hinganbana.":
+                    "Apa maksud dari bunga hinganbana ini?":
                         jump mcheart_a
                     "Atau mungkin ini ada hubungan dengan bunga hinganbana?":
                         jump mcheart_b
                 label mcheart_a:
-                        "Apa maksud dari bungan hinganbana."
+                        "Apa maksud dari bunga hinganbana ini?"
                         "Aku ingat pernah membaca bahwa bunga hinganbana identik dengan {b}KEMATIAN DAN KESEDIHAN{/b}."
                         "Apa jangan-jangan bunga hinganbana adalah clue selanjutnya?"
                         jump mcheart_done
@@ -6205,7 +6205,7 @@ label chapter3_start:
                 show idleyerinormal
                 p "Bener banget!"
                 hide idleyerinormal
-                show yerinormal at short_shake
+                show yerinormal at short_shake, center
                 y "Eh itu dia bunganya."
                 hide yerinormal
                 show idleyerinormal
@@ -6227,6 +6227,9 @@ label chapter3_start:
                 g "Wah keren juga ya bisa menemukan bunga kesukaanku."
                 hide obake
                 show obake
+                "Lagi-lagi secara tiba-tiba Yuki muncul dihadapan kita berdua."
+                hide obake
+                show obake
                 p "Hey, ini mau dibawa kemana?"
                 hide obake
                 show obake
@@ -6236,7 +6239,7 @@ label chapter3_start:
                 show yeriangry1 at long_shake, center
                 y "HEY!"
                 y "Kita ini serius!"
-                Y "Jangan secara sengaja buang-buang waktu kami."
+                y "Jangan secara sengaja buang-buang waktu kami."
                 hide yeriangry1
                 show obake at long_shake, center
                 g "HAHAHAHAHA"
@@ -6314,13 +6317,643 @@ label chapter3_start:
                         p "Iya aku masih percaya."
                         hide idleyerisad
                         show yerisad
-                        y "..."
+                        y "Yakin?"
+                        y "Aku sih ngga percaya."
+                        hide yerisad
+                        show idleyerisad
+                        p "Iya terserah kamu mau percaya atau tidak dengan dia."
+                        p "Tapi yang penting kita harus segera ke hall sekolah."
+                        p "Jadi bagaimana?"
+                        p "Mau ikut atau tidak?"
+                        hide idleyerisad
+                        show yerinormal
+                        y "Aduh bagaimana ya."
+                        hide yerinormal
+                        show idleyerinormal
+                        p "Gimana?"
+                        "Yeri terdiam."
+                        p "Gimana?"
+                        hide idleyerinormal
+                        show yeritsundere2 at short_shake, center
+                        y "Iya deh iya."
+                        y "Ayo kita ke hall sekolah."
+                        hide yeritsundere2
+                        show idleyeritsundere2
+                        menu:
+                            "Nah gitu dong!":
+                                jump mctell7_a
+                            "Lama banget mikirnya.":
+                                jump mctell7_b
+                        label mctell7_a: 
+                                p "Nah gitu dong!"
+                                jump mctell7_done
+                        label mctell7_b:
+                                p "Lama banget mikirnya."
+                                jump mctell7_done
+                        label mctell7_done:
+                        hide idleyeritsundere2
+                        show yeriangry2 at short_shake, center
+                        y "IYA-IYA"
+                        y "Cepetan sebelum aku berubah pikiran."
+                        hide yeriangry2
+                        show idleyeriangry2
+                        p "Oke!"
+                        hide idleyeriangry2
+                        "Kita berdua lari sekuat tenaga menuju ke arah hall sekolah."
+                        "Di pertengahan jalan lari Yeri mulai melambat."
+                        "Dikarenakan dirinya mulai lelah."
+                        "Aku menyemangati Yeri agar tidak berhenti berlari karena waktu telah mepet."
+                        "Saat Yeri melihat jam ternyata telah menunjukkan pukul 23.56."
+                        python:
+                            renpy.notify("Pukul 23.56")
+                        "Yeri mulai bangkit dan melanjutkan larinya sekuat tenaga."
+                        "Aku pun mendukung dirinya agar tidak berhenti ditengah jalan."
+                        "Dan kita berdua pun melanjutkan berlari ke arah hall sekolah."
+                        scene bg hallway2 with dissolve
+                        python:
+                            renpy.notify("Hall Sekolah")
+                        "Akhirnya kita berdua telah sampai di hall sekolah."
+                        python:
+                            renpy.notify("Pukul 23.58")
+                        show yeriangry2 at short_shake, center
+                        y "Sial capek banget!"
+                        hide yeriangry2
+                        show idleyeriangry2
+                        "Yeri terengah-engah karena dia telah menggunakan sisa-sisa tenaganya untuk berlari."
+                        p "Huft!"
+                        p "Ini mau ditaruh dimana?"
+                        hide idleyeriangry2
+                        show yerinormal
+                        y "Itu... m-mungkin... taruh... d-disana."
+                        hide yerinormal
+                        show idleyerinormal
+                        "Yeri menunjuk ke arah lingkaran merah yang ada dilantai."
+                        p "Oke aku taruh ya."
+                        hide idleyerinormal with dissolve
+                        "Aku mendekati lingkaran itu."
+                        "Aku merasa agak merinding ketika ingin meletakkan barang-barang tersebut."
+                        "Secara perlahan-lahan aku meletakkan barang-barang kedalam lingkaran merah itu."
+                        "Saat aku telah meletakkan tidak terjadi apa-apa."
+                        "Namun..."
+                        "Beberapa detik kemudian muncul sebuah ledakan kecil."
+                        "DUARRRRRR!!!"
+                        "Aku dan Yeri terkejut dengan ledakan tadi."
+                        show yeriscared at short_shake, center
+                        y "Apa yang terjadi?"
+                        hide yeriscared
+                        show idleyeriscared
+                        p "Aku tidak tahu."
+                        hide idleyeriscared
+                        u_shout "YERI!!!"
+                        "Yeri terkejut dengan suara itu dan serasa tidak asing dengan suaranya."
+                        show citrairritated at long_shake, center
+                        c_shout "YERI!!!"
+                        hide citrairritated with dissolve
+                        "Ternyata suara tersebut merupakan suara Citra."
+                        "Muncul Citra, Zaky, dan Kevin yang berlari ke arah kita berdua."
+                        show yeritalk at long_shake, center
+                        y_shout "CITRAAAA!!!"
+                        hide yeritalk with dissolve
+                        "Mereka berdua berpelukan erat."
+                        "Seakan sudah bertahun-tahun lamanya tidak berjumpa."
+                        show citrahappy2 at short_shake, center
+                        c "Syukurlah!"
+                        hide citrahappy2
+                        show idlecitrahappy2
+                        p "Kamu tidak apa-apa?"
+                        hide idlecitrahappy2
+                        show citrahappy
+                        c "Tidak apa-apa kok."
+                        show citrahappy with move:
+                            xalign 0.8
+                            yalign 1.0
+                        hide citrahappy
+                        show idlecitrahappy:
+                            xalign 0.8
+                            yalign 1.0
+                        show yerisad at short_shake:
+                            xalign 0.2
+                            yalign 1.0
+                        y "Kamu terluka?"
+                        hide yerisad
+                        show idleyerisad:
+                            xalign 0.2
+                            yalign 1.0
+                        hide idlecitrahappy
+                        show citrahappy at short_shake:
+                            xalign 0.8
+                            yalign 1.0
+                        c "Hahahaha"
+                        c "Beneran ngga apa-apa kok."
+                        c "Aku baik-baik saja."
+                        hide citrahappy
+                        show idlecitrahappy:
+                            xalign 0.8
+                            yalign 1.0
+                        p "Kalian bertiga habis darimana saja?"
+                        hide idleyerisad
+                        hide idlecitrahappy
+                        with dissolve
+                        show kevinserious at short_shake, center
+                        k "Emm..."
+                        k "Entah sih."
+                        k "Sulit untuk dijelaskan."
+                        hide kevinserious
+                        show idlekevinserious
+                        p "Sulit untuk dijelaskan?"
+                        show idlekevinserious with move:
+                            xalign 0.2
+                            yalign 1.0
+                        hide idlekevinserious
+                        show idlekevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        show zakyhesitant at short_shake:
+                            xalign 0.8
+                            yalign 1.0
+                        z "Iya."
+                        z "Kita bertiga tiba-tiba pingsan dan bangun di ruangan yang sangat gelap."
+                        z "Dan kita bisa melihat kalian berdua."
+                        hide zakyhesitant
+                        show idlezakyhesitant:
+                            xalign 0.8
+                            yalign 1.0
+                        p "Hah?"
+                        p "Gimana maksudnya?"
+                        "Aku benar-benar tidak paham apa yang dimaksud mereka."
+                        hide idlekevinserious
+                        show kevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        k "Jadi kita tadi berada diruangan yang sangat gelap."
+                        k "Benar-benar gelap sekali."
+                        k "Dan tiba-tiba ada cermin muncul."
+                        k "Didalam cermin itu ada kamu dan Yeri yang sedang di Perpustakaan dan di kebun sekolah."
+                        hide kevinserious
+                        show idlekevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        p "Jadi selama ini kalian memantau kami?"
+                        hide idlekevinserious
+                        show kevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        k "Iya benar."
+                        k "Soalnya kita juga tidak bisa keluar dan membantu."
+                        hide kevinserious
+                        hide idlezakyhesitant
+                        show obake at short_shake, center
+                        g "Ya..."
+                        hide obake
+                        show obake at short_shake, center
+                        g "Aku memang sengaja agar [name] dan Yeri yang mengerjakan semuanya."
+                        g "Dan sekarang kau berhasil memecahkan misteri ini dengan tepat waktu."
+                        hide obake
+                        show kevinserious at short_shake, center
+                        k "Tunggu dulu!"
+                        k "Aku masih memiliki pertanyaan."
+                        hide kevinserious with dissolve
+                        show obake with dissolve
+                        g "Apa?"
+                        hide obake
+                        show kevinserious at short_shake, center
+                        k "Apa alasanmu melakukan semua ini?"
+                        hide kevinserious
+                        show obake at short_shake, center
+                        g "Hahahaha"
+                        g "Kamu masih penasarannya."
+                        hide obake
+                        show obake
+                        menu:
+                            "Iya aku masih penasaran! Ceritakan semuanya!":
+                                jump mcwish2_a
+                            "Aku cukup penasaran dengan alasanmu melakukan ini!":
+                                jump mcwish2_b
+                        label mcwish2_a:
+                                p "Iya aku masih penasaran!"
+                                p "Ceritakan semuanya!"
+                                jump mcwish2_done
+                        label mcwish2_b:
+                                p "Aku cukup penasaran dengan alasanmu melakukan ini!"
+                                jump mcwish2_done
+                        label mcwish2_done:
+                        hide obake
+                        show obake at short_shake, center
+                        g "Baiklah akan kuberitahu."
+                        g "Kenapa aku melakukan semua ini?"
+                        g "Mungkin karena ingin balas dendam tapi entah ke siapa."
+                        g "Dan kebetulan kalian berada di sekolah saat malam hari."
+                        g "Jadi kalian terkena kutukannya."
+                        g "Disini tugasku hanya ingin membantu atau mungkin menjebak kalian agar kalian menjadi temanku disini selamanya."
+                        hide obake
+                        show citratalk at short_shake, center
+                        c "Iya tapi kenapa?"
+                        hide citratalk
+                        show obake at short_shake, center
+                        g "Hahahaha"
+                        g "Jadi dulu aku juga merupakan murid sekolah sini."
+                        g "Namun, aku berbeda dengan kalian semua."
+                        hide obake
+                        show obake
+                        menu:
+                            "...":
+                                jump mcmute_a
+                            "...":
+                                jump mcmute_b
+                        label mcmute_a:
+                                p "..."
+                                jump mcmute_done
+                        label mcmute_b:
+                                p "..."
+                                jump mcmute_done
+                        label mcmute_done:
+                        g "Dulu aku ingin sekali kehidupan sekolahku berjalan lancar sesuai harapan."
+                        g "Aku ingin memulai debut sekolahku dengan bahagia."
+                        g "Namun..."
+                        g "Takdir berkata lain."
+                        g "Aku hanyalah karakter figuran dihidup ini."
+                        g "Aku hanya mendapat {b}CACIAN, HINAAAN, DAN BULLYAN{/b} di kehidupan sekolahku."
+                        g "Tragis bukan?"
+                        g "Beda dengan kalian yang merupakan anak OSIS."
+                        g "Yang memiliki reputasi baik di sekolah ini atau mungkin di {b}KEHIDUPAN{/b} ini!"
+                        hide obake
+                        show yerisad at short_shake, center
+                        y "Hei!"
+                        hide yerisad
+                        show obake at long_shake, center
+                        g "DIAM KAU SIALAN!"
+                        g "Kau tidak akan pernah merasakan semua ini!"
+                        hide obake
+                        show obake at long_shake, center
+                        g "Tidak ada yang ingin berteman kepadaku."
+                        g "Orang tuaku hanya menyiksaku."
+                        g "Mereka hanya suka mabuk-mabukan."
+                        hide obake
+                        show obake at long_shake, center
+                        g "Apa-apaan semua ini!"
+                        g "Hanya-hanya satu tempat yang membuat kunyaman."
+                        g "Perpustakaan adalah tempat yang cocok untuk sampah masyarakat sepertiku."
+                        g "Dan buku yang paling kusuka adalah {i}Singuratic{/i}."
+                        g "Tapi suatu saat aku pernah diperpustakaan dan ketiduran."
+                        g "Saat itu tidak ada siapa-siapa dan jam menunjukkan pukul 21.00."
+                        g "Dan disaat aku ingin berkemas untuk pulang ke rumah yang seperti neraka itu..."
+                        g "Tiba-tiba ada beberapa pelajar yang masih ada di sekolah."
+                        g "Dan..."
+                        g "Mereka adalah orang-orang yang selalu membullyku."
+                        g "Dan disaat itu aku mencoba memberanikan diri untuk melawan mereka."
+                        g "Tapi apa daya."
+                        g "Aku hanya satu orang."
+                        g "Mereka justru menyiksaku..."
+                        g "Memukulku..."
+                        g "Ah... aku ingat rasanya saat aku dipukul pada saat itu."
+                        g "Namun, pada saat itu juga buku kesayanganku itu direbut."
+                        g "Aku mencoba untuk melawan kembali..."
+                        g "Namun, tubuhku sudah tidak kuat."
+                        g "Dan mereka malah memukul kepalaku hingga terluka."
+                        g "Bodoh sekali bukan?"
+                        g "Aku mati pada saat itu juga."
+                        g "Mereka panik pada saat itu karena tidak sengaja membunuhku."
+                        g "Lalu, salah satu dari mereka berpikir dengan membawa tubuhku, menyiapkan tali, dan kursi."
+                        g "Membuatku seolah-olah bunuh diri disekolah ini."
+                        g "Dan aku tidak terima akan hal itu dan disaat itulah aku berada disini."
+                        g "Dan entah kenapa kutukannya pun dimulai."
+                        hide obake
+                        show obake
+                        menu:
+                            "Lalu bagaimana kelanjutannya?":
+                                jump mcask_a
+                            "Apa yang terjadi setelahnya?":
+                                jump mcask_b
+                        label mcask_a:
+                                p "Lalu bagaimana kelanjutannya?"
+                                jump mcask_done
+                        label mcask_b:
+                                p "Apa yang terjadi setelahnya?"
+                                jump mcask_done
+                        label mcask_done:
+                        hide obake
+                        show obake
+                        g "Kau ingin tahu kelanjutannya?"
+                        hide obake
+                        show obake at short_shake, center
+                        g "MEREKA SEMUA MATI!"
+                        hide obake
+                        show obake at long_shake, center
+                        g_shout "HAHAHAHAHA!"
+                        g "Mereka yang membullyku mendapatkan karma!"
+                        g "Ada yang mati karena kecelakaan."
+                        g "Ada yang mati karena terpeleset di rumah."
+                        g "Ada yang ditabrak hingga tubuhnya {b}HANCUR{/b}."
+                        g "Ada juga yang mati karena merasa bersalah dan bunuh diri."
+                        g "Dan karena sekarang aku tidak ada tujuan untuk balas dendam tapi aku masih terjebak di realitas ini."
+                        g "Tapi tujuanku sudah bukan balas dendam."
+                        hide obake with dissolve
+                        show kevinserious with dissolve
+                        k "Lalu apa tujuanmu masih ada disini?"
+                        k "Bukannya kalau sudah tidak ada tujuan lagi kau sudah bisa bebas tenang?"
+                        hide kevinserious
+                        show obake at short_shake, center
+                        g "Entahlah!"
+                        g "Aku juga tidak tahu."
+                        g "Seolah-olah ada orang yang menyuruhku untuk tetap disini tapi tidak tau siapa."
+                        g "Dan tidak lama aku berpikir, ada tujuanku yang lain."
+                        g "Yaitu buku kesayanganku."
+                        g "Dan sekarang kalian sudah berhasil membuat tujuanku tercapai."
+                        g "Dan sekarang aku bisa tenang."
+                        g "Terimakasih..."
+                        hide obake
+                        show obake
+                        "Yuki tersenyum kepadaku seolah aku merupakan penyelamat baginya."
+                        "Saat aku mendengarkan ceritanya..."
+                        "Aku sangat beersedih atas apa yang dia alami."
+                        "Aku tidak menyangka didalam instansi pendidikan masih ada yang namanya pembullyan."
+                        "Yang bahkan sampai menghilangkan nyawa seseorang."
+                        "Hal ini sangat-sangat tidak dapat diterima."
+                        "Pembullyan seharusnya tidak boleh sampai ada didalam instansi pendidikan."
+                        "Dan juga seharusnya orang tua menciptakan suasana nyaman didalam rumah."
+                        "Jangan sampai orang tua bersikap kasar kepada anak hingga anak terkena mental."
+                        "Sungguh aku hanya bisa terdiam tanpa kata-kata dihadapan Yuki."
+                        p "Aku tidak dapat berkata apa-apa lagi."
+                        p "Aku dapat merasakan apa yang kamu rasakan, Yuki."
+                        hide obake
+                        show obake
+                        g "Sudah-sudah hal itu juag sudah berlalu."
+                        hide obake
+                        show yerisad at short_shake, center
+                        y "Aku turut bersedih."
+                        hide yerisad
+                        show kevinserious at short_shake, center
+                        k "Aku juga."
+                        hide kevinserious
+                        show zakysad at short_shake, center
+                        z "Aku juga."
+                        hide zakysad with dissolve
+                        show citratalk with dissolve
+                        c "Seandainya kita bisa bertemu sebelum kamu pergi."
+                        hide citratalk
+                        show obake at short_shake, center
+                        g "Sudah-sudah."
+                        g "Terima kasih semua."
+                        g "Kita tidak akan bisa bertemu."
+                        g "Karena kejadianku sudah sangat sangat lama."
+                        g "Tapi aku apresiasi atas kebaikan kalian semua."
+                        g "Sekarang, kalian tinggal buka saja pintu itu."
+                        g "Kalian akan pindah ke dunia kalian seperti semula."
+                        hide obake
+                        show obake
+                        p "Terima kasih Yuki."
+                        hide obake
+                        show obake
+                        g "Iya."
+                        g "Cepatlah kalian pergi darisini sebelum aku berubah pikiran."
+                        hide obake
+                        show kevinserious at short_shake, center
+                        k "Baiklah!"
+                        k "Yuk kita pergi."
+                        hide kevinserious with dissolve
+                        "Kita berlima berjalan menuju kearah pintu yang sudah terbuka."
+                        "Citra melambaikan tangan."
+                        "Akupun melambaikan tangan kepada Yuki."
+                        "Yuki membalas dengan melambaikan tangan dan tersenyum ke arah kita berlima."
+                        python: 
+                            renpy.notify("EPILOG") 
+                        "Kita berlima tiba-tiba terbangun di depan sekolah."
+                        
                         jump fixend2_done
                 label fixend2_b:
                         p "Namun kalau dipikir-pikir perkataanmu mungkin benar."
                         hide idleyerisad
                         show yerisad
-                        y "..."
+                        y "Nah kan, jadi sekarang kita mau gimana?"
+                        hide yerisad
+                        show idleyerisad
+                        p "Gimana ya..."
+                        p "Ada cara lain ga ya selain kita pergi ke hall?"
+                        "Kita berdua berpikir sejenak."
+                        "Lalu aku kepikiran akan sebuah ide."
+                        menu:
+                            "Bagaimana kalau kita hancurkan saja benda-benda ini?":
+                                jump mcopini3_a
+                            "Bagaimana kalau kita bakar saja benda-benda ini?":
+                                jump mcopini3_b
+                        label mcopini3_a:
+                                p "Bagaimana kalau kita hancurkan saja benda-benda ini?"
+                                p "Mungkin jika kita menghancurkan benda kesayangannya arwah jahatnya akan ikut menghilang."
+                                hide idleyerisad
+                                show yeritalk at short_shake, center
+                                y "Nah mungkin benar juga kalau kayak begitu."
+                                hide yeritalk
+                                show idleyeritalk
+                                p "Tapi bagaimana cara menghancurkan ini?"
+                                hide idleyeritalk
+                                show yeritalk
+                                y "Dibakar mungkin?"
+                                hide yeritalk
+                                show idleyeritalk
+                                p "Oh benar juga!"
+                                p "Tetapi..."
+                                jump mcopini3_done
+                        label mcopini3_b:
+                                p "Bagaimana kalau kita bakar saja benda-benda ini?"
+                                hide idleyerisad
+                                show yeritalk at short_shake, center
+                                y "Nah mungkin benar juga kalau kayak begitu."
+                                hide yeritalk
+                                show idleyeritalk
+                                p "Tetapi..."
+                                jump mcopini3_done
+                        label mcopini3_done:
+                        p "Membakarnya dimana?"
+                        hide idleyeritalk
+                        show yerinormal
+                        y "Mungkin di gudang ada korek api?"
+                        y "Soalnya setauku korek itu disimpan di gudang."
+                        hide yerinormal
+                        show idleyerinormal
+                        p "Okeh, cepat kita kesana."
+                        hide idleyerinormal with dissolve
+                        "Kita berdua berlari menuju gudang sekolah."
+                        "Aku kehabisan tenaga saat dipertengahan jalan."
+                        "Yeri menyemangatiku untuk segera lari lagi karena waktu sudah sangat mepet."
+                        python:
+                            renpy.notify("Pukul 23.54")
+                        show yerinormal with dissolve
+                        y "Akhirnya sampai depan gudang."
+                        y "Ayo masuk kegudangnya dan segera mencari korek."
+                        hide yerinormal
+                        python:
+                            renpy.notify("Dalam Gudang")
+                        show yerinormal at short_shake, center
+                        y "Dimana nih koreknya?"
+                        hide yerinormal
+                        show idleyerinormal
+                        p "Lebih baik kita berpencar."
+                        hide idleyerinormal
+                        show yerinormal
+                        y "Oke deh!"
+                        hide yerinormal with dissolve
+                        "Kita berdua berpencar untuk mencari korek."
+                        "Saat aku membuka-buka lemari aku menemukan secarik kertas lagi."
+                        "Saat aku ingin membaca isi kertas itu."
+                        "Aku terkejut dengan teriakan Yeri."
+                        show yerihappy at long_shake, center
+                        y_shout "KETEMU!!!"
+                        hide yerihappy
+                        show idleyerihappy
+                        "Lantas aku menengok ke arah Yeri dan menghampirinya."
+                        "Yeri berhasil menemukan korek serta minyak yang dimaksud."
+                        hide idleyerihappy
+                        show yerinormal at short_shake, center
+                        y "Ayo cepat bakar!"
+                        hide yerinormal
+                        show idleyerinormal
+                        p "Oke!"
+                        p "Sekarang aku bakar."
+                        hide idleyerinormal with dissolve
+                        "Aku meletakkan buku dan bunganya."
+                        "Lalu menuangkan sedikit minyak diatas buku dan bunganya."
+                        "Korek yang kugenggam lalu kunyalakan diatas buku dan bunga."
+                        show yerihappy at short_shake, center
+                        y "Bagus!"
+                        hide yerihappy
+                        show idleyerihappy
+                        p "Lalu sekarang apa yang terjadi?"
+                        hide idleyerihappy
+                        show yerinormal
+                        y "Entahlah."
+                        y "Coba yuk kita keluar dari sini."
+                        hide yerinormal with dissolve
+                        "Kita berdua keluar dari gudang."
+                        python:
+                            renpy.notify("Depan Gudang")
+                        "Suasana diluar gudang sangat sepi."
+                        "Sepertinya buku dan bunganya dibakar tidak ada efek apapun."
+                        "Namun..."
+                        u_shout "YERI!!!"
+                        "Yeri terkejut dengan suara itu dan serasa tidak asing dengan suaranya."
+                        show citrairritated at long_shake, center
+                        c_shout "YERI!!!"
+                        hide citrairritated with dissolve
+                        "Ternyata suara tersebut merupakan suara Citra."
+                        "Muncul Citra, Zaky, dan Kevin yang berlari ke arah kita berdua."
+                        show yeritalk at long_shake, center
+                        y_shout "CITRAAAA!!!"
+                        hide yeritalk with dissolve
+                        "Mereka berdua berpelukan erat."
+                        "Seakan sudah bertahun-tahun lamanya tidak berjumpa."
+                        show citrahappy2 at short_shake, center
+                        c "Syukurlah!"
+                        hide citrahappy2
+                        show idlecitrahappy2
+                        p "Kamu tidak apa-apa?"
+                        hide idlecitrahappy2
+                        show citrahappy
+                        c "Tidak apa-apa kok."
+                        show citrahappy with move:
+                            xalign 0.8
+                            yalign 1.0
+                        hide citrahappy
+                        show idlecitrahappy:
+                            xalign 0.8
+                            yalign 1.0
+                        show yerisad at short_shake:
+                            xalign 0.2
+                            yalign 1.0
+                        y "Kamu terluka?"
+                        hide yerisad
+                        show idleyerisad:
+                            xalign 0.2
+                            yalign 1.0
+                        hide idlecitrahappy
+                        show citrahappy at short_shake:
+                            xalign 0.8
+                            yalign 1.0
+                        c "Hahahaha"
+                        c "Beneran ngga apa-apa kok."
+                        c "Aku baik-baik saja."
+                        hide citrahappy
+                        show idlecitrahappy:
+                            xalign 0.8
+                            yalign 1.0
+                        p "Kalian bertiga habis darimana saja?"
+                        hide idleyerisad
+                        hide idlecitrahappy
+                        with dissolve
+                        show kevinserious at short_shake, center
+                        k "Emm..."
+                        k "Entah sih."
+                        k "Sulit untuk dijelaskan."
+                        hide kevinserious
+                        show idlekevinserious
+                        p "Sulit untuk dijelaskan?"
+                        show idlekevinserious with move:
+                            xalign 0.2
+                            yalign 1.0
+                        hide idlekevinserious
+                        show idlekevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        show zakyhesitant at short_shake:
+                            xalign 0.8
+                            yalign 1.0
+                        z "Iya."
+                        z "Kita bertiga tiba-tiba pingsan dan bangun di ruangan yang sangat gelap."
+                        z "Dan kita bisa melihat kalian berdua."
+                        hide zakyhesitant
+                        show idlezakyhesitant:
+                            xalign 0.8
+                            yalign 1.0
+                        p "Hah?"
+                        p "Gimana maksudnya?"
+                        "Aku benar-benar tidak paham apa yang dimaksud mereka."
+                        hide idlekevinserious
+                        show kevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        k "Jadi kita tadi berada diruangan yang sangat gelap."
+                        k "Benar-benar gelap sekali."
+                        k "Dan tiba-tiba ada cermin muncul."
+                        k "Didalam cermin itu ada kamu dan Yeri yang sedang di Perpustakaan dan di kebun sekolah."
+                        hide kevinserious
+                        show idlekevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        p "Jadi selama ini kalian memantau kami?"
+                        hide idlekevinserious
+                        show kevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        k "Iya benar."
+                        k "Soalnya kita juga tidak bisa keluar dan membantu."
+                        k "Ya sudah, sekarang kita harus pergi ke hall sekolah."
+                        hide kevinserious
+                        show idlekevinserious:
+                            xalign 0.2
+                            yalign 1.0
+                        p "Kenapa harus pergi ke hall?"
+                        hide idlekevinserious
+                        hide idlezakyhesitant
+                        with dissolve
+                        show yeriangry2 at short_shake, center
+                        y "Iya!"
+                        y "Kenapa harus pergi kesana?"
+                        hide yeriangry2
+                        show kevintalk at short_shake, center
+                        k "Sudah ikuti saja."
+                        k "Entah kenapa aku merasa kita harus kesana."
+                        hide kevintalk
+                        show idlekevintalk
+                        p "Baiklah!"
+                        p "Ayo kita kesana."
+                        hide idlekevintalk with dissolve
+                        "Kita berlima bergegas menuju hall sekolah."
+                        "Dalam perjalanan menuju hall sekolah."
+                        "Aku berpikir dengan apa yang aku lakukan sebelumnya."
+                        "Yaitu apakah semua akan baik-baik saja."
+                        python:
+                            renpy.notify("Hall Sekolah")
+                        "Kita berlima telah sampai ke hall sekolah."
+                        
                         jump fixend2_done
                 label fixend2_done:
                 jump fixend_done

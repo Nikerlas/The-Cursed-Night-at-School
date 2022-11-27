@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label mctell_b is defined twice, at File "game/script.rpy", line 3606:
-    label mctell_b:
-and File "game/script.rpy", line 6269:
-    label mctell_b:
-
+File "game/script.rpy", line 6686: expected 'image_name_component' not found.
+    show 
+         ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Sun Nov 27 12:30:41 2022
+Sun Nov 27 15:07:24 2022
