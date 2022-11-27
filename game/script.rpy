@@ -6012,6 +6012,317 @@ label chapter3_start:
                 hide idleyerinormal
                 show yerinormal
                 y "Buku apa itu?"
+                hide yerinormal
+                show idleyerinormal
+                p "Bukunya adalah {i}Singuratic{/i}"
+                hide idleyerinormal
+                show yerinormal
+                y "{i}Singuratic{/i}?"
+                hide yerinormal
+                show idleyerinormal
+                p "Iya benar."
+                p "Mungkin coba kita cari di perpustakaan ini."
+                hide idleyerinormal
+                show yerinormal
+                y "Cari apa?"
+                y "Buku {i}Singuratic{/i}nya?"
+                hide yerinormal
+                show idleyerinormal
+                p "Iya benar."
+                p "Biar cepat kita berpisah saja."
+                p "Kamu cari di area rak 1-30."
+                p "Nah aku area rak 31-60."
+                hide idleyerinormal
+                show yerinormal
+                y "Boleh aja sih."
+                hide yerinormal
+                show yeriscared at shake, center
+                y "Tapi aku agak takut kalau sendirian."
+                hide yeriscared
+                show idleyeriscared
+                p "Tenang saja."
+                p "Disini sudah aman kok."
+                p "Engga ada makhluk tadi kok."
+                p "Mungkin sih."
+                hide idleyeriscared
+                show yeriscared at shake, center
+                "Yeri tampak sedikit ketakutan."
+                hide yeriscared
+                show idleyeriscared
+                p "Yaudah gini saja."
+                p "Kita cari barengan saja ya."
+                hide idleyeriscared
+                show yerihappy at shake, center
+                y "Oke!"
+                hide yerihappy
+                show idleyerihappy
+                p_shout "HAHAHAHAHA"
+                p "Yeri oh Yeri."
+                hide idleyerihappy
+                show yeritsundere2 at long_shake, center
+                y_shout "APA!"
+                hide yeritsundere2
+                show idleyeritsundere2
+                p "Hahahaha"
+                p "Ngga ada apa-apa kok."
+                hide idleyeritsundere2
+                show yeritsundere1 
+                y "Soalnya ini aku beneran takut."
+                hide yeritsundere1
+                show idleyeritsundere1
+                p "Iya iya."
+                p "Yuk cari bukunya sekarang."
+                hide idleyeritsundere1
+                show yerismile at short_shake, center
+                y "Oke!"
+                hide yerismile with dissolve
+                "Kita berdua mulai mencari buku {i}Singuratic{/i} itu."
+                "Kita mencari dengan teliti tiap rak-rak buku."
+                "Sudah berjalan hampir 30 menit."
+                "Belum juga menemukan buku yang dimaksud."
+                show yerisad with dissolve
+                y "Kok daritadi belum ketemu ya."
+                y "Sudah hampir setengah jam juga."
+                hide yerisad
+                show idleyerisad
+                p "Tenang Yeri."
+                p "Kita pasti bisa menemukan bukunya kok."
+                p "Mungkin kita harus mengecek rak 59-60 yang belum kita cek."
+                hide idleyerisad
+                show yerinormal
+                y "Oke deh."
+                hide yerinormal with dissolve
+                "Kita berdua pun menuju ke rak 59-60 yang belum kita cek."
+                "Setelah mengecek secara teliti akhirnya buku {i}Singuratic{/i} dapat ditemukan."
+                "Kita berdua senang karena usaha selama hampir setengah jam tidak sia-sia."
+                "Namun..."
+                show obake at long_shake, center
+                "Yuki muncul secara tiba-tiba dihadapan kita berdua."
+                hide obake
+                show yeriscared at long_shake, center
+                "Yeri terkejut dengan kedatangan Yuki."   
+                hide yeriscared
+                show idleyeriscared
+                p "Sekarang apa maumu?"
+                p "Aku sudah mendapatkan bukumu!" 
+                hide idleyeriscared
+                show obake at short_shake, center
+                g "Hah?"
+                g "Cuma itu?"
+                hide obake
+                show obake
+                p "Hah?"
+                p "Emang apa lagi selain buku ini?"
+                hide obake
+                show obake at long_shake, center
+                g_shout "HAHAHAHAHA DASAR BODOH!"
+                g "Bukan hanya buku itu saja yang aku butuhkan."
+                g "Ada satu benda lagi!"
+                hide obake
+                show obake
+                p "Apalagi yang kamu butuhkan?"
+                hide obake
+                show obake at long_shake, center
+                g "HAHAHAHAHAHA"
+                g "Pikir saja sendiri."
+                g "Sudah jelas petunjuknya ada didalam buku itu."
+                g "Selamat berpikir lagi!"
+                hide obake
+                show obake at short_shake, center
+                g "Hahahaha!"
+                hide obake
+                "Yuki menghilang kembali dari hadapan kita berdua."
+                "Yeri tampak kebingungan dengan semua ini."
+                "Aku mulai membaca buku {i}Singuratic{/i} tersebut."
+                "Saat aku membacanya tidak ada sesuatu yang aneh."
+                "Akan tetapi ada satu hal yang paling menonjol dibuku ini."
+                show yerinormal with dissolve
+                y "Bagaimana?"
+                hide yerinormal
+                show idleyerinormal
+                p "Ada sesuatu yang paling menonjol disini."
+                hide idleyerinormal
+                show yerinormal     
+                y "Apa emangnya?"
+                hide yerinormal
+                show idleyerinormal
+                p "Ada banyak gambar bunga hinganbana disini."
+                hide idleyerinormal
+                show yerinormal
+                y "Bunga hinganbana?"
+                y "..."
+                hide yerinormal
+                show idleyerinormal
+                menu: 
+                    "Apa maksud dari bunga hinganbana.":
+                        jump mcheart_a
+                    "Atau mungkin ini ada hubungan dengan bunga hinganbana?":
+                        jump mcheart_b
+                label mcheart_a:
+                        "Apa maksud dari bungan hinganbana."
+                        "Aku ingat pernah membaca bahwa bunga hinganbana identik dengan {b}KEMATIAN DAN KESEDIHAN{/b}."
+                        "Apa jangan-jangan bunga hinganbana adalah clue selanjutnya?"
+                        jump mcheart_done
+                label mcheart_b:
+                        "Atau mungkin ini ada hubungan dengan bunga hinganbana?"
+                        "Seingatku bunga hinganbana ini sangat identik dengan {b}KEMATIAN DAN KESEDIHAN{/b}."
+                        "Apa mungkin bunga hinganbana adalah clue selanjutnya?"
+                        jump mcheart_done
+                label mcheart_done:
+                hide idleyerinormal
+                show yerinormal
+                y "Jangan-jangan benda kedua yang dimaksud itu bunga hinganbana?"
+                hide yerinormal
+                show idleyerinormal
+                p "Sepertinya iya."
+                hide idleyerinormal
+                show yerinormal
+                y "Di kebun sekolah ada bunga itu."
+                y "Mau ambil bunga itu sekarang?"
+                hide yerinormal
+                show idleyerinormal
+                p "Ayo kita ambil sekarang!"
+                p "Waktu kita tidak banyak."
+                hide idleyerinormal
+                show yerinormal at short_shake, center
+                y "Oke ayo!"
+                hide yerinormal with dissolve
+                "Kita berdua keluar dari Perpustakaan dan bergegas menuju kekebun sekolah."
+                scene bg black with dissolve
+                python:
+                    renpy.notify("Perjalanan Menuju Kebun Sekolah")
+                "Perjalanan menuju kebun sangat lama."
+                "Dikarenakan posisi Perpustakaan sangat jauh dari kebun sekolah."
+                "Entah kenapa ini semua disengaja."
+                "Agar jaraknya sangat jauh dan menguras tenaga."
+                "Namun kita berdua tetap berusaha karena waktu tidak banyak."
+                python:
+                    renpy.notify("Kebun Sekolah")
+                "Akhirnya kita berdua sampai kebun sekolah."
+                show yerinormal with dissolve
+                y "Capek banget gila!"
+                hide yerinormal
+                show idleyerinormal
+                p "Bener banget!"
+                hide idleyerinormal
+                show yerinormal at short_shake
+                y "Eh itu dia bunganya."
+                hide yerinormal
+                show idleyerinormal
+                p "Oke!"
+                p "Pas banget cuma ada satu aja disini."
+                p "Ini kalau dipegang ngga beracun kan?"
+                hide idleyerinormal
+                show yerinormal
+                y "Kayaknya sih ngga."
+                hide yerinormal
+                show idleyerinormal
+                p "Yasudah aku ambil ya."
+                p "Eh tapi ini mau dibawa kemana?"
+                hide idleyerinormal
+                show yerinormal
+                y "Nah itu yang aku ngga tau."
+                hide yerinormal
+                show obake at short_shake, center
+                g "Wah keren juga ya bisa menemukan bunga kesukaanku."
+                hide obake
+                show obake
+                p "Hey, ini mau dibawa kemana?"
+                hide obake
+                show obake
+                g "Hmm..."
+                g "Mau dibawa kemana ya."
+                hide obake
+                show yeriangry1 at long_shake, center
+                y "HEY!"
+                y "Kita ini serius!"
+                Y "Jangan secara sengaja buang-buang waktu kami."
+                hide yeriangry1
+                show obake at long_shake, center
+                g "HAHAHAHAHA"
+                hide obake
+                show obake at short_shake, center
+                g "EMANG KAU SIAPA?"
+                g "Hadeh."
+                g "Kalian lupa tempat kita bertemu dan berbicara?"
+                hide obake with dissolve
+                "Lagi dan lagi Yuki menghilang secara tiba-tiba."
+                show yeriangry1 at short_shake, center
+                y "Sumpah ini makhluk ngeselin."
+                hide yeriangry1
+                show idleyeriangry1
+                p "Maksud dari tempat ketemu dan berbicara itu apa ya?"
+                menu:
+                    "Aku tidak paham apa yang dia maksud.":
+                        jump mctell6_a
+                    "Atau mungkin yang dia maksud itu hall sekolah?":
+                        jump mctell6_b
+                label mctell6_a:
+                        p "Aku tidak paham apa yang dia maksud."
+                        hide idleyeriangry1
+                        show yerinormal
+                        y "Mungkin yang dia maksud hall sekolah?"
+                        hide yerinormal
+                        show idleyerinormal
+                        p "Kalau begitu sepertinya kita harus membawa ini ke hall sekolah."
+                        jump mctell6_done
+                label mctell6_b:
+                        p "Atau mungkin yang dia maksud itu hall sekolah?"
+                        p "Sepertinya kita harus membawa ini ke hall sekolah."
+                        jump mctell6_done
+                label mctell6_done:
+                hide idleyeriangry1
+                hide idleyerinormal
+                show yerinormal at short_shake, center
+                y "Kamu yakin?"
+                hide yerinormal
+                show idleyerinormal
+                p "Iya aku yakin kok."
+                hide idleyerinormal
+                show yerisad
+                y "Kok sepertinya kamu sangat percaya dia?"
+                hide yerisad
+                show idleyerisad
+                p "Memangnya kenapa?"
+                hide idleyerisad
+                show yerisad
+                y "Kok aku merasa aneh dengan dia ya?"
+                hide yerisad
+                show idleyerisad
+                p "Memangnya aneh gimana?"
+                hide idleyerisad
+                show yerisad
+                y "Dia selalu muncul disaat kita mendapat clue-cluenya."
+                y "Seolah-olah dia membantu kita."
+                y "Atau mungkin dia mempermainkan kita?"
+                hide yerisad
+                show idleyerisad
+                p "Iya itu cukup aneh."
+                hide idleyerisad
+                show yerisad
+                y "Nah itu."
+                y "Jadi gimana?"
+                y "Kamu masih percaya dengan dia?"
+                hide yerisad
+                show idleyerisad
+                menu:
+                    "Iya aku masih percaya.":
+                        jump fixend2_a
+                    "Namun kalau dipikir-pikir perkataanmu mungkin benar.":
+                        jump fixend2_b
+                label fixend2_a:
+                        p "Iya aku masih percaya."
+                        hide idleyerisad
+                        show yerisad
+                        y "..."
+                        jump fixend2_done
+                label fixend2_b:
+                        p "Namun kalau dipikir-pikir perkataanmu mungkin benar."
+                        hide idleyerisad
+                        show yerisad
+                        y "..."
+                        jump fixend2_done
+                label fixend2_done:
                 jump fixend_done
         label fixend_b:
                 p "Tidak, aku tidak percaya denganmu."
