@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 6242, in script
-    Y "Jangan secara sengaja buang-buang waktu kami."
-Exception: Sayer 'Y' is not defined.
+  File "game/script.rpy", line 7079, in script
+    h "Ah sial!"
+Exception: Sayer 'h' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 6242, in script
-    Y "Jangan secara sengaja buang-buang waktu kami."
+  File "game/script.rpy", line 7079, in script
+    h "Ah sial!"
   File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 881, in execute
     who = eval_who(self.who, self.who_fast)
   File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 774, in eval_who
     raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'Y' is not defined.
+Exception: Sayer 'h' is not defined.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.1.22070801
 The Cursed Night at School 1.0
-Sun Nov 27 13:25:05 2022
+Wed Nov 30 11:57:51 2022
