@@ -167,7 +167,15 @@ image satpam_a = "images/npc/satpam.png"
 image satpam_b = "images/npc/satpam_a.png"
 #-------->
 #GHOST
-image obake = "images/ghost/obake.png"
+#Yuki
+#--------> talk
+image kuntinormal = "images/ghost/talk/kunti.png"
+image kuntiangry = "images/ghost/talk/marah.png"
+image kuntilaugh = "images/ghost/talk/laugh.png"
+#--------> idle
+image idlekuntinormal = "images/ghost/idle/kunti.png"
+image idlekuntiangry = "images/ghost/idle/marah.png"
+image idlekuntilaugh = "images/ghost/idle/laugh.png"
 #END IMG CHARA
 
 # CHARACTER
