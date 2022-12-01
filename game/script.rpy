@@ -6451,6 +6451,7 @@ label chapter3_start:
         show citranormal
         c "Oke!"
         c "Ayo Yeri dan [name] kita harus segera ke hall sekolah buat menemui Kevin dan Zaky."
+        hide citranormal with dissolve
         "Kita bertiga bergegas menuju ke hall sekolah untuk menemui Kevin dan Zaky."
         python:
             renpy.notify("Pukul 22.42")
@@ -6463,8 +6464,127 @@ label chapter3_start:
         hide yerismile
         show kevinsmile at short_shake, center
         k "Syukurlah kita bisa bertemu lagi."
+        show kevinsmile with move:
+            xalign 0.2
+            yalign 1.0
         hide kevinsmile
-        show idlekevinsmile
+        show idlekevinsmile:
+            xalign 0.2
+            yalign 1.0
+        show yerismile at short_shake:
+            xalign 0.8
+            yalign 1.0
+        y "Kalian habis kemana aja sih?"
+        hide yerismile
+        hide idlekevinsmile
+        show kevinsmile:
+            xalign 0.2
+            yalign 1.0
+        show idleyerismile:
+            xalign 0.8
+            yalign 1.0
+        k "Justru aku yang seharusnya nanya gitu, kalian habis dari mana saja?"
+        hide idleyerismile
+        hide kevinsmile
+        show idlekevinsmile:
+            xalign 0.2
+            yalign 1.0
+        show yerinormal:
+            xalign 0.8
+            yalign 1.0
+        c "Sudah sudah, singkat cerita kami ke toilet, lalu saat kembali kalian sudah tidak ada disana."
+        hide yerinormal
+        hide idlekevinsmile
+        show kevintalk:
+            xalign 0.2
+            yalign 1.0
+        show idleyerinormal:
+            xalign 0.8
+            yalign 1.0
+        k "Ya sudah deh, yang penting kalian selamat."
+        hide kevintalk
+        show idlekevintalk:
+            xalign 0.2
+            yalign 1.0
+        p "Gimana keadaan kalian?"
+        hide idleyerinormal
+        
+        show zakytalk at short_shake:
+            xalign 0.8
+            yalign 1.0
+        z "Aman kok, santai aja."
+        hide zakytalk
+        show idlezakytalk:
+            xalign 0.8
+            yalign 1.0
+        hide idlekevintalk
+        show kevinserious:
+            xalign 0.2
+            yalign 1.0
+        k "Apa iya santai? Tadi itu apa?"
+        hide kevinserious
+        show idlekevinserious:
+            xalign 0.2
+            yalign 1.0
+        hide idlezakytalk
+        show yerinormal at short_shake:
+            xalign 0.8
+            yalign 1.0
+        y "Zaky kenapa?"
+        hide yerinormal
+        hide idlekevinserious
+        show kevinserious:
+            xalign 0.2
+            yalign 1.0
+        show idleyerinormal:
+            xalign 0.8
+            yalign 1.0
+        k "Tadi dia kabur dan bersembunyi di salah satu ruang kelas karena dia katanya melihat sesosok perempuan yang menggunakan seragam seperti kita tapi wajahnya yang seram."
+        hide idleyerinormal
+        hide kevinserious
+        show idlekevinserious:
+            xalign 0.2
+            yalign 1.0
+        show yeriscared at short_shake:
+            xalign 0.8
+            yalign 1.0
+        y "Kamu juga lihat orang itu, Zaky?"
+        hide yeriscared
+        hide idlekevinserious
+        show zakyscared at short_shake, center
+        z "Kamu tau orang itu?"
+        hide zakyscared
+        show citrairritated at short_shake, center
+        c "Hmm..."
+        c "Jadi yang dikatakan Yeri benar..."
+        hide citrairritated
+        show idlecitrairritated
+        p "Dia siapa ya?"
+        menu:
+            "...":
+                jump mcheart4_a
+            "...":
+                jump mcheart4_b
+            "...":
+                jump mcheart4_c
+        label mcheart4_a:
+                p "..."
+                jump mcheart4_done
+        label mcheart4_b:
+                p "..."
+                jump mcheart4_done
+        label mcheart4_c:
+                p "..."
+                jump mcheart4_done
+        label mcheart4_done:
+        hide idlecitrairritated
+        show kevinserious at short_shake, center
+        k "Nah itu yang aku bi-"
+        u_shout "HIHIHIHIHI"
+        hide kevinserious
+        show kevinserious at long_shake, center
+        k "???"
+        hide kevinserious with dissolve
         jump labelalur_done
     label labelalur_done:
         
@@ -6639,7 +6759,7 @@ label chapter3_start:
         hide yerisad
         show yeriangry1 at short_shake, center
         y "Tapi, aku lama-lama ngga betah disini."
-        hide yeriangry1 with dissolve
+        hide yeriangry1 with dissolhkve
         show kevinsmile with dissolve
         k "Iya..."
         k "Kita tunggu dulu aja."
