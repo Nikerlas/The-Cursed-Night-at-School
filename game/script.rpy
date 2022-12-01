@@ -169,13 +169,13 @@ image satpam_b = "images/npc/satpam_a.png"
 #GHOST
 #Yuki
 #--------> talk
-image kuntinormal = "images/ghost/talk/kunti.png"
-image kuntiangry = "images/ghost/talk/marah.png"
-image kuntilaugh = "images/ghost/talk/laugh.png"
+image obake = "images/ghost/talk/kunti.png"
+image obakeangry = "images/ghost/talk/marah.png"
+image obakelaugh = "images/ghost/talk/laugh.png"
 #--------> idle
-image idlekuntinormal = "images/ghost/idle/kunti.png"
-image idlekuntiangry = "images/ghost/idle/marah.png"
-image idlekuntilaugh = "images/ghost/idle/laugh.png"
+image idleobake = "images/ghost/idle/kunti.png"
+image idleobakeangry = "images/ghost/idle/marah.png"
+image idleobakelaugh = "images/ghost/idle/laugh.png"
 #END IMG CHARA
 
 # CHARACTER
@@ -299,7 +299,7 @@ label start:
 
     show kevintalk with dissolve
 
-    k 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kita.'
+    k 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kami.'
 
     hide kevintalk
     show idlekevintalk
@@ -1086,7 +1086,7 @@ label start:
         
         hide idleyericheerful with dissolve
         
-        "Saat kita berdua sedang mengobrol datang Kevin, Zaky, dan Citra."
+        "Saat kami berdua sedang mengobrol datang Kevin, Zaky, dan Citra."
         show kevincheerful at left with dissolve:
             xalign 0.1
             yalign 1.0
@@ -1920,7 +1920,7 @@ label chapter1_start:
         hide idlekevintalk
         hide idlezakytalk
         with dissolve
-        "Kita bertiga mulai pergi kekantin."
+        "Kami bertiga mulai pergi kekantin."
         scene canteen with dissolve
         python:
             renpy.notify("Kantin")
@@ -2144,7 +2144,7 @@ label chapter1_start:
 
         "Entah kenapa suasana dikantin ini sangat sepi sekali."
         "Seharusnya jika masih jam segini masih ada beberapa murid yang berada di kantin."
-        "Tetapi justru tidak ada seorang murid kecuali kita bertiga yang disini."
+        "Tetapi justru tidak ada seorang murid kecuali kami bertiga yang disini."
         "Ini seperti sesuatu yang TIDAK BIASA."
 
         
@@ -2236,9 +2236,9 @@ label chapter1_start:
         hide idlezakynormal
         with dissolve
 
-        "Kita bertiga beranjak meninggalkan kantin yang sunyi dan sepi itu."
+        "Kami bertiga beranjak meninggalkan kantin yang sunyi dan sepi itu."
         "Dan pergi menuju ke ruang OSIS."
-        "Waktu di pertengahan jalan kita saling mengobrol."
+        "Waktu di pertengahan jalan kami saling mengobrol."
         scene bg hallway with dissolve
         python:
             renpy.notify("Lorong Kelas")
@@ -3841,7 +3841,7 @@ label chapter1_start:
         y "Iya, sama-sama Kevin."
         y "Kan kita sudah solid dari kecil."
         y "Jadi saat salah satu dari kita butuh pertolongan."
-        y "Kami semua siap membantu."
+        y "Kita semua siap membantu."
         hide yerismile
         show idleyerismile:
             xalign 0.2
@@ -4210,9 +4210,9 @@ label chapter3_start:
     show kevinserious at short_shake, center
 
     k "Sudah bercandanya."
-    k "Ayok, bangunin yang lain."
+    k "Ayo, bangunin yang lain."
 
-    hide kevinserious
+    hide kevinserious with dissolve
 
     "Kevin menuju ke Zaky dan membangunkannya."
     "Sedangkan aku menuju ke Citra."
@@ -4733,7 +4733,7 @@ label chapter3_start:
 
         
             
-        z "Iya, kami janji ga bilang ini ke Yeri kok."
+        z "Iya, kita janji ga bilang ini ke Yeri kok."
         hide zakytalk
         show idlezakytalk:
             xalign 0.8
@@ -4742,7 +4742,7 @@ label chapter3_start:
         show kevinsmile:
             xalign 0.2
             yalign 1.0
-        k "Kami janji kok."
+        k "Kita janji kok."
 
         hide kevinsmile
         show kevintalk:
@@ -5098,7 +5098,7 @@ label chapter3_start:
             xalign 0.2
             yalign 1.0
         k "Kenapa-kenapa?"
-        k "Tenang aja, sekarang ada kami disini."
+        k "Tenang aja, sekarang ada kita disini."
         hide kevinserious
         show idlekevinserious:
             xalign 0.2
@@ -5240,7 +5240,7 @@ label chapter3_start:
         "Jadi mungkin bisa melihat posisi Yeri dan Citra."
         python:
             renpy.notify("Depan Ruang TU")
-        "Akhirnya kami bertiga telah sampai di depan Ruang TU."
+        "Akhirnya kita bertiga telah sampai di depan Ruang TU."
         python:
             renpy.notify("Pukul 22.20")
         "Lantas kita bertiga langsung memasuki Ruang TU tanpa pikir panjang."
@@ -5427,7 +5427,7 @@ label chapter3_start:
         p "Ketakutan? Kenapa?"
         hide idleyerismile
         show yerisad
-        y "Beberapa kali kami diterror sama sesosok hantu menyerupai siswi disini."
+        y "Beberapa kali kita diterror sama sesosok hantu menyerupai siswi disini."
         hide yerisad
         show zakyscared at short_shake, center
         z "Dia juga menghatui kalian ya?"
@@ -5441,7 +5441,7 @@ label chapter3_start:
         show kevinserious at short_shake, center
         k "Iya!"
         k "Kita juga beberapa kali diterror oleh dia."
-        k "Dan kami juga masih ingin mencari tau dia itu siapa."
+        k "Dan kita juga masih ingin mencari tau dia itu siapa."
         show kevinserious with move:
             xalign 0.2
             yalign 1.0
@@ -6463,7 +6463,10 @@ label chapter3_start:
         "Kita bertiga bergegas menuju ke hall sekolah untuk menemui Kevin dan Zaky."
         python:
             renpy.notify("Pukul 22.42")
+        scene bg black
         "Akhirnya kita bertiga terlah tiba di hall Sekolah."
+        python:
+            renpy.notify("Hall Sekolah")
         show yerismile at long_shake, center
         y "KEVINNNN!!!"
         hide yerismile
@@ -6500,7 +6503,7 @@ label chapter3_start:
         show yerinormal:
             xalign 0.8
             yalign 1.0
-        c "Sudah sudah, singkat cerita kami ke toilet, lalu saat kembali kalian sudah tidak ada disana."
+        c "Sudah sudah, singkat cerita kita ke toilet, lalu saat kembali kalian sudah tidak ada disana."
         hide yerinormal
         hide idlekevinsmile
         show kevintalk:
@@ -6767,7 +6770,7 @@ label chapter3_start:
         hide yerisad
         show yeriangry1 at short_shake, center
         y "Tapi, aku lama-lama ngga betah disini."
-        hide yeriangry1 with dissolhkve
+        hide yeriangry1 with dissolve
         show kevinsmile with dissolve
         k "Iya..."
         k "Kita tunggu dulu aja."
@@ -6856,7 +6859,7 @@ label chapter3_start:
         "Reflek kami berlima menengok ke arah sumber suara."
         show obake with dissolve
         u "Hmm?"
-        hide obake with dissolve
+        hide obake 
         show yeriscared at long_shake, center
         y "AHHHHHHHHHHH HANTU!!!"
         hide yeriscared with dissolve
@@ -6889,15 +6892,15 @@ label chapter3_start:
         show kevinserious at short_shake, center
         k_shout "JANGAN GANGGU KAMI!"
         hide kevinserious
-        show obake at long_shake, center
+        show obakelaugh at long_shake, center
         u_shout "HAHAHAHAHAHAHAHAHA"
-        hide obake
-        show obake at short_shake, center
+        hide obakelaugh
+        show obakelaugh at short_shake, center
         u "Harusnya kalianlah yang pergi menjauh!"
         u "Kalian telah memasuki wilayahku!"
-        hide obake
+        hide obakelaugh
         show kevinserious at short_shake, center
-        k "Kami saja tidak tahu kenapa kami tiba-tiba masuk ke dalam wilayahmu!"
+        k "Kita saja tidak tahu kenapa kami tiba-tiba masuk ke dalam wilayahmu!"
         hide kevinserious
         show obake at short_shake, center
         u "Oh jadi begitu ya."
@@ -6906,26 +6909,26 @@ label chapter3_start:
         show kevinserious at short_shake, center
         k "Jadi bebaskan kami dari tempat ini!"
         hide kevinserious
-        show obake at short_shake, center
+        show obakeangry at short_shake, center
         u "Hah?"
         u "Membebaskan kalian?"
-        hide obake with dissolve
+        hide obakeangry with dissolve
         show kevinserious with dissolve
         k "Iya bebaskan kami!"
         k "Biarkan kami keluar dari tempat ini!"
         hide kevinserious
-        show obake at short_shake, center
+        show obakelaugh at short_shake, center
         u "Hahahahaha"
         u "Sayang sekali kalian tidak akan bisa keluar dari sini."
-        hide obake
+        hide obakelaugh
         show zakyangry at long_shake, center
         z_shout "HAAAAHHHHHH?"
         z "Seriusan tidak bisa keluar dari sini?"
         hide zakyangry with dissolve
-        show obake with dissolve
+        show obakeangry with dissolve
         u "Iyalah!"
         u "Kalian semua disini akan menjadi temanku."
-        hide obake 
+        hide obakeangry
         show kevinserious at short_shake, center
         k "Hah?"
         k "Temanmu?"
@@ -6937,9 +6940,11 @@ label chapter3_start:
         show kevintalk at short_shake, center
         k "Kami tidak akan menjadi temanmu!"
         hide kevintalk
-        show obake at short_shake, center
+        show obakeangry at short_shake, center
         u "Kenapa tidak mau?"
         u "Kalian akan nyaman bila hidup disini."
+        hide obakeangry
+        show obake at short_shake, center
         u "Percayalah kepadaku."
         u "Kita akan hidup damai di tempat ini."
         u "Tidak akan ada lagi yang namanya perbedaan!"
@@ -6948,10 +6953,14 @@ label chapter3_start:
         c "Bukankah kalau ingin menjadi teman itu tidak harus memaksa?"
         c "Iyakan?"
         hide citrairritated 
-        show obake at long_shake, center
+        show obakelaugh at long_shake, center
         u_shout "HAHAHAHAHAHA"
         u "Tidak ada kata memaksa katamu?"
+        hide obakelaugh
+        show idleobakelaugh
         "Secara tiba-tiba makhluk itu pindah ke belakang Citra."
+        hide idleobakelaugh
+        show obakeangry at short_shake, center
         u "Kau tidak tau rasanya kan?"
         u "Tidak punya teman."
         u "Selalu dibully."
@@ -6959,11 +6968,13 @@ label chapter3_start:
         u "Apakah kamu pernah merasakan itu?"
         u "Tidak ada yang menerimaku didunia ini."
         u "Aku benci kehidupanku yang lalu."
+        hide obakeangry
+        show obakeangry at short_shake, center
         u "Kenapa!"
-        hide obake
-        show obake at long_shake, center
+        hide obakeangry
+        show obakeangry at long_shake, center
         u_shout "KENAPAAAAA!"
-        hide obake with dissolve
+        hide obakeangry with dissolve
         show citrahappy2 with dissolve
         c "Aku..."
         c "Aku juga pernah merasakan hal itu."
@@ -6993,11 +7004,11 @@ label chapter3_start:
         show citrairritated at short_shake:
             xalign 0.8
             yalign 1.0
-        show obake:
+        show idleobake:
             xalign 0.2
             yalign 1.0
         c "Mana mungkin aku berbohong."
-        hide obake
+        hide idleobake
         hide citrairritated
         show idlecitrahappy2:
             xalign 0.8
@@ -7008,40 +7019,40 @@ label chapter3_start:
         u "Baiklah aku percaya padamu."
         u "Tetapi..."
         hide obake
-        show obake at short_shake:
+        show obakeangry at short_shake:
             xalign 0.2
             yalign 1.0
         u "Aku masih tidak terima dengan semua ini."
         u "Kalau saja aku tidak sampai seperti ini-"
-        hide obake
+        hide obakeangry
         hide idlecitrahappy2
         show citrahappy at short_shake:
             xalign 0.8
             yalign 1.0
-        show obake:
+        show idleobakeangry:
             xalign 0.2
             yalign 1.0
         c "Seandainya kalau kita bisa bertemu sebelumnya."
         c "Mungkin kita bisa berteman."
-        hide obake
+        hide idleobakeangry
         hide citrahappy
         show idlecitrahappy:
             xalign 0.8
             yalign 1.0
-        show obake at long_shake:
+        show obakeangry at long_shake:
             xalign 0.2
             yalign 1.0
         u_shout "AKU BENCI KATA-KATA ITU!"
-        hide obake
+        hide obakeangry
         hide idlecitrahappy
         show citratalk:
             xalign 0.8
             yalign 1.0
-        show obake:
+        show idleobakeangry:
             xalign 0.2
             yalign 1.0
         c "Kenapa seperti itu?"
-        hide obake
+        hide idleobakeangry
         hide citratalk
         show idlecitratalk:
             xalign 0.8
@@ -7062,10 +7073,10 @@ label chapter3_start:
         hide obake with dissolve
         "Makhluk tersebut tiba-tiba mendekap Zaky dari belakang."
         "Zaky terkejut dan raut wajahnya mulai ketakutan."
-        show obake with dissolve
+        show obakelaugh with dissolve
         u "Hmm???"
         "Makhluk tersebut tersenyum jahat kepada Zaky."
-        hide obake with dissolve
+        hide obakelaugh with dissolve
         show zakyscared with dissolve
         z "To-to-to-t-t-to"
         hide zakyscared with dissolve
@@ -7075,14 +7086,14 @@ label chapter3_start:
         show zakyscared at long_shake, center
         z_shout "TOLONG AKU!!!"
         hide zakyscared
-        show obake at long_shake, center
+        show obakelaugh at long_shake, center
         u_shout "HAHAHAHAHAHA"
         u "Kenapa takut begitu sih?"
         u "Oh iya..."
         u "Aku lupa belum memperkenalkan diri ya."
-        hide obake with dissolve
+        hide obakel with dissolve
         "Makhluk itu secara tiba-tiba menghilang."
-        "Lalu muncul kembali dihadapan kami berlima."
+        "Lalu muncul kembali dihadapan kita berlima."
         show obake with dissolve
         u "Jadi perkenalkan namaku itu Yuki."
         g "Tapi semenjak aku berada disini makhluk yang ada disini memanggilku Kamite-Hime."
@@ -7092,16 +7103,16 @@ label chapter3_start:
         
         g "Jadi kalian ingin keluar dari sini kan?"
         hide obake
-        show obake at short_shake, center
+        show obakelaugh at short_shake, center
         g "Sayangnya kalian tidak bisa keluar dari sini."
-        hide obake
+        hide obakelaugh
         show kevintalk at short_shake, center
         k "Kenapa?"
         hide kevintalk
-        show obake at short_shake, center
+        show obakelaugh at short_shake, center
         g "Kalian tidak tahu tentang rumor kalau kalian di sekolah di jam tertentu itu kalian tidak akan bisa kembali lagi?"
-        hide obake
-        show obake
+        hide obakelaugh
+        show idleobakelaugh
         menu:
             "Iya aku pernah mendengarnya.":
                 jump mcopini2_a
@@ -7114,6 +7125,8 @@ label chapter3_start:
                 p "Sepertinya pernah mendengarnya"
                 jump mcopini2_done
         label mcopini2_done:
+        hide idleobakelaugh
+        show obake
         g "Nah rumornya itu nyata."
         g "Kecuali kalau kalian berhasil memecahkan misteri sekolah ini."
         hide obake
@@ -7122,16 +7135,16 @@ label chapter3_start:
         k "Memecahkan misteri?"
         k "Kamu sudah gila ya?"
         hide kevinserious
-        show obake at short_shake, center
+        show obakeangry at short_shake, center
         g "Haduh..."
         g "Aku tidak tertarik denganmu."
-        hide obake with dissolve
+        hide obakeangry with dissolve
         "Tiba-tiba Yuki menghilangkan Kevin, Zaky, dan Citra."
-        show obake with dissolve
+        show obakelaugh with dissolve
         g "Oke..."
         g "Sekarang hanya tinggal kau dan aku."
-        hide obake
-        show obake
+        hide obakelaugh
+        show idleobakelaugh
         menu:
             "What...":
                 jump mctell4_a
@@ -7149,21 +7162,21 @@ label chapter3_start:
                 p "Kembalikan mereka bertiga!"
                 jump mctell4_done
         label mctell4_done:
-        hide obake
+        hide idleobakelaugh
         show obake
         g "Tenang saja."
         g "Mereka kupindahkan ke tempat lain di sekolah ini kok."
         g "Kalian berdua fokus saja kepada misteri ini."
         hide obake
-        show obake
+        show idleobake
         p "Kenapa harus aku dan Yeri?"
-        hide obake
+        hide idleobake
         show obake
         g "Karena aku ingin kau dan Yeri itu yang menyelesaikan misteri disini."
         hide obake
-        show obake
+        show idleobake
         p "Kenapa harus kami?"
-        hide obake
+        hide idleobake
         show obake
         g "Hmmm..."
         g "Kenapa ya."
@@ -7171,30 +7184,30 @@ label chapter3_start:
         g "Kau bisa lihat Yeri sekarang?"
         g "Sampai sekarang dia masih diam membeku seperti ini."
         hide obake 
-        show obake
+        show idleobake
         p "Lalu kenapa harus aku?"
-        hide obake 
-        show obake
+        hide idleobake 
+        show obakelaugh
         g "Soalnya aku tertarik denganmu."
         g "Seolah-olah..."
         g "Didalam jiwamu itu bukan hanya kamu."
-        hide obake with dissolve
+        hide obakelaugh with dissolve
         "Diriku masih belum paham apa yang dimaksud oleh Yuki."
         "Apa misteri yang dia maksud."
         "Memangnya disekolah ini ada misteri?"
         "Apa maksudnya “Didalam jiwamu itu bukan hanya kamu”?"
         "Apa maksud semua ini?"
-        show obake with dissolve
+        show idleobakelaugh with dissolve
         p "Hah?"
         p "Maksudnya?"
-        hide obake
-        show obake at short_shake, center
+        hide idleobakelaugh
+        show obakelaugh at short_shake, center
         g "Hahahahaha"
         g "Intinya begitu deh."
         g "Jadi bagaimana?"
         g "Apa kau mau untuk memecahkan misteri ini?"
-        hide obake
-        show obake
+        hide obakelaugh
+        show idleobakelaugh
         menu:
             "Aku ingin memecahkan misteri ini.":
                 jump fixend_a
@@ -7204,15 +7217,15 @@ label chapter3_start:
                 p "Aku ingin memecahkan misteri ini."
                 p "Tapi aku masih bingung kenapa harus aku yang memecahkan misteri ini."
                 p "Dan kenapa tidak kau saja atau mungkin yang lain?"
-                hide obake
-                show obake at short_shake, center
+                hide idleobakelaugh
+                show obakelaugh at short_shake, center
                 g "Hahahahaha"
                 g "Mungkin kau bisa tahu setelah kau melihatnya."
-                hide obake
-                show obake 
+                hide obakelaugh
+                show idleobakelaugh 
                 p "Melihat apa?"
                 p "Kamu juga tidak akan memberikan sedikit clue untuk memecahkan sekolah yang sebesar ini."
-                hide obake
+                hide idleobakelaugh
                 show obake
                 g "Oke deh."
                 g "Karena aku tertarik denganmu aku kasih sedikit clue."
@@ -7222,13 +7235,15 @@ label chapter3_start:
                 show obake with dissolve
                 g_whisper "Perpustakaan."
                 hide obake
-                show obake
+                show idleobake
                 p "Perpustakaan?"
                 p "Maksudnya perpustakaan apaan?"
+                hide idleobake
+                show idleobakelaugh
                 "Yuki tersenyum kepadaku."
                 "Seakan bahwa diriku dapat memecahkan misteri ini."
                 "Lalu Yuki menghilang dari hadapanku."
-                hide obake with dissolve
+                hide idleobakelaugh with dissolve
                 "Tiba-tiba Yeri menepuk pundakku dari belakang."
                 show yerinormal with dissolve
                 p_shout "ASTAGA KAGET!"
@@ -7308,7 +7323,7 @@ label chapter3_start:
                 show yerismile at short_shake, center
                 y "Iya!"
                 hide yerismile with dissolve
-                "Kita berdua berjalan menuju ke arah Perpustakaan."
+                "Kami berdua berjalan menuju ke arah Perpustakaan."
                 "Aku mencoba untuk memecahkan misteri ini."
                 "Maka dari itu aku mengikuti clue yang diberikan Yuki."
                 "Yaitu Perpustakaan."
@@ -7328,7 +7343,7 @@ label chapter3_start:
                 show yerinormal at short_shake, center
                 y "Oke."
                 hide yerinormal with dissolve
-                "Kita berdua pun memasuki Perpustakaan."
+                "Kami berdua pun memasuki Perpustakaan."
                 scene bg library
                 with dissolve
                 python:
@@ -7342,10 +7357,10 @@ label chapter3_start:
                 p "Yaa, sunyi sekali."
                 p "Tapi sekarang kita harus ngapain?"
                 hide idleyerinormal with dissolve
-                "Lalu tiba-tiba ada seseorang dari belakang kita."
-                show obake at short_shake, center
+                "Lalu tiba-tiba ada seseorang dari belakang kami."
+                show obakeangry at short_shake, center
                 g "Lama sekali kalian."
-                hide obake
+                hide obakeangry
                 show yeriscared at long_shake, center
                 y_shout "KYAAAAHHHHH-!"
                 hide yeriscared
@@ -7355,31 +7370,31 @@ label chapter3_start:
                 p "Mungkin sih..."
             
                 show idleyeriscared with move:
-                    xalign 0.8
+                    xalign 0.2
                     yalign 1.0
                 hide idleyeriscared
                 show idleyeriscared:
-                    xalign 0.8
-                    yalign 1.0
-                show obake at long_shake:
                     xalign 0.2
+                    yalign 1.0
+                show obakelaugh at long_shake:
+                    xalign 0.8
                     yalign 1.0
                 g "HAHAHAHAHA"
                 g "Tenang saja aku tidak akan meneror kalian."
-                hide obake
-                show obake:
-                    xalign 0.2
+                hide obakelaugh
+                show idleobakelaugh:
+                    xalign 0.8
                     yalign 1.0
                 p "Ya tapi sekarang gimana?"
                 p "Kita sudah sampai di Perpustakaan."
-                hide obake
+                hide idleobakelaugh
                 hide idleyeriscared
-                show obake at short_shake, center
+                show obakelaugh at short_shake, center
                 g "Iya cari sendirilah."
-                hide obake
-                show obake
+                hide obakelaugh
+                show idleobakelaugh
                 p "Lalu kenapa kau datang kesini?"
-                hide obake
+                hide idleobakelaugh
                 show obake
                 g "Aku kesini cuma ingin bilang sesuatu kepadamu."
                 g "Soalnya tadi aku lupa hahahaha."
@@ -7387,9 +7402,9 @@ label chapter3_start:
                 show obake at short_shake, center
                 g "Kau masih ingat kan untuk memecahkan misteri disini?"
                 hide obake
-                show obake
+                show idleobake
                 p "Iya aku masih ingat."
-                hide obake
+                hide idleobake
                 show obake
                 g "Nah itu ada batas waktunya."
                 g "Jadi kalau terlambat kalian semua akan menjadi temanku dan tinggal disini selamanya."
@@ -7398,14 +7413,14 @@ label chapter3_start:
                 show yeriscared at long_shake, center
                 y_shout "SERIUSAN?"
                 hide yeriscared
-                show obake at short_shake, center
+                show obakelaugh at short_shake, center
                 g "Pastilah!"
                 g "Coba saja kalau tidak percaya."
                 g "Diam saja disini satu jam tidak ngapa-ngapain."
-                hide obake
-                show obake
+                hide obakelaugh
+                show idleobakelaugh
                 p "Satu jam?"
-                hide obake
+                hide idleobakelaugh
                 show obake
                 g "Iya."
                 g "Karena batas waktunya hingga tengah malam ini."
@@ -7425,10 +7440,10 @@ label chapter3_start:
                 p "Tenang saja Yeri."
                 p "Kita pasti bisa memecahkan misteri ini."
                 hide idleyeriscared
-                show obake at long_shake, center
+                show obakelaugh at long_shake, center
                 g "HAHAHAHAHA"
                 g "Semoga saja kalian berhasil."
-                hide obake with dissolve
+                hide obakelaugh with dissolve
                 "Yuki tiba-tiba langsung menghilang."
                 "Aku melihat Yeri dan wajahnya terlihat panik."
                 "Sebenarnya aku juga bingung harus melakukan apa."
@@ -7531,7 +7546,7 @@ label chapter3_start:
                 y "Buku apa itu?"
                 hide yerinormal
                 show idleyerinormal
-                p "Bukunya adalah {i}Singuratic{/i}"
+                p "Bukunya adalah {i}Singuratic{/i}."
                 hide idleyerinormal
                 show yerinormal
                 y "{i}Singuratic{/i}?"
@@ -7593,8 +7608,8 @@ label chapter3_start:
                 show yerismile at short_shake, center
                 y "Oke!"
                 hide yerismile with dissolve
-                "Kita berdua mulai mencari buku {i}Singuratic{/i} itu."
-                "Kita mencari dengan teliti tiap rak-rak buku."
+                "Kami berdua mulai mencari buku {i}Singuratic{/i} itu."
+                "Kami mencari dengan teliti tiap rak-rak buku."
                 "Sudah berjalan hampir 30 menit."
                 "Belum juga menemukan buku yang dimaksud."
                 show yerisad with dissolve
@@ -7613,9 +7628,9 @@ label chapter3_start:
                 "Setelah mengecek secara teliti akhirnya buku {i}Singuratic{/i} dapat ditemukan."
                 "Kita berdua senang karena usaha selama hampir setengah jam tidak sia-sia."
                 "Namun..."
-                show obake at long_shake, center
-                "Yuki muncul secara tiba-tiba dihadapan kita berdua."
-                hide obake
+                show obakelaugh at long_shake, center
+                "Yuki muncul secara tiba-tiba dihadapan kami berdua."
+                hide obakelaugh
                 show yeriscared at long_shake, center
                 "Yeri terkejut dengan kedatangan Yuki."   
                 hide yeriscared
@@ -7623,32 +7638,32 @@ label chapter3_start:
                 p "Sekarang apa maumu?"
                 p "Aku sudah mendapatkan bukumu!" 
                 hide idleyeriscared
-                show obake at short_shake, center
+                show obakeangry at short_shake, center
                 g "Hah?"
                 g "Cuma itu?"
-                hide obake
-                show obake
+                hide obakeangry
+                show idleobakeangry
                 p "Hah?"
                 p "Emang apa lagi selain buku ini?"
-                hide obake
-                show obake at long_shake, center
+                hide idleobakeangry
+                show obakelaugh at long_shake, center
                 g_shout "HAHAHAHAHA DASAR BODOH!"
                 g "Bukan hanya buku itu saja yang aku butuhkan."
                 g "Ada satu benda lagi!"
-                hide obake
-                show obake
+                hide obakelaugh
+                show idleobakelaugh
                 p "Apalagi yang kamu butuhkan?"
-                hide obake
-                show obake at long_shake, center
+                hide idleobakelaugh
+                show obakelaugh at long_shake, center
                 g "HAHAHAHAHAHA"
                 g "Pikir saja sendiri."
                 g "Sudah jelas petunjuknya ada didalam buku itu."
                 g "Selamat berpikir lagi!"
-                hide obake
-                show obake at short_shake, center
+                hide obakelaugh
+                show obakelaugh at short_shake, center
                 g "Hahahaha!"
-                hide obake
-                "Yuki menghilang kembali dari hadapan kita berdua."
+                hide obakelaugh with dissolve
+                "Yuki menghilang kembali dari hadapan kami berdua."
                 "Yeri tampak kebingungan dengan semua ini."
                 "Aku mulai membaca buku {i}Singuratic{/i} tersebut."
                 "Saat aku membacanya tidak ada sesuatu yang aneh."
@@ -7704,7 +7719,7 @@ label chapter3_start:
                 show yerinormal at short_shake, center
                 y "Oke ayo!"
                 hide yerinormal with dissolve
-                "Kita berdua keluar dari Perpustakaan dan bergegas menuju kekebun sekolah."
+                "Kami berdua keluar dari Perpustakaan dan bergegas menuju kekebun sekolah."
                 scene bg black with dissolve
                 python:
                     renpy.notify("Perjalanan Menuju Kebun Sekolah")
@@ -7712,10 +7727,10 @@ label chapter3_start:
                 "Dikarenakan posisi Perpustakaan sangat jauh dari kebun sekolah."
                 "Entah kenapa ini semua disengaja."
                 "Agar jaraknya sangat jauh dan menguras tenaga."
-                "Namun kita berdua tetap berusaha karena waktu tidak banyak."
+                "Namun, kami berdua tetap berusaha karena waktu tidak banyak."
                 python:
                     renpy.notify("Kebun Sekolah")
-                "Akhirnya kita berdua sampai kebun sekolah."
+                "Akhirnya kami berdua sampai kebun sekolah."
                 show yerinormal with dissolve
                 y "Capek banget gila!"
                 hide yerinormal
@@ -7740,15 +7755,15 @@ label chapter3_start:
                 show yerinormal
                 y "Nah itu yang aku ngga tau."
                 hide yerinormal
-                show obake at short_shake, center
+                show obakelaugh at short_shake, center
                 g "Wah keren juga ya bisa menemukan bunga kesukaanku."
-                hide obake
-                show obake
-                "Lagi-lagi secara tiba-tiba Yuki muncul dihadapan kita berdua."
-                hide obake
-                show obake
+                hide obakelaugh
+                show idleobake
+                "Lagi-lagi secara tiba-tiba Yuki muncul dihadapan kami berdua."
+                hide idleobake
+                show idleobakelaugh
                 p "Hey, ini mau dibawa kemana?"
-                hide obake
+                hide idleobakelaugh
                 show obake
                 g "Hmm..."
                 g "Mau dibawa kemana ya."
@@ -7758,14 +7773,14 @@ label chapter3_start:
                 y "Kita ini serius!"
                 y "Jangan secara sengaja buang-buang waktu kami."
                 hide yeriangry1
-                show obake at long_shake, center
+                show obakelaugh at long_shake, center
                 g "HAHAHAHAHA"
-                hide obake
-                show obake at short_shake, center
+                hide obakelaugh
+                show obakeangry at short_shake, center
                 g "EMANG KAU SIAPA?"
                 g "Hadeh."
                 g "Kalian lupa tempat kita bertemu dan berbicara?"
-                hide obake with dissolve
+                hide obakeangry with dissolve
                 "Lagi dan lagi Yuki menghilang secara tiba-tiba."
                 show yeriangry1 at short_shake, center
                 y "Sumpah ini makhluk ngeselin."
@@ -7876,7 +7891,7 @@ label chapter3_start:
                         show idleyeriangry2
                         p "Oke!"
                         hide idleyeriangry2
-                        "Kita berdua lari sekuat tenaga menuju ke arah hall sekolah."
+                        "Kami berdua lari sekuat tenaga menuju ke arah hall sekolah."
                         "Di pertengahan jalan lari Yeri mulai melambat."
                         "Dikarenakan dirinya mulai lelah."
                         "Aku menyemangati Yeri agar tidak berhenti berlari karena waktu telah mepet."
@@ -7885,11 +7900,11 @@ label chapter3_start:
                             renpy.notify("Pukul 23.56")
                         "Yeri mulai bangkit dan melanjutkan larinya sekuat tenaga."
                         "Aku pun mendukung dirinya agar tidak berhenti ditengah jalan."
-                        "Dan kita berdua pun melanjutkan berlari ke arah hall sekolah."
+                        "Dan kami berdua pun melanjutkan berlari ke arah hall sekolah."
                         scene bg hallway2 with dissolve
                         python:
                             renpy.notify("Hall Sekolah")
-                        "Akhirnya kita berdua telah sampai di hall sekolah."
+                        "Akhirnya kami berdua telah sampai di hall sekolah."
                         python:
                             renpy.notify("Pukul 23.58")
                         show yeriangry2 at short_shake, center
@@ -7927,7 +7942,7 @@ label chapter3_start:
                         c_shout "YERI!!!"
                         hide citrairritated with dissolve
                         "Ternyata suara tersebut merupakan suara Citra."
-                        "Muncul Citra, Zaky, dan Kevin yang berlari ke arah kita berdua."
+                        "Muncul Citra, Zaky, dan Kevin yang berlari ke arah kami berdua."
                         show yeritalk at long_shake, center
                         y_shout "CITRAAAA!!!"
                         hide yeritalk with dissolve
@@ -8022,25 +8037,25 @@ label chapter3_start:
                         show obake at short_shake, center
                         g "Ya..."
                         hide obake
-                        show obake at short_shake, center
+                        show obakelaugh at short_shake, center
                         g "Aku memang sengaja agar [name] dan Yeri yang mengerjakan semuanya."
                         g "Dan sekarang kau berhasil memecahkan misteri ini dengan tepat waktu."
-                        hide obake
+                        hide obakelaugh
                         show kevinserious at short_shake, center
                         k "Tunggu dulu!"
                         k "Aku masih memiliki pertanyaan."
-                        hide kevinserious with dissolve
-                        show obake with dissolve
+                        hide kevinserious 
+                        show obake at short_shake, center
                         g "Apa?"
                         hide obake
                         show kevinserious at short_shake, center
                         k "Apa alasanmu melakukan semua ini?"
                         hide kevinserious
-                        show obake at short_shake, center
+                        show obakelaugh at short_shake, center
                         g "Hahahaha"
                         g "Kamu masih penasarannya."
-                        hide obake
-                        show obake
+                        hide obakelaugh
+                        show idleobakelaugh
                         menu:
                             "Iya aku masih penasaran! Ceritakan semuanya!":
                                 jump mcwish2_a
@@ -8054,7 +8069,7 @@ label chapter3_start:
                                 p "Aku cukup penasaran dengan alasanmu melakukan ini!"
                                 jump mcwish2_done
                         label mcwish2_done:
-                        hide obake
+                        hide idleobakelaugh
                         show obake at short_shake, center
                         g "Baiklah akan kuberitahu."
                         g "Kenapa aku melakukan semua ini?"
@@ -8066,12 +8081,12 @@ label chapter3_start:
                         show citratalk at short_shake, center
                         c "Iya tapi kenapa?"
                         hide citratalk
-                        show obake at short_shake, center
+                        show obakelaugh at short_shake, center
                         g "Hahahaha"
                         g "Jadi dulu aku juga merupakan murid sekolah sini."
                         g "Namun, aku berbeda dengan kalian semua."
-                        hide obake
-                        show obake
+                        hide obakelaugh
+                        show idleobakelaugh
                         menu:
                             "...":
                                 jump mcmute_a
@@ -8084,58 +8099,74 @@ label chapter3_start:
                                 p "..."
                                 jump mcmute_done
                         label mcmute_done:
+                        hide idleobakelaugh
+                        show obake
                         g "Dulu aku ingin sekali kehidupan sekolahku berjalan lancar sesuai harapan."
                         g "Aku ingin memulai debut sekolahku dengan bahagia."
                         g "Namun..."
                         g "Takdir berkata lain."
                         g "Aku hanyalah karakter figuran dihidup ini."
+                        hide obake
+                        show obakeangry at long_shake, center
                         g "Aku hanya mendapat {b}CACIAN, HINAAAN, DAN BULLYAN{/b} di kehidupan sekolahku."
                         g "Tragis bukan?"
+                        hide obakeangry
+                        show obake
                         g "Beda dengan kalian yang merupakan anak OSIS."
                         g "Yang memiliki reputasi baik di sekolah ini atau mungkin di {b}KEHIDUPAN{/b} ini!"
                         hide obake
                         show yerisad at short_shake, center
                         y "Hei!"
                         hide yerisad
-                        show obake at long_shake, center
+                        show obakeangry at long_shake, center
                         g "DIAM KAU SIALAN!"
                         g "Kau tidak akan pernah merasakan semua ini!"
-                        hide obake
-                        show obake at long_shake, center
+                        hide obakeangry
+                        show obakeangry at long_shake, center
                         g "Tidak ada yang ingin berteman kepadaku."
                         g "Orang tuaku hanya menyiksaku."
                         g "Mereka hanya suka mabuk-mabukan."
-                        hide obake
-                        show obake at long_shake, center
+                        hide obakeangry
+                        show obakeangry at long_shake, center
                         g "Apa-apaan semua ini!"
                         g "Hanya-hanya satu tempat yang membuat kunyaman."
                         g "Perpustakaan adalah tempat yang cocok untuk sampah masyarakat sepertiku."
                         g "Dan buku yang paling kusuka adalah {i}Singuratic{/i}."
+                        hide obakeangry
+                        show obake
                         g "Tapi suatu saat aku pernah diperpustakaan dan ketiduran."
                         g "Saat itu tidak ada siapa-siapa dan jam menunjukkan pukul 21.00."
                         g "Dan disaat aku ingin berkemas untuk pulang ke rumah yang seperti neraka itu..."
                         g "Tiba-tiba ada beberapa pelajar yang masih ada di sekolah."
                         g "Dan..."
                         g "Mereka adalah orang-orang yang selalu membullyku."
+                        hide obake
+                        show obakelaugh at short_shake, center
                         g "Dan disaat itu aku mencoba memberanikan diri untuk melawan mereka."
                         g "Tapi apa daya."
                         g "Aku hanya satu orang."
                         g "Mereka justru menyiksaku..."
                         g "Memukulku..."
+                        hide obakelaugh
+                        show obake
                         g "Ah... aku ingat rasanya saat aku dipukul pada saat itu."
                         g "Namun, pada saat itu juga buku kesayanganku itu direbut."
                         g "Aku mencoba untuk melawan kembali..."
                         g "Namun, tubuhku sudah tidak kuat."
                         g "Dan mereka malah memukul kepalaku hingga terluka."
+                        hide obake
+                        show obakelaugh at short_shake, center
                         g "Bodoh sekali bukan?"
                         g "Aku mati pada saat itu juga."
+                        hide obakelaugh
+                        show obake
                         g "Mereka panik pada saat itu karena tidak sengaja membunuhku."
                         g "Lalu, salah satu dari mereka berpikir dengan membawa tubuhku, menyiapkan tali, dan kursi."
                         g "Membuatku seolah-olah bunuh diri disekolah ini."
                         g "Dan aku tidak terima akan hal itu dan disaat itulah aku berada disini."
                         g "Dan entah kenapa kutukannya pun dimulai."
                         hide obake
-                        show obake
+                        show idleobake
                         menu:
                             "Lalu bagaimana kelanjutannya?":
                                 jump mcask_a
@@ -8148,20 +8179,22 @@ label chapter3_start:
                                 p "Apa yang terjadi setelahnya?"
                                 jump mcask_done
                         label mcask_done:
-                        hide obake
+                        hide idleobake
                         show obake
                         g "Kau ingin tahu kelanjutannya?"
                         hide obake
-                        show obake at short_shake, center
-                        g "MEREKA SEMUA MATI!"
-                        hide obake
-                        show obake at long_shake, center
+                        show obakeangry at long_shake, center
+                        g_shout "MEREKA SEMUA MATI!"
+                        hide obakeangry
+                        show obakelaugh at long_shake, center
                         g_shout "HAHAHAHAHA!"
                         g "Mereka yang membullyku mendapatkan karma!"
                         g "Ada yang mati karena kecelakaan."
                         g "Ada yang mati karena terpeleset di rumah."
                         g "Ada yang ditabrak hingga tubuhnya {b}HANCUR{/b}."
                         g "Ada juga yang mati karena merasa bersalah dan bunuh diri."
+                        hide obakelaugh
+                        show obake
                         g "Dan karena sekarang aku tidak ada tujuan untuk balas dendam tapi aku masih terjebak di realitas ini."
                         g "Tapi tujuanku sudah bukan balas dendam."
                         hide obake with dissolve
@@ -8169,17 +8202,19 @@ label chapter3_start:
                         k "Lalu apa tujuanmu masih ada disini?"
                         k "Bukannya kalau sudah tidak ada tujuan lagi kau sudah bisa bebas tenang?"
                         hide kevinserious
-                        show obake at short_shake, center
+                        show obakelaugh at short_shake, center
                         g "Entahlah!"
                         g "Aku juga tidak tahu."
                         g "Seolah-olah ada orang yang menyuruhku untuk tetap disini tapi tidak tau siapa."
                         g "Dan tidak lama aku berpikir, ada tujuanku yang lain."
+                        hide obakelaugh
+                        show obake
                         g "Yaitu buku kesayanganku."
                         g "Dan sekarang kalian sudah berhasil membuat tujuanku tercapai."
                         g "Dan sekarang aku bisa tenang."
                         g "Terimakasih..."
                         hide obake
-                        show obake
+                        show idleobake
                         "Yuki tersenyum kepadaku seolah aku merupakan penyelamat baginya."
                         "Saat aku mendengarkan ceritanya..."
                         "Aku sangat beersedih atas apa yang dia alami."
@@ -8192,9 +8227,9 @@ label chapter3_start:
                         "Sungguh aku hanya bisa terdiam tanpa kata-kata dihadapan Yuki."
                         p "Aku tidak dapat berkata apa-apa lagi."
                         p "Aku dapat merasakan apa yang kamu rasakan, Yuki."
-                        hide obake
+                        hide idleobake
                         show obake
-                        g "Sudah-sudah hal itu juag sudah berlalu."
+                        g "Sudah-sudah hal itu juga sudah berlalu."
                         hide obake
                         show yerisad at short_shake, center
                         y "Aku turut bersedih."
@@ -8217,9 +8252,9 @@ label chapter3_start:
                         g "Sekarang, kalian tinggal buka saja pintu itu."
                         g "Kalian akan pindah ke dunia kalian seperti semula."
                         hide obake
-                        show obake
+                        show idleobake
                         p "Terima kasih Yuki."
-                        hide obake
+                        hide idleobake
                         show obake
                         g "Iya."
                         g "Cepatlah kalian pergi darisini sebelum aku berubah pikiran."
@@ -8228,13 +8263,49 @@ label chapter3_start:
                         k "Baiklah!"
                         k "Yuk kita pergi."
                         hide kevinserious with dissolve
-                        "Kita berlima berjalan menuju kearah pintu yang sudah terbuka."
+                        "Kami berlima berjalan menuju kearah pintu yang sudah terbuka."
                         "Citra melambaikan tangan."
                         "Akupun melambaikan tangan kepada Yuki."
                         "Yuki membalas dengan melambaikan tangan dan tersenyum ke arah kita berlima."
-                        python: 
-                            renpy.notify("EPILOG") 
-                        "Kita berlima tiba-tiba terbangun di depan sekolah."
+                        scene bg district with dissolve
+                        "..."
+                        "..."
+                        "..."
+                        scene bg schoolyard with dissolve
+                        "..."
+                        "..."
+                        "..."
+                        scene bg hallway with dissolve
+                        "..."
+                        "..."
+                        "..."
+                        scene bg hallway2 with dissolve
+                        "..."
+                        "..."
+                        "..."
+                        scene bg library with dissolve
+                        "..."
+                        "..."
+                        "..."
+                        scene bg district with dissolve
+                        "Mereka berlima tiba tiba terbangun di depan sekolah dan banyak guru dan murid yang melihat mereka berlima."
+                        
+                        scene bg schoolyard with dissolve
+                        "Singkat cerita mereka berlima dipanggil di ruang guru untuk di introgasi."
+                        
+                        scene bg hallway with dissolve
+                        "Dan tidak terduga, ternyata mereka berlima sudah hilang selama 4 hari, dan tidak ada jejak apapun dari mereka berlima."
+                        
+                        scene bg hallway2 with dissolve
+                        "Lalu Kevin mencoba untuk menjelaskan semuanya, bahkan yang lain pun ikut menjelaskan."
+                        
+                        scene bg library with dissolve
+                        "Tapi sebanyak apapun mereka menjelaskan, tidak ada satupun guru yang percaya dengan ucapan mereka."
+                        scene bg black with dissolve
+                        "Dan akhirnya mereka berlima dihukum dan dibawa kerumahnya masing masing."
+                        "..."
+                        "..."
+                        "..."
                         
                         jump fixend2_done
                 label fixend2_b:
@@ -8246,7 +8317,7 @@ label chapter3_start:
                         show idleyerisad
                         p "Gimana ya..."
                         p "Ada cara lain ga ya selain kita pergi ke hall?"
-                        "Kita berdua berpikir sejenak."
+                        "Kami berdua berpikir sejenak."
                         "Lalu aku kepikiran akan sebuah ide."
                         menu:
                             "Bagaimana kalau kita hancurkan saja benda-benda ini?":
@@ -8289,7 +8360,7 @@ label chapter3_start:
                         show idleyerinormal
                         p "Okeh, cepat kita kesana."
                         hide idleyerinormal with dissolve
-                        "Kita berdua berlari menuju gudang sekolah."
+                        "Kami berdua berlari menuju gudang sekolah."
                         "Aku kehabisan tenaga saat dipertengahan jalan."
                         "Yeri menyemangatiku untuk segera lari lagi karena waktu sudah sangat mepet."
                         python:
@@ -8340,7 +8411,7 @@ label chapter3_start:
                         y "Entahlah."
                         y "Coba yuk kita keluar dari sini."
                         hide yerinormal with dissolve
-                        "Kita berdua keluar dari gudang."
+                        "Kami berdua keluar dari gudang."
                         python:
                             renpy.notify("Depan Gudang")
                         "Suasana diluar gudang sangat sepi."
@@ -8463,13 +8534,13 @@ label chapter3_start:
                         p "Baiklah!"
                         p "Ayo kita kesana."
                         hide idlekevintalk with dissolve
-                        "Kita berlima bergegas menuju hall sekolah."
+                        "Kami berlima bergegas menuju hall sekolah."
                         "Dalam perjalanan menuju hall sekolah."
                         "Aku berpikir dengan apa yang aku lakukan sebelumnya."
                         "Yaitu apakah semua akan baik-baik saja."
                         python:
                             renpy.notify("Hall Sekolah")
-                        "Kita berlima akhirnya telah sampai ke hall sekolah."
+                        "Kami berlima akhirnya telah sampai ke hall sekolah."
                         show kevinhappy with dissolve
                         k "Akhirnya kita sampai juga."
                         hide kevinhappy
@@ -8490,22 +8561,22 @@ label chapter3_start:
                         k "Hmm..."
                         k "Entah kenapa aku masih belum yakin dengan keputusanmu."
                         hide kevinserious
-                        show obake at long_shake, center
+                        show obakeangry at long_shake, center
                         g_shout "KENAPA KAU MEMBAKAR BUKUKU?"
-                        hide obake
-                        show obake at long_shake, center
+                        hide obakeangry
+                        show obakeangry at long_shake, center
                         g_shout "APA KAU BERHARAP AKU AKAN IKUT TERBAKAR?"
-                        hide obake
-                        show obake at long_shake, center
+                        hide obakeangry
+                        show obakelaugh at long_shake, center
                         g_shout "HAHAHAHAHAHA"
-                        hide obake
+                        hide obakelaugh
                         show kevinserious at short_shake, center
                         k "Ah sial!"
                         hide kevinserious
-                        show obake at short_shake, center
+                        show obakeangry at short_shake, center
                         g "PADAHAL ITU MERUPAKAN BUKU KESAYANGANKU DAN SEKARANG MALAH KAU BAKAR."
-                        hide obake
-                        show obake
+                        hide obakeangry
+                        show idleobakeangry
                         "Emosi Yuki semakin tidak stabil dan seisi ruangan menjadi aneh."
                         menu:
                             "Kenapa semuanya harus seperti ini.":
@@ -8524,19 +8595,19 @@ label chapter3_start:
                                 "Apakah akan tamat riwayatku disini?"
                                 jump mcheart2_done
                         label mcheart2_done:
-                        hide obake
-                        show obake
+                        hide idleobakeangry
+                        show obakelaugh
                         g "Hey [name]."
-                        hide obake
-                        show obake
+                        hide obakelaugh
+                        show idleobakelaugh
                         "Yuki memegang erat aku."
-                        hide obake
-                        show obake
+                        hide idleobakelaugh
+                        show obakeangry
                         g "Kenapa kau melakukannya hah?"
-                        hide obake
-                        show obake
+                        hide obakeangry
+                        show idleobakeangry
                         "Zaky melihat pintu hall sekolah menyala."
-                        hide obake
+                        hide idleobakeangry
                         show zakysuprised at short_shake, center
                         z "Hei..."
                         z "Lihat pintu itu!"
@@ -8550,11 +8621,11 @@ label chapter3_start:
                         show kevinserious at long_shake, center
                         k_shout "LEPASKAN SIALAN!"
                         hide kevinserious
-                        show obake at long_shake, center
+                        show obakelaugh at long_shake, center
                         g_shout "HAHAHAHAHA"
                         g_shout "AKU TIDAK AKAN MELEPASKANNYA!"
-                        hide obake
-                        show obake
+                        hide obakelaugh
+                        show idleobakelaugh
                         "Kenapa semua ini harus terjadi."
                         "Sial sekali aku melakukan blunder yang sangat fatal."
                         "Andai saja aku tidak menghancurkan benda dia."
@@ -8578,7 +8649,7 @@ label chapter3_start:
                                 p_shout "SELAMATKAN DIRI KALIAN!"
                                 jump mcwish3_done
                         label mcwish3_done:
-                        hide obake
+                        hide idleobakelaugh
                         show kevinserious at short_shake, center
                         k "Tapi-"
                         hide kevinserious
@@ -8600,12 +8671,13 @@ label chapter3_start:
                         "Zaky masuk terlebih dahulu disusul Citra dan Yeri."
                         "Saat Kevin ingin memasuki pintu hall yang menyala."
                         "Aku melihat dirinya seperti sedang bergumam mengucapkan maaf kepadaku."
-                        show obake at short_shake, center
+                        show obakelaugh at short_shake, center
                         g "Hahahahaha"
                         g "Sepertinya hanya tinggal kau seorang."
                         g "Saatnya mengucapkan perpisahan kepada orang yang telah membakar buku kesayanganku..."
                         g "Bye bye."
-                        "Sepertinya telah selesai semua ini.    "
+                        hide obakelaugh with dissolve
+                        "Sepertinya telah selesai semua ini."
                         scene bg district with dissolve
                         "..."
                         "..."
@@ -8645,48 +8717,48 @@ label chapter3_start:
                         "..."
                         "..."
                         "..."
-                        show obake with dissolve
+                        show obakelaugh with dissolve
                         g "Hey kau, kerja bagus."
-                        hide obake
-                        show obake 
-                        u "Terimakasih, dengan ini utangku sudah lunas bukan?"
-                        hide obake
-                        show obake 
+                        hide obakelaugh
+                        show idleobakelaugh
+                        u "Terima kasih, dengan ini utangku sudah lunas bukan?"
+                        hide idleobakelaugh
+                        show obakelaugh 
                         g "Ya!"
                         g "Bahkan kau membawa orang yang lebih dari ekspetasiku."
-                        hide obake
-                        show obake 
+                        hide obakelaugh
+                        show idleobakelaugh
                         u "Benarkah?"
-                        hide obake
-                        show obake 
+                        hide idleobakelaugh
+                        show obakelaugh
                         g "Iya benar."
                         g "Seolah-olah orang ini memiliki 2 jiwa."
-                        hide obake
-                        show obake 
+                        hide obakelaugh
+                        show idleobakelaugh
                         u "2 jiwa?"
-                        hide obake
-                        show obake 
+                        hide idleobakelaugh
+                        show obakelaugh 
                         g "Iya."
                         g "Jiwa satunya itu seperti dari dunia lain yang jauh lebih nyata yang aku kira, tapi aku tidak bisa melihatnya."
                         g "Tetapi aku masih bisa merasakannya."
-                        hide obake
-                        show obake
+                        hide obakelaugh
+                        show idleobakelaugh
                         u "Dunia apa itu?"
                         u "Aku jadi semakin penasaran."
-                        hide obake
+                        hide idleobakelaugh
                         show obake
                         g "Ah sudahlah."
                         g "Lebih baik kau pergi."
                         g "Urusan kita sudah selesai sekarang."
                         hide obake
-                        show obake
+                        show idleobake
                         u "Oke."
                         u "Aku akan pergi sekarang."
-                        hide obake
-                        show obake
+                        hide idleobake
+                        show obakelaugh
                         g "Sekali lagi terima kasih ya..."
                         g "Yeri..."
-                        hide obake
+                        hide obakelaugh
                         show yerismile with dissolve
                         y "Iya..."
                         jump fixend2_done
@@ -8694,34 +8766,34 @@ label chapter3_start:
                 jump fixend_done
         label fixend_b:
                 p "Tidak, aku tidak percaya denganmu."
-                hide obake
+                hide idleobakelaugh
                 show obake
                 g "Kamu yakin?"
                 hide obake
-                show obake
+                show idleobake
                 p "Iya, aku masih tidak percaya denganmu."
                 p "Lebih baik aku pergi sendiri!"
-                hide obake
-                show obake
+                hide idleobake
+                show obakelaugh
                 g "Kamu yakin?"
                 g "Kau tidak apa-apa tanpaku?"
                 g "Dan kau tidak akan bisa keluar tanpa kehendakku!"
-                hide obake
-                show obake
+                hide obakelaugh
+                show idleobakelaugh
                 p "Memangnya kau siapa?"
                 p "Aku dan Yeri bisa mencari sendiri."
-                p "Karena kami tidak bisa percaya denganmu!"
-                hide obake
+                p "Karena kita tidak bisa percaya denganmu!"
+                hide idleobakelaugh
                 show obake 
                 g "Baiklah."
                 g "Kalau seperti itu permintaanmu."
                 g "Silahkan kalau mau cari sendiri."
                 g "Aku tidak akan membantumu."
                 hide obake
-                show obake at short_shake, center
+                show obakeangry at short_shake, center
                 g "CAMKAN ITU!"
-                hide obake 
-                show obake
+                hide obakeangry 
+                show idleobakeangry
                 menu:
                     "Kita tidak akan percaya dengan siasat busukmu!":
                         jump mcopini4_a
@@ -8737,7 +8809,7 @@ label chapter3_start:
                         jump mcopini4_done
                 label mcopini4_done:
                 p "Ayo Yeri kita pergi dari sini."
-                hide obake
+                hide idleobakeangry
                 show yerismile at short_shake, center
                 y "Oke!"
                 y "Ayo [name] kita cari mereka bertiga."
@@ -8745,7 +8817,7 @@ label chapter3_start:
                 show idleyerismile
                 p "Oke!"
                 hide idleyerismile with dissolve
-                "Kita berdua pergi meninggalkan Yuki untuk mencari Kevin, Zaky, dan Citra."
+                "Kami berdua pergi meninggalkan Yuki untuk mencari Kevin, Zaky, dan Citra."
                 "Aku tidak percaya dengan Yuki."
                 menu:
                     "Mungkin dia hanya mempermainkanku serta teman-temanku.":
@@ -8821,7 +8893,7 @@ label chapter3_start:
                 show idleyerisad
                 p "Hah? Aneh gimana?"
                 hide idleyerisad with dissolve
-                "Kita berdua menengok kanan kiri tidak ada apa-apa."
+                "Kami berdua menengok kanan kiri tidak ada apa-apa."
                 "Tetapi saat menengok kebelakang ternyata Yeri mengamuk."
                 "Wajahnya dipenuhi hawa kemarahan."
                 "Hawa pembunuh sangat terpancar darinya."
@@ -8829,28 +8901,67 @@ label chapter3_start:
                 y_shout "LARIIIII [name]!"
                 y_shout "DIA MENGAMUK!"
                 hide yeriscared with dissolve
-                "Kita berdua lari sekuat tenaga untuk menjauhinya."
+                "Kami berdua lari sekuat tenaga untuk menjauhinya."
                 "Aku berpikir apakah perkataanku tadi menyakitinya?"
                 "SIAL KENAPA HARUS SEPERTI INI!!!"
                 "Apakah aku bisa kabur dari kejarannya?"
-                show obake at long_shake, center
+                show obakeangry at long_shake, center
                 p "Ah sial!"
-                "Dia berpindah dihadapan kita berdua."
+                "Dia berpindah dihadapan kami berdua."
                 "Apakah ini semua akan berakhir?"
-                hide obake
-                show obake at long_shake, center
+                hide obakeangry
+                show obakelaugh at long_shake, center
                 g "AHAHAHAHAHAHAHAHAHAHA"
                 g "KALIAN TIDAK AKAN BISA KABUR DARIKU!"
                 g "KENAPA TIDAK ADA YANG MAU BERTEMAN DENGANKU!"
                 g "SATUPUN..."
-                hide obake
-                show obake at long_shake, center
+                hide obakelaugh
+                show obakeangry at long_shake, center
                 g "BENAR-BENAR SATUPUN."
                 g "SEKARANG AKU AKAN MENGHANCURKAN KALIAN SEMUA!"
                 #scene hantu fullface
                 g "DAN INI SEMUA..."
                 g "KARENA DIRIMU!"
                 g "LEBIH BAIK KAU MENGHILANG!"
+                scene bg district with dissolve
+                "..."
+                "..."
+                "..."
+                scene bg schoolyard with dissolve
+                "..."
+                "..."
+                "..."
+                scene bg hallway with dissolve
+                "..."
+                "..."
+                "..."
+                scene bg hallway2 with dissolve
+                "..."
+                "..."
+                "..."
+                scene bg library with dissolve
+                "..."
+                "..."
+                "..."
+                scene bg district with dissolve
+                "Beberapa minggu sudah berlalu."
+                        
+                scene bg schoolyard with dissolve
+                "Mereka berlima masih tidak ada petunjuk satupun untuk ditemukan."
+                        
+                scene bg hallway with dissolve
+                "Bahkan berita hilaangnya mereka secara misterius telaah tersebar satu negara.."
+                        
+                scene bg hallway2 with dissolve
+                "Sampai sampai pihak polisi pun menyerah untuk mencarinya mereka."
+                        
+                scene bg library with dissolve
+                "Dan pihak sekolahpun akhirnya juga ikut tidak mencarinya lagi, dan berusaha menutup nutupi kasusnya."
+                scene bg black with dissolve
+                "Kasus pun ditutup karena tidak membuahkan hasil apapun."
+                "..."
+                "..."
+                        
                 jump fixend_done
         label fixend_done:
     return

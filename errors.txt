@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6529: expected 'image_name_component' not found.
-    hide
-        ^
+File "game/script.rpy", line 8963: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "..."
+    ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Thu Dec  1 07:13:02 2022
+Thu Dec  1 14:29:16 2022
