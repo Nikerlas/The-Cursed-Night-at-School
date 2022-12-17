@@ -129,6 +129,11 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
+init -2:
+    style say_thought:
+        line_spacing 20
+    style say_dialogue:
+        line_spacing 20
 
 style window:
     xalign 0.5
@@ -139,7 +144,7 @@ style window:
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos gui.name_xpos
+    xpos gui.name_xalign
     xanchor gui.name_xalign
     xsize gui.namebox_width
     ypos gui.name_ypos
@@ -246,18 +251,34 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.05
+            yalign 0.8
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
-            textbutton _("Inventory")action ShowMenu("inventory_screen")
+            imagebutton auto "/gui/phone/button/inventory_%s.png" action ShowMenu("inventory_screen")
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.05
+            yalign 0.95
+            
+            imagebutton auto "/gui/phone/button/setting_%s.png" action ShowMenu() 
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.95
+            yalign 0.8
+            
+            imagebutton auto "/gui/phone/button/auto_%s.png" action Preference("auto-forward", "toggle") 
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.95
+            yalign 0.95
+
+            imagebutton auto "/gui/phone/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -331,26 +352,17 @@ screen navigation():
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
-
-            textbutton _("Help") action ShowMenu("help")
-
         if main_menu:
 
             imagebutton auto "/gui/button/about_%s.png" action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        if renpy.variant("pc") and not renpy.variant("mobile"):
 
             if main_menu:
 
-                ## Help isn't necessary or relevant to mobile devices.
                 imagebutton auto "/gui/button/help_%s.png" action ShowMenu("help")
 
-            else:
-
-                textbutton _("Return to Menu") action MainMenu()
-
-        if renpy.variant("pc"):
+        if renpy.variant("pc") or renpy.variant("mobile"):
 
             if main_menu:
 
@@ -360,7 +372,7 @@ screen navigation():
 
             else: 
 
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("Return to Menu") action MainMenu()
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -471,7 +483,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    textbutton _("Return"):
+    imagebutton auto "gui/button/back_%s.png":
         style "return_button"
 
         action Return()
@@ -765,17 +777,6 @@ screen option():
                         hbox:
                             bar value Preference("music volume")
 
-                    if config.has_sound:
-
-                        label _("Sound Volume")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
-
-
                     if config.has_voice:
                         label _("Voice Volume")
 
@@ -861,160 +862,6 @@ style slider_button_text:
 
 style slider_vbox:
     xsize 675
-
-
-
-screen preferences():
-
-    tag menu
-
-    use game_menu(_(""), scroll="viewport"):
-
-        vbox:
-
-            hbox:
-                box_wrap True
-
-                if renpy.variant("pc") or renpy.variant("web"):
-
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
-
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
-
-            null height (4 * gui.pref_spacing)
-
-            hbox:
-                style_prefix "slider"
-                box_wrap True
-
-                vbox:
-
-                    label _("Text Speed")
-
-                    bar value Preference("text speed")
-
-                    label _("Auto-Forward Time")
-
-                    bar value Preference("auto-forward time")
-
-                vbox:
-
-                    if config.has_music:
-                        label _("Music Volume")
-
-                        hbox:
-                            bar value Preference("music volume")
-
-                    if config.has_sound:
-
-                        label _("Sound Volume")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
-
-
-                    if config.has_voice:
-                        label _("Voice Volume")
-
-                        hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
-
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
-
-
-style pref_label is gui_label
-style pref_label_text is gui_label_text
-style pref_vbox is vbox
-
-style radio_label is pref_label
-style radio_label_text is pref_label_text
-style radio_button is gui_button
-style radio_button_text is gui_button_text
-style radio_vbox is pref_vbox
-
-style check_label is pref_label
-style check_label_text is pref_label_text
-style check_button is gui_button
-style check_button_text is gui_button_text
-style check_vbox is pref_vbox
-
-style slider_label is pref_label
-style slider_label_text is pref_label_text
-style slider_slider is gui_slider
-style slider_button is gui_button
-style slider_button_text is gui_button_text
-style slider_pref_vbox is pref_vbox
-
-style mute_all_button is check_button
-style mute_all_button_text is check_button_text
-
-style pref_label:
-    top_margin gui.pref_spacing
-    bottom_margin 3
-
-style pref_label_text:
-    yalign 1.0
-
-style pref_vbox:
-    xsize 338
-
-style radio_vbox:
-    spacing gui.pref_button_spacing
-
-style radio_button:
-    properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
-
-style radio_button_text:
-    properties gui.button_text_properties("radio_button")
-
-style check_vbox:
-    spacing gui.pref_button_spacing
-
-style check_button:
-    properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
-
-style check_button_text:
-    properties gui.button_text_properties("check_button")
-
-style slider_slider:
-    xsize 525
-
-style slider_button:
-    properties gui.button_properties("slider_button")
-    yalign 0.5
-    left_margin 15
-
-style slider_button_text:
-    properties gui.button_text_properties("slider_button")
-
-style slider_vbox:
-    xsize 675
-
 
 ## History screen ##############################################################
 ##
@@ -1571,18 +1418,44 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.05
+            yalign 0.8
 
-            textbutton _("Inventory") action ShowMenu("inventory_screen")
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Menu") action ShowMenu()
+            imagebutton auto "/gui/phone/button/inventory_%s.png" action ShowMenu("inventory_screen")
 
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.05
+            yalign 0.95
+            
+            imagebutton auto "/gui/phone/button/setting_%s.png" action ShowMenu() 
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.95
+            yalign 0.8
+
+            
+            imagebutton auto "/gui/phone/button/auto_%s.png" action Preference("auto-forward", "toggle")
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.95
+            yalign 0.95
+
+            imagebutton auto "/gui/phone/button/skip_%s.png" action Skip() alternate Skip(fast=True, confirm=True)
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/textbox.png", xalign=0.5, yalign=0.2)
 
 style radio_button:
     variant "small"
@@ -1660,6 +1533,65 @@ style slider_slider:
     variant "small"
     xsize 900
 
+screen inventory_screen:
+    variant "touch"
+    add "gui/inventory/inventory.png"
+    modal False
+
+    if quick_menu:
+
+        hbox:
+            style_prefix "quick"
+
+            xalign 0.05
+            yalign 0.7
+
+            imagebutton auto "/gui/phone/button/inventory_%s.png" action  [Hide("inventory_screen"), Return(None)]
+
+    $ x = 665
+    $ y = -40
+    $ i = 0 
+    $ sorted_items = sorted(inventory.items, key=attrgetter('image'), reverse=False)
+    $ next_inv_page = inv_page + 1
+    if next_inv_page > int(len(inventory.items)/9):
+        $ next_inv_page = 0
+    for item in sorted_items:
+        if i+1 <= (inv_page+1)*9 and i+1>inv_page*9:
+            $ x += 300
+            if i%3==0:
+                $ y += 260
+                $ x = 665
+            $ pic = item.image
+            $ my_tooltip = "tooltip_inventory_" + pic.replace("gui/inventory/inv_", "").replace(".png", "")
+            imagebutton idle pic hover pic xpos x ypos y action ShowMenu('diary'), [Hide("gui_tooltip"), SetVariable("item", item),] hovered [Show("gui_tooltip", my_picture=my_tooltip, my_tt_ypos=920) ] unhovered [Hide("gui_tooltip")] at inv_eff 
+            
+            $ i += 1
+            if len(inventory.items)>9:
+                textbutton _("Next Page") action [SetVariable('inv_page', next_inv_page), Show("inventory_screen")] xpos .475 ypos .83
+
+screen gui_tooltip (my_picture="", my_tt_xpos=58, my_tt_ypos=1500):
+    add my_picture xpos my_tt_xpos ypos my_tt_ypos
+
+init -1:
+    transform inv_eff: # too lazy to make another version of each item, we just use ATL to make hovered items super bright
+        zoom 0.5 xanchor 0.5 yanchor 0.5
+        on idle:
+            linear 0.2 alpha 1.0
+        on hover:
+            linear 0.2 alpha 2.5
+
+    image information = Text("DIARY")
+    #Tooltips-inventory:
+    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary05=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary06=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary07=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary08=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary09=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+
 init -1 python:
     import renpy.store as store
     import renpy.exports as renpy 
@@ -1724,8 +1656,6 @@ screen inventory_screen:
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')

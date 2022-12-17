@@ -1,0 +1,1660 @@
+Sat Dec 17 22:11:53 2022
+Windows-10-10.0.22621
+Ren'Py 8.0.1.22070801
+ 
+
+Bootstrap to the start of init.init took 0.10s
+Early init took 0.01s
+Loader init took 0.24s
+Loading error handling took 0.11s
+Loading script took 3.08s
+Loading save slot metadata. took 0.41s
+Loading persistent took 0.04s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.20s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1360, 768) drawable=(1360, 768)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 85.42s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.06s
+Loading script took 0.79s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 108.96s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.61s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.09s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 117.07s
+Early init took 0.00s
+Loader init took 0.12s
+Loading error handling took 0.03s
+Loading script took 0.71s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.10s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.19s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.24s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.12s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.06s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 366.97s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.63s
+Loading save slot metadata. took 0.22s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.09s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.14s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 376.72s
+Early init took 0.00s
+Loader init took 0.14s
+Loading error handling took 0.03s
+Loading script took 0.44s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.20s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1527.46s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.56s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.18s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.12s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1558.64s
+Early init took 0.00s
+Loader init took 0.19s
+Loading error handling took 0.04s
+Loading script took 0.63s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.12s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 170, in script
+    $ ui.interact()
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 170, in <module>
+    $ ui.interact()
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 451, in visit_all
+    callback(self)
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 462, in per_interact
+    self.update()
+  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 707, in execute
+    screen option():
+  File "game/screens.rpy", line 707, in execute
+    screen option():
+  File "game/screens.rpy", line 711, in execute
+    use game_menu(_("Setting"), scroll="viewport"):
+  File "game/screens.rpy", line 412, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 412, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 421, in execute
+    frame:
+  File "game/screens.rpy", line 424, in execute
+    hbox:
+  File "game/screens.rpy", line 430, in execute
+    frame:
+  File "game/screens.rpy", line 433, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 435, in execute
+    viewport:
+  File "game/screens.rpy", line 444, in execute
+    vbox:
+  File "game/screens.rpy", line 445, in execute
+    transclude
+  File "game/screens.rpy", line 711, in execute
+    use game_menu(_("Setting"), scroll="viewport"):
+  File "game/screens.rpy", line 715, in execute
+    vbox:
+  File "game/screens.rpy", line 717, in execute
+    hbox:
+  File "game/screens.rpy", line 720, in execute
+    if renpy.variant("pc") or renpy.variant("web"):
+  File "game/screens.rpy", line 722, in execute
+    vbox:
+  File "game/screens.rpy", line 725, in execute
+    textbutton _("Window") action option("display", "window")
+  File "game/screens.rpy", line 725, in keywords
+    textbutton _("Window") action option("display", "window")
+  File "game/screens.rpy", line 725, in <module>
+    textbutton _("Window") action option("display", "window")
+NameError: name 'option' is not defined
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 170, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 170, in <module>
+    $ ui.interact()
+  File "game/screens.rpy", line 707, in execute
+    screen option():
+  File "game/screens.rpy", line 707, in execute
+    screen option():
+  File "game/screens.rpy", line 711, in execute
+    use game_menu(_("Setting"), scroll="viewport"):
+  File "game/screens.rpy", line 412, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 412, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0):
+  File "game/screens.rpy", line 421, in execute
+    frame:
+  File "game/screens.rpy", line 424, in execute
+    hbox:
+  File "game/screens.rpy", line 430, in execute
+    frame:
+  File "game/screens.rpy", line 433, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 435, in execute
+    viewport:
+  File "game/screens.rpy", line 444, in execute
+    vbox:
+  File "game/screens.rpy", line 445, in execute
+    transclude
+  File "game/screens.rpy", line 711, in execute
+    use game_menu(_("Setting"), scroll="viewport"):
+  File "game/screens.rpy", line 715, in execute
+    vbox:
+  File "game/screens.rpy", line 717, in execute
+    hbox:
+  File "game/screens.rpy", line 720, in execute
+    if renpy.variant("pc") or renpy.variant("web"):
+  File "game/screens.rpy", line 722, in execute
+    vbox:
+  File "game/screens.rpy", line 725, in execute
+    textbutton _("Window") action option("display", "window")
+  File "game/screens.rpy", line 725, in keywords
+    textbutton _("Window") action option("display", "window")
+  File "game/screens.rpy", line 725, in <module>
+    textbutton _("Window") action option("display", "window")
+NameError: name 'option' is not defined
+Resetting cache.
+Bootstrap to the start of init.init took 1565.35s
+Early init took 0.00s
+Loader init took 0.14s
+Loading error handling took 0.03s
+Loading script took 0.78s
+Loading save slot metadata. took 0.20s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.17s
+Loading analysis data took 0.06s
+Analyze and compile ATL took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.13s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1610.46s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.06s
+Loading script took 0.51s
+Loading save slot metadata. took 0.18s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.11s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.19s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1618.61s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.60s
+Loading save slot metadata. took 0.14s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.12s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1694.37s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.49s
+Loading save slot metadata. took 0.16s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.17s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.00s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1711.65s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.44s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.24s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1736.58s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.58s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.18s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.12s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 1754.33s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.66s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 2604.38s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.39s
+Loading save slot metadata. took 0.13s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1360, 697) drawable=(1360, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 2659.83s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.38s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1360, 697) drawable=(1360, 697)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 3607.96s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.38s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.04s
+Index archives took 0.00s
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4072.67s
+Early init took 0.00s
+Loader init took 0.12s
+Loading error handling took 0.03s
+Loading script took 0.91s
+Loading save slot metadata. took 0.21s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.12s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4177.05s
+Early init took 0.00s
+Loader init took 0.09s
+Loading error handling took 0.03s
+Loading script took 0.46s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4191.27s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.49s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.12s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4199.50s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.55s
+Loading save slot metadata. took 0.20s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4207.83s
+Early init took 0.00s
+Loader init took 0.12s
+Loading error handling took 0.04s
+Loading script took 0.44s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4214.50s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.49s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.08s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.11s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4224.06s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.06s
+Loading script took 0.56s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.16s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.19s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.18s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.10s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4230.76s
+Early init took 0.00s
+Loader init took 0.21s
+Loading error handling took 0.03s
+Loading script took 0.66s
+Loading save slot metadata. took 0.14s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4237.57s
+Early init took 0.00s
+Loader init took 0.22s
+Loading error handling took 0.06s
+Loading script took 0.66s
+Loading save slot metadata. took 0.13s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4245.87s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.44s
+Loading save slot metadata. took 0.13s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.14s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4250.92s
+Early init took 0.00s
+Loader init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.41s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.13s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4259.20s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.43s
+Loading save slot metadata. took 0.14s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.20s
+Loading analysis data took 0.10s
+Analyze and compile ATL took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.19s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4271.99s
+Early init took 0.00s
+Loader init took 0.12s
+Loading error handling took 0.03s
+Loading script took 0.53s
+Loading save slot metadata. took 0.18s
+Loading persistent took 0.01s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.11s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.10s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.10s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4445.28s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.42s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.11s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4464.20s
+Early init took 0.00s
+Loader init took 0.14s
+Loading error handling took 0.03s
+Loading script took 0.46s
+Loading save slot metadata. took 0.11s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.11s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.14s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 4475.43s
+Early init took 0.00s
+Loader init took 0.10s
+Loading error handling took 0.03s
+Loading script took 0.45s
+Loading save slot metadata. took 0.12s
+Loading persistent took 0.00s
+Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\Download\\Programs\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nicho\\AppData\\Roaming/RenPy/backups\\The-Cursed-Night-at-School':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.13s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.14761 Compatibility Profile Context 21.30.14 30.0.13014.8'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
