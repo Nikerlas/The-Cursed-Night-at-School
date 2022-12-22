@@ -24,11 +24,15 @@ transform short_shake:
     ease .01 yoffset 0
 #END TRANSFORM
 
-init python:
-    renpy.music.register_channel("noise")
+#BGM
+define audio.town = "audio/bgm/town.wav"
+
+#AMBIENT
+define audio.noise = "audio/effect/village.wav"
 
 #BG
 image bg black = "images/bg/bg black.png"
+image bg white = "images/bg/bg white.png"
 image bg district = "images/bg/scene.jpg"
 image bg schoolyard = "images/bg/outschool.jpg"
 image bg hallway = "images/bg/corridor.jpg"
@@ -177,6 +181,9 @@ image idleobake = "images/ghost/idle/kunti.png"
 image idleobakeangry = "images/ghost/idle/marah.png"
 image idleobakelaugh = "images/ghost/idle/laugh.png"
 #END IMG CHARA
+#---------> Logo
+image seninterus = "images/logo/SeninTerus.png"
+image cursed = "images/logo/cursed.png"
 
 # CHARACTER
 #YERI
@@ -219,6 +226,26 @@ define g_whisper = Character("Yuki", what_size=22)
 #-------->
 define s_a = Character("Satpam A")
 define s_b = Character("Satpam B")
+
+label splashscreen:
+    scene bg white
+    with Pause(1)
+
+    show seninterus with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    show cursed with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    return
+
+
 #GAME START
 #-------->
 
@@ -252,6 +279,8 @@ label start:
 
     stop music fadeout 1.0
 
+    play sound village volume 0.1 loop
+
     "Pagi hari ini terasa sangat cerah tidak seperti biasa."
     "Dengan semangat pagi yang membara aku pergi menuju sekolahku."
 
@@ -264,6 +293,8 @@ label start:
     hide idlekevinserious 
 
     show kevincheerful at short_shake, center
+
+    play music town
 
     k 'Hai [name], baik kok! bagaimana denganmu?'
 
@@ -292,14 +323,14 @@ label start:
     python:
         renpy.notify("Halaman Sekolah")
 
-    stop noise fadeout 1.0
+    stop sound fadeout 1.0
 
     "Kami berdua berjalan menuju sekolah."
     "Sesampainya disekolah, Kevin mengingatkanku tentang rapat OSIS sehabis pulang sekolah nanti."
 
     show kevintalk with dissolve
 
-    k 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kami.'
+    k 'Eh... Jangan lupa nanti ya! Sehabis pulang sekolah buat rapat untuk acara Ulang Tahun sekolah kita.'
 
     hide kevintalk
     show idlekevintalk

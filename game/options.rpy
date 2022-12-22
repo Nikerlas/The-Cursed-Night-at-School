@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "2.0"
+define config.version = "beta1.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -64,8 +64,8 @@ define config.has_voice = False
 
 # define config.main_menu_music = "main-menu-theme.ogg"
 
-define config.main_menu_music = "audio/mainmenu.mp3"
-define config.game_menu_music = "audio/mainmenu.mp3"
+define config.main_menu_music = "audio/bgm/girlish.wav"
+define config.game_menu_music = "audio/bgm/mainmenu.mp3"
 
 ## Transitions #################################################################
 ##
