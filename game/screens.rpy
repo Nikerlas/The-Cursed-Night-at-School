@@ -2046,7 +2046,7 @@ init -1:
 
     image information = Text("DIARY")
     #Tooltips-inventory:
-    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Buku, Aku suka buku, Buku adalah teman pertamaku"))
     image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
     image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
     image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
@@ -2099,11 +2099,13 @@ screen diary:
 
     hbox:
 
-        hbox align (.95,.04) spacing 20:
+        hbox:
+            xpos 0.2
+            ypos 0.1
             imagebutton auto "gui/button/back_%s.png" action [ToggleScreen('inventory_screen'), Hide('diary')]
 
-        $ x = 475
-        $ y = 200
+        $ x = 425
+        $ y = 300
         $ pic = item.image
         add pic xpos x ypos y zoom 2.5 
 
@@ -2117,16 +2119,10 @@ screen inventory_screen:
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.05
+            yalign 0.7
 
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('option')
-            textbutton "Inventory" action [Hide("inventory_screen"), Return(None)]
+            imagebutton auto "/gui/phone/button/inventory_%s.png" action  [Hide("inventory_screen"), Return(None)]
 
     $ x = 665
     $ y = -40
@@ -2162,7 +2158,7 @@ init -1:
 
     image information = Text("DIARY")
     #Tooltips-inventory:
-    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Buku, Aku suka buku, Buku adalah teman pertamaku"))
     image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
     image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
     image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
