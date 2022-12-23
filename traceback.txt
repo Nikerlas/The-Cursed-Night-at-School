@@ -1,30 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 7649, in script
-    scene administrasi dimension with dissolve
-Exception: Image 'administrasi' does not accept attributes 'dimension'.
+  File "game/script.rpy", line 1331, in script
+    play music funny2 fadeout 1.0
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 1331, in <module>
+    play music funny2 fadeout 1.0
+NameError: name 'funn2' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 7649, in script
-    scene administrasi dimension with dissolve
-  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 1542, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 1371, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\exports.py", line 686, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\display\image.py", line 413, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\display\core.py", line 397, in _duplicate
-    args.extraneous()
-  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\display\core.py", line 265, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'administrasi' does not accept attributes 'dimension'.
+  File "game/script.rpy", line 1331, in script
+    play music funny2 fadeout 1.0
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 2232, in execute
+    self.call("execute")
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 2220, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\statements.py", line 281, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\python.py", line 1080, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\python.py", line 1073, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 1331, in <module>
+    play music funny2 fadeout 1.0
+NameError: name 'funn2' is not defined
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.1.22070801
 Cursed Night at School beta1.0
-Fri Dec 23 23:46:42 2022
+Sat Dec 24 00:26:54 2022

@@ -1326,9 +1326,9 @@ label chapter1_start:
     hide idlekevintalk
     hide zakytalk 
     with dissolve
-
-    "Tiba tiba Yeri tertawa dengan sangat keras."
-   
+    stop music fadeout 1.0
+    "Tiba-tiba Yeri tertawa dengan sangat keras."
+    play music funny3 fadeout 1.0
     show yeriangry2 at long_shake, center
 
     y "Hahaha..."
@@ -1402,9 +1402,9 @@ label chapter1_start:
     stop music fadeout 1.0
     z "Eh kamu jangan bilang gitu di sekolah ini..."
     
-    
-    z "Nanti kamu didatengin hantu beneran lo."
     play music funny fadeout 1.0
+    z "Nanti kamu didatengin hantu beneran lo."
+    
     show zakysad with move:
         xalign 0.8
         yalign 1.0
@@ -1513,9 +1513,9 @@ label chapter1_start:
     hide idlekevintalk
     hide zakytalk 
     with dissolve
-
+    
     "Tiba-tiba Yeri tertawa dengan keras lagi."
-
+   
     show yericheerful at long_shake, center
 
     y_shout "HAHAHAHAHAHA"
