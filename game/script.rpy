@@ -72,11 +72,17 @@ image bg way dimension = "images/bg/bg scene dimension.png"
 #BG DIMENSI TAMBAHAN
 image bg council dimension = "images/bg/bg osis.jpg"
 image bg library dimension = "images/bg/perpus-dimension.jpg"
-image bg corridor dimension = "images/bg/corridor-dimension.jpg"
+image bg corridor dimension = "images/bg/corridor-dimesion.jpg"
+image bg corridordua dimension = "images/bg/corridor2-dimension.jpg"
 image bg halaman dimension = "images/bg/outschool-dimension.jpg"
 image bg councilfront dimension = "images/bg/bg-osisdepan-dimension.jpg" 
 image bg bathroom dimension = "images/bg/bathroom-dimension.jpg"
-
+image bg depantu dimension = "images/bg/bg depan tu.png"
+image bg tu dimension = "images/bg/tu dimension.jpg"
+image bg administrasi dimension = "images/bg/administrasi.jpg"
+image bg kebun dimension = "images/bg/kebun dim.jpg"
+image bg gudang dimension = "images/bg/gudang dimension.jpg"
+image yerifull = "images/bg/neutral.png"
 #END BG
 
 #IMG CHARA
@@ -1393,10 +1399,12 @@ label chapter1_start:
     with dissolve
 
     show zakysad with dissolve
-
+    stop music fadeout 1.0
     z "Eh kamu jangan bilang gitu di sekolah ini..."
+    
+    
     z "Nanti kamu didatengin hantu beneran lo."
-
+    play music funny fadeout 1.0
     show zakysad with move:
         xalign 0.8
         yalign 1.0
@@ -1532,8 +1540,9 @@ label chapter1_start:
 
         z "Jadi kemarin jam 6 sore, aku baru keluar sekolah karena tugas piket dan sekalian nyelesaiin tugas."
         z "Lalu saat di gerbang aku gak sengaja denger dua satpam sedang membicarakan tentang sekolah ini saat malam hari."
+        stop music fadeout 1.0
         z "Terus kata salah satu satpam itu..."
-
+        
         scene bg schoolyard afternoon
         with dissolve
 
@@ -1543,10 +1552,10 @@ label chapter1_start:
         show satpam_b:
             xalign 0.2
             yalign 1.0
-
+        play music funny2 fadeout 1.0
         s_b "Bro, temani aku masuk dong, aku mau ambil barang di gudang"
         s_a "Kenapa harus ku temani?"
-        s_b "Kamu belum tau"
+        s_b "Kamu belum tau."
         s_a "Memangnya ada apa?"
         
         show satpam_b at short_shake:
@@ -1557,13 +1566,13 @@ label chapter1_start:
         s_b "Denger-denger si ada suara perempuan menangis, "
         s_b "Ada juga yang bilang kursi di kelas gerak sendiri"
         s_b "Karena kejadian-kejadian itu aku gapernah masuk ke sekolah pas jam segitu"
-
+        stop music fadeout 1.0
         scene bg canteen morning
         with dissolve
-
+        
         "Setelah mendengar itu, aku merasa rumor yang di ceritakan Zaky sangat tidak masuk akal."
         "Dan sepertinya bukan hanya aku yang merasakan itu."
-
+        play music funny fadeout 1.0
         show kevincheerful at long_shake, center
 
         k "Hahaha, mana mungkin..."
@@ -1683,10 +1692,10 @@ label chapter1_start:
         show zakyhappy at short_shake, center
 
         z "Hahaha, bercandanya."
-
+        stop music fadeout 1.0
         hide zakyhappy with dissolve
         show kevintalk with dissolve
-
+        play music town fadeout 1.0
         k "Btw..."
         k "Perasaan tadi kita lagi membahas rapat Osis dah."
         k "Kenapa pembahasannya jadi kemana-mana?"
@@ -1846,7 +1855,7 @@ label chapter1_start:
         show idlezakytalk
         p "Iyanih.. women."
         hide idlezakytalk with dissolve
-
+        play sound bell
         "Sesaat kemudian bel masuk kelas pun berbunyi."
         "Hal tersebut menandakan untuk segera masuk ke kelas masing-masing."
         #bel
@@ -1872,6 +1881,7 @@ label chapter1_start:
         hide idlezakytalk with dissolve
 
         "Kami berlima pun kembali ke kelas masing-masing untuk pelajaran selanjutnya."
+        stop music fadeout 1.0
         "Sebenarnya aku masih penasaran dengan cerita yang diceritakan oleh Zaky."
         "Apakah cerita tersebut beneran nyata atau tidak."
         "Bagaimana jika cerita tersebut NYATA?"
@@ -1885,6 +1895,8 @@ label chapter1_start:
         scene inclass with dissolve
         python:
             renpy.notify("Kelas 2-A")
+        play music town fadeout 1.0
+        play sound bell
         "KRINGGGGGGGGGGGGGG"
         "Jam telah menunjukkan pukul 3 sore."
         "Pelajaran hari ini telah selesai."
@@ -2004,6 +2016,18 @@ label chapter1_start:
         show idlekevintalk:
             xalign 0.2
             yalign 1.0
+        "Sembari mengobrol."
+        "Aku menemukan sebuah sobekan kertas dilantai."
+        python:
+            renpy.notify("Mendapatkan Diary 2")
+            inventory.add(diary02)
+        "Aku terheran dengan tulisan yang ada pada kertas itu."
+        hide idlezakyworry
+        show zakyworry
+        z "Kok makin serem ya disini."
+        z "Pindah aja yuk."
+        hide zakyworry
+        show idlezakyworry
         p "Perasaanmu aja kali."
         p "Disini kan masih ada penjaga kantinnya."
         hide idlekevintalk
@@ -2052,6 +2076,7 @@ label chapter1_start:
         #IMAGE KEVIN KAGET
         show kevinserious at long_shake, center
         k_shout "WAAAAAAAAAAAA"
+        play music funny fadeout 1.0
         k "Hei, bikin kaget saja."
         k "Kenapa sih?"
         show kevinserious with move:
@@ -2184,13 +2209,13 @@ label chapter1_start:
         hide idlekevintalk
         hide idlekevinsmile
         with dissolve
-
+        stop music fadeout 1.0
         "Entah kenapa suasana dikantin ini sangat sepi sekali."
         "Seharusnya jika masih jam segini masih ada beberapa murid yang berada di kantin."
         "Tetapi justru tidak ada seorang murid kecuali kami bertiga yang disini."
         "Ini seperti sesuatu yang TIDAK BIASA."
 
-        
+        play music funny2 fadeout 1.0
         show kevintalk at short_shake, center
         k "Hahaha, mestilah!"
         k "Emang ga ada jawaban dari penjaga kantin."
@@ -2282,6 +2307,7 @@ label chapter1_start:
         "Kami bertiga beranjak meninggalkan kantin yang sunyi dan sepi itu."
         "Dan pergi menuju ke ruang OSIS."
         "Waktu di pertengahan jalan kami saling mengobrol."
+        stop music fadeout 1.0
         scene bg hallway with dissolve
         python:
             renpy.notify("Lorong Kelas")
@@ -2340,11 +2366,15 @@ label chapter1_start:
             xalign 0.2
             yalign 1.0
         k "Iya yaudah."
+        
         hide kevintalk
         show kevintalk at short_shake:
             xalign 0.2
             yalign 1.0
+        stop music fadeout 1.0
+        
         k "Btw..."
+        play music funny fadeout 1.0
         k "Tadi waktu aku menolong ibu penjaga kantin."
         k "Beliau memberitahu sesuatu kepadaku."
         hide kevintalk
@@ -2421,6 +2451,7 @@ label chapter1_start:
         show idlekevintalk:
             xalign 0.2
             yalign 1.0
+        
     menu:
         "Paling itu emang beneran manusia.":
             jump ask1_a
@@ -2454,7 +2485,10 @@ label chapter1_start:
         k "Iya pelajar, di sekitar sini."
         jump ask1_done
     label ask1_done:
+        stop music fadeout 1.0
+        
         k "Jadi tuh ada penampakan kayak pelajar cewe disini."
+        play music wind fadeout 1.0
         k "Rambutnya panjang dan wajahnya itu pucat."
         k "Ibu penjaga pernah mencoba buat manggil dia."
         k "Tetapi, pelajar itu hanya berdiri dan diam aja disana."
@@ -2466,7 +2500,7 @@ label chapter1_start:
         "Kevin menceritakan panjang lebar apa yang sudah pernah dialami oleh ibu penjaga kantin."
         "Saat Kevin menceritakan tentang ciri-ciri pelajar perempuan yang dilihat ibu penjaga kantin itu."
         "Aku..."
-        stop music fadeout 1.0
+        
     menu:
         "Mulai penasaran dengan apa yang dialami oleh ibu penjaga kantin.":
             jump imo1_a
@@ -2479,7 +2513,7 @@ label chapter1_start:
         "Aku mulai penasaran dengan apa yang dialami ibu penjaga kantin."
         "Itu sangat menarik apabila bisa diusut tuntas."
         "Tetapi BAGAIMANA JIKA CERITA TADI ADALAH NYATA?"
-        play music town
+        
         show zakyworry with dissolve
 
         z "Kok serem yah."
@@ -2488,8 +2522,10 @@ label chapter1_start:
         hide zakyworry with dissolve
         show kevinserious with dissolve
 
-        k "Iya, makanya barang-barang bawaan ibu penjaga sempat terjatu karena terburu-buru."
+        k "Iya, makanya barang-barang bawaan ibu penjaga sempat terjatuh karena terburu-buru."
+        stop music fadeout 1.0
         k "Tapi jujur saja, aku masih diantara percaya atau tidak percaya dengan kejadian itu."
+        play music funny2 fadeout 1.0
         k "Mana ada yang namanya hantu disini."
 
         hide kevinserious with dissolve
@@ -2653,14 +2689,17 @@ label chapter1_start:
         hide zakyworry with dissolve
         show kevintalk with dissolve
         k "Iya, yaudah ayok!"
+        stop music fadeout 1.0
         hide kevintalk with dissolve
         jump imo1_done
+        
     label imo1_done:
 
         scene bg osisdepan with dissolve
         python:
             renpy.notify("Depan Ruang OSIS")
-        "Akhirnya kita bertiga sampai ke didepan ruang OSIS."
+        play music town fadeout 1.0
+        "Akhirnya kami bertiga sampai ke didepan ruang OSIS."
         "Selama perjalanan tadi aku selalu membayangkan apa yang diceritakan Kevin."
         "Disini aku bertemu dengan Citra dan Yeri yang sedang berada didepan ruangan OSIS."
 
@@ -2669,9 +2708,11 @@ label chapter1_start:
         z "Sampai juga disini."
         hide zakyhappy
         show yerinormal with dissolve
+        stop music fadeout 1.0
         y "Kenapa dah?"
         hide yerinormal
         show zakynormal with dissolve
+        play music funny fadeout 1.0
         z "Ceritanya panjang banget."
         hide zakynormal
         show yerinormal with dissolve
@@ -2796,7 +2837,9 @@ label chapter1_start:
         hide zakynormal 
         show idlezakynormal
         p "Oke deh masuk aja lah."
+        stop music fadeout 1.0
         hide idlezakynormal with dissolve
+        
         jump mcstroy1_done
     label mcstroy1_b:
         p "Engga ada apa-apa sih."
@@ -2859,7 +2902,7 @@ label chapter1_start:
         show zakysmile at short_shake, center
 
         zc "Ayo!"
-
+        stop music fadeout 1.0
         hide zaky smile with dissolve
         jump mcstroy1_done
     label mcstroy1_done:
@@ -3223,13 +3266,16 @@ label chapter1_start:
         
         "Kita asik bercanda dan mengobrol."
         "Sungguh sangat menyenangkan."
+        stop music fadeout 1.0
         "Tetapi..."
+        play music wind fadeout 1.0
         "Entah kenapa aku mendengarkan sesuatu yang samar."
         #scene bg penampakan.
         u_whisper "Apa kamu melihatku???"
         p "Eh..."
         "Lalu tiba-tiba ada sesosok perempuan lewat di depan lorong."
         p "Itu apaan tadi?"
+        stop music fadeout 1.0
         show zakyworry at long_shake, center
         z "Eh eh apaan? Kamu kenapa?"
         hide zakyworry
@@ -3556,7 +3602,7 @@ label chapter1_start:
         hide kevintalk
         hide idlezakytalk
         with dissolve
-
+        play music wind fadeout 1.0
         "Setelah kejadian yang aku lihat tadi kita bertiga langsung bergegas untuk menuju ruang OSIS."
         "Kenapa hanya aku yang melihat kejadian tadi."
         "Padahal tadi kelihatan jelas dan aku melihatnya cukup lama."
@@ -3565,10 +3611,11 @@ label chapter1_start:
         "“Apa kamu melihatku?“ Kata-kata tersebut masih terngiang dikepalaku."
         "Apa maksudnya semua ini?"
         "Padahal dihari biasa aku tidak pernah merasakan hal-hal aneh seperti tadi."
-
+        stop music fadeout 1.0
         scene bg osisdepan with dissolve
         python:
             renpy.notify("Depan Ruang OSIS")
+        play music town fadeout 1.0
         "Akhirnya kita bertiga sampai ke didepan ruang OSIS."
         "Gegara mengalami kejadian seperti tadi kita dengan secepat kilat sampai sini."
         "Disini aku bertemu dengan Citra dan Yeri yang sedang berada didepan ruangan OSIS."
@@ -3582,9 +3629,11 @@ label chapter1_start:
         hide yerinormal with dissolve
         show zakynormal with dissolve
         z "Ceritanya panjang banget."
+        stop music fadeout 1.0
         hide zakynormal with dissolve
         show yerinormal with dissolve
         y "Apa? Aku penasaran banget."
+        play music funny fadeout 1.0
         show yerinormal with move:
             xalign 0.2
             yalign 1.0
@@ -3699,6 +3748,7 @@ label chapter1_start:
         show kevinsmile with dissolve
         k "Nah gitu dong, baguslah kalau begitu"
         k "Yok masuk."
+        stop music fadeout 1.0
         jump mcstroy2_done
     label mcstroy2_b:
         p "Engga ada apa-apa sih."
@@ -3770,6 +3820,7 @@ label chapter1_start:
 
         z "Ya udah deh."
         z "Ayo masuk [name]."
+        stop music fadeout 1.0
         jump mcstroy2_done
     label mcstroy2_done:
     label chap2kantin_done:
@@ -3956,9 +4007,12 @@ label chapter1_start:
            
         z "Paling engga akan datang satpamnya."
         z "Kan dia engga berani datang ke sekolah jam segini."
+        stop music fadeout 1.0
         hide zakytalk
         show zakyworry
+        
         z "..."
+        play music funny2 fadeout 1.0
         z "Kesekolah..."
         z "Jam segini..."
         hide zakyworry
@@ -3971,7 +4025,7 @@ label chapter1_start:
         z "Rasanya kok aku ngantuk banget yak."
         hide zakysad with dissolve
         "Zaky tertidur."
-        stop music fadeout 1.0
+        
     menu:
         "...":
             jump talking2_a
@@ -4002,7 +4056,9 @@ label chapter1_start:
         k "Kok aneh yah..."
         k "Tiba-tiba... bisa ngantuk... begini..."
         hide kevinserious with dissolve
+        stop music fadeout 1.0
         "Kevin tertidur."
+        play music wind volume 1.5 fadeout 1.0
     menu:
         "...":
             jump talking3_a
@@ -4171,7 +4227,7 @@ label chapter3_start:
     scene bg osis with dissolve
 
     p "Ini diman-"
-
+    play music wind volume 1.5 fadeout 1.0
     "Aku sadar bahwa aku masih diruang OSIS."
 
     p "Kok aku bisa tidur disini yaa.."
@@ -4283,6 +4339,7 @@ label chapter3_start:
     "Aku terkejut."
     show citrasmile with dissolve
     p "HEII, UDAH BANGUN DARITADI KAH?"
+    
     hide citrasmile
     show citrahappy at long_shake, center
     c "Ngga kok, aku barusan bangun."
@@ -4480,6 +4537,9 @@ label chapter3_start:
 
     "Aku melihat selembar kertas di salah satu laci di meja."
     "Kertas ini cukup aneh jika dilihat."
+    python:
+        renpy.notify("Mendapatkan Diary 3")
+        inventory.add(diary03)
     show kevinserious with dissolve
 
     k "Ada apa [name]?"
@@ -4991,7 +5051,9 @@ label chapter3_start:
 
 
         "Aku menemukan secarik kertas lagi di atas meja."
-
+        python:
+            renpy.notify("Mendapatkan Diary 4")
+            inventory.add(diary04)
         p "Hei, aku melihat secarik kertas lagi disini."
         p "Lagi-lagi kertas dan tulisannya sama."
         p "Seperti ditulis oleh satu orang."
@@ -5283,17 +5345,19 @@ label chapter3_start:
         "Zaky menunjuk sesuatu yang ada di ujung lorong."
         "Ternyata di ujung lorong ada makhluk yang dimaksud Zaky sebelumnya."
         "Kami bertiga reflek berlari menjauh dari makhluk tersebut."
-        scene bg black with dissolve
+        scene bg hallway dimension with dissolve
         "Kami bertiga lari sekuat tenaga demi menjauhi makhluk tadi."
         "Saat kami bertiga berlari tanpa arah dan tujuan Kevin menyarankan untuk keruang TU."
         "Karena disana ada ruang CCTV."
         "Jadi mungkin bisa melihat posisi Yeri dan Citra."
+        scene bg depantu dimension with dissolve
         python:
             renpy.notify("Depan Ruang TU")
         "Akhirnya kami bertiga telah sampai di depan Ruang TU."
         python:
             renpy.notify("Pukul 22.20")
         "Lantas kami bertiga langsung memasuki Ruang TU tanpa pikir panjang."
+        scene tu dimension with dissolve
         show kevintalk with dissolve
         k "Disini juga tidak ada orang ternyata."
         show kevintalk with move:
@@ -5346,7 +5410,10 @@ label chapter3_start:
         with dissolve
         "Aku menjelajah seluruh ruang TU."
         "Aku menggeledah tiap-tiap laci dan lemari yang ada diruang TU ini."
-        "Dan menemukan secarik kertas lagi yang berisi dairy."#dairykelima
+        "Dan menemukan secarik kertas lagi yang berisi dairy."
+        python:
+            renpy.notify("Mendapatkan Diary 5")
+            inventory.add(diary05)
         "Lalu tiba-tiba Kevin menghampiriku."
         show kevinserious with dissolve
         k "Gimana [name], nemu sesuatu ngga?"
@@ -5605,7 +5672,8 @@ label chapter3_start:
         "Tiba-tiba terdengar suara."
         #Suara klontang
         show yeriscared at long_shake, center
-        "KLONTANGGGGG!!!"
+        play sound kaleng
+        "..."
         hide yeriscared
         show idleyeriscared
 
@@ -5731,7 +5799,7 @@ label chapter3_start:
         hide citranormal with dissolve
         "Kami bertiga berjalan bersama meninggalkan ruang OSIS untuk mengecek sumber suara tadi."
         #scene bg osisdepan dimension with dissolve
-        scene bg black with dissolve
+        scene bg councilfront dimension with dissolve
         python:
             renpy.notify("Pukul 21.34")
         "Kami bertiga telah keluar dari ruang OSIS."
@@ -5849,12 +5917,15 @@ label chapter3_start:
                 with dissolve
                 jump mcwish4_done
         label mcwish4_done:
-        #scene bg toilet dimension
-
+        
+        
         "Kami bertiga masuk kedalam toilet perempuan."
-        play music waterdrop
+        scene bg bathroom dimension with dissolve
+        play sound waterdrop volume 0.6 loop
         python:
             renpy.notify("Toilet Perempuan")
+        "Saat masuk kedalam keadaan sangat sepi."
+        "Hanya terdengar suara tetesan air."
         show yerinormal with dissolve
         y "Halo..."
         y "Apakah ada orang disini?"
@@ -5990,10 +6061,10 @@ label chapter3_start:
         "Sial kalau semakin dipikir justru membuatku semakin pusing."
         "Mungkin aku bisa berkeliling untuk mencari beberapa petunjuk disini."
         "Saat aku membuka satu persatu bilik."
-        "Aku menemukan secarik kertas diary di bilik nomor 9."
+        "Aku menemukan secarik kertas diary di bilik nomor 6."
         python:
-            renpy.notify("Mendapatkan Diary 9")
-            inventory.add(diary09)
+            renpy.notify("Mendapatkan Diary 6")
+            inventory.add(diary06)
         show citranormal with dissolve
         c "Kamu nemuin apa?"
         hide citranormal
@@ -6013,12 +6084,11 @@ label chapter3_start:
         p "Tadi di bilik no 9."
         hide idlecitratalk
         show citratalk
-        c "Bilik no 9."
-        c "Aku pernah baca dibuku kalau no 9 di negara Jepang dianggap sial."
-        c "Angka 9 dianggap sial di Jepang dikarenakan angka ini mirip dengan huruf di Jepang yang memiliki arti siksaan atau penderitaan."
+        c "Bilik no 6?"
+        c "Apa maksudnya dari diary ini ya?"
         hide citratalk
         show idlecitratalk
-        p "Beneran kah?"
+        p "Ntahlah..."
         p "Dan saat kubaca seperti kehidupan si penulis yang cukup suram dan sering dapat siksaan."
         hide idlecitratalk 
        
@@ -6188,7 +6258,7 @@ label chapter3_start:
         hide yerismile
         hide idlecitrahappy
         with dissolve
-        stop music fadeout 1.0
+        stop sound fadeout 1.0
         scene bg hallway dimension with dissolve
         "Kita bertiga pergi keruang OSIS bersama-sama."
         "Sebenarnya..."
@@ -6347,6 +6417,7 @@ label chapter3_start:
         show idlecitrairritated:
             xalign 0.8
             yalign 1.0
+       
         y "Lah?"
         y "Kok malah nyalahin aku sih?"
         hide yeriangry1
@@ -6450,8 +6521,8 @@ label chapter3_start:
         y "Oke!"
         hide yericheerful with dissolve
         "Kita bertiga berkeliling di sekitar ruang OSIS."
-        scene bg osisdepan with dissolve
-        #scene bg osisdepan dimension with dissolve
+        scene bg councilfront dimension with dissolve
+        
         python:
             renpy.notify("22.10")
         
@@ -6485,9 +6556,11 @@ label chapter3_start:
         with dissolve
         "Kita bertiga hanya diam menunggu."
         "Sunyi dan sepi sangat terasa."
+        play sound ht loop
         "Tiba-tiba HT yang ada dimeja berbunyi."
         show citranormal with dissolve
         c "Ini kenapa?"
+        stop sound
         hide citranormal
         show idlecitranormal
         hk "Halo!"
@@ -6529,7 +6602,7 @@ label chapter3_start:
         "Kita bertiga bergegas menuju ke hall sekolah untuk menemui Kevin dan Zaky."
         python:
             renpy.notify("Pukul 22.42")
-        scene bg hallway dimension with dissolve
+        scene bg corridordua dimension with dissolve
         
         "Akhirnya kami bertiga telah tiba di hall Sekolah."
         python:
@@ -6930,6 +7003,7 @@ label chapter3_start:
         u "Hey Kalian!"
         "Terdengar suara panggilan."
         "Reflek kami berlima menengok ke arah sumber suara."
+        
         show obake with dissolve
         u "Hmm?"
         hide obake 
@@ -7555,6 +7629,9 @@ label chapter3_start:
                         p "Hmm?"
                         "Aku menemukan secarik kertas disela-sela buku itu."
                         "Aku mencoba menarik secara perlahan kertas tersebut."
+                        python:
+                            renpy.notify("Mendapatkan Diary 7")
+                            inventory.add(diary07)
                         "Yeri datang menghampiriku."
                         show yerinormal with dissolve
                         y "Ada apa?"
@@ -7570,7 +7647,7 @@ label chapter3_start:
                         y "Aku akan mencari di rak buku sekitar sini."
                         hide yerinormal with dissolve
                         "Aku langsung menuju tempat administrasi."
-                        #sceneadministrasi
+                        scene bg administrasi dimension with dissolve
                         python:
                             renpy.notify("Tempat Administrasi")
                         "Setelah aku sampai di tempat administrasi."
@@ -7578,6 +7655,7 @@ label chapter3_start:
                         "Hanya berisi kertas-kertas absen kosong."
                         "Aku melihat ke arah Yeri yang hanya berdiam diri di area rak buku."
                         "Aku langsung menghampirinya."
+                        scene bg library dimension with dissolve
                         python:
                             renpy.notify("Area Rak Buku")
                         show yerinormal at short_shake, center
@@ -7599,7 +7677,7 @@ label chapter3_start:
                         hide yerinormal
                         show idleyerinormal
                         p "Hm..."
-                        p '"Aku sangat suka dengan buku ini, setiap hari di tempat ini aku selalu membaca buku ini, karena hanya buku ini yang menemaniku disaat aku kesepian."'
+                        p '"Walaupun hidupku seburuk itu. Setidaknya aku punya tempatku sendiri disini. Di perpustakaan dengan buku favoritku Singuratic."'
                         
                         jump mcwish_done
                 label mcwish_done:
@@ -7790,7 +7868,7 @@ label chapter3_start:
                 "Entah kenapa ini semua disengaja."
                 "Agar jaraknya sangat jauh dan menguras tenaga."
                 "Namun, kami berdua tetap berusaha karena waktu tidak banyak."
-                scene bg way dimension with dissolve
+                scene bg kebun dimension with dissolve
                 python:
                     renpy.notify("Kebun Sekolah")
                 "Akhirnya kami berdua sampai kebun sekolah."
@@ -7964,7 +8042,7 @@ label chapter3_start:
                         "Yeri mulai bangkit dan melanjutkan larinya sekuat tenaga."
                         "Aku pun mendukung dirinya agar tidak berhenti ditengah jalan."
                         "Dan kami berdua pun melanjutkan berlari ke arah hall sekolah."
-                        scene bg hallway dimension with dissolve
+                        scene bg corridordua dimension with dissolve
                         python:
                             renpy.notify("Hall Sekolah")
                         "Akhirnya kami berdua telah sampai di hall sekolah."
@@ -8330,8 +8408,13 @@ label chapter3_start:
                         "Citra melambaikan tangan."
                         "Akupun melambaikan tangan kepada Yuki."
                         "Yuki membalas dengan melambaikan tangan dan tersenyum ke arah kita berlima."
-                        play music town
+                        "..."
+                        stop music fadeout 1.0
+                        "END"
+                        "..."
+                        
                         scene bg district with dissolve
+                        play music town fadeout 1.0
                         "..."
                         "..."
                         "..."
@@ -8365,11 +8448,21 @@ label chapter3_start:
                         
                         scene bg library with dissolve
                         "Tapi sebanyak apapun mereka menjelaskan, tidak ada satupun guru yang percaya dengan ucapan mereka."
+                        stop music fadeout 1.0
                         scene bg black with dissolve
                         "Dan akhirnya mereka berlima dihukum dan dibawa kerumahnya masing masing."
                         "..."
                         "..."
+                        scene yerifull at short_shake
+                        play sound noisezz volume 0.6
                         "..."
+                        scene black at short_shake
+                        play sound noisezz volume 0.6
+                        "..."
+                        "..."
+                        "HAPPY END"
+                        "..."
+                        
                         
                         jump fixend2_done
                 label fixend2_b:
@@ -8424,15 +8517,18 @@ label chapter3_start:
                         show idleyerinormal
                         p "Okeh, cepat kita kesana."
                         hide idleyerinormal with dissolve
+                        scene bg hallway dimension with dissolve
                         "Kami berdua berlari menuju gudang sekolah."
                         "Aku kehabisan tenaga saat dipertengahan jalan."
                         "Yeri menyemangatiku untuk segera lari lagi karena waktu sudah sangat mepet."
                         python:
                             renpy.notify("Pukul 23.54")
+                        scene bg depantu dimension with dissolve
                         show yerinormal with dissolve
                         y "Akhirnya sampai depan gudang."
                         y "Ayo masuk kegudangnya dan segera mencari korek."
-                        hide yerinormal
+                        hide yerinormal with dissolve
+                        scene bg gudang dimension with dissolve
                         python:
                             renpy.notify("Dalam Gudang")
                         show yerinormal at short_shake, center
@@ -8446,6 +8542,9 @@ label chapter3_start:
                         hide yerinormal with dissolve
                         "Kita berdua berpencar untuk mencari korek."
                         "Saat aku membuka-buka lemari aku menemukan secarik kertas lagi."
+                        python:
+                            renpy.notify("Mendapatkan Diary 8")
+                            inventory.add(diary08)
                         "Saat aku ingin membaca isi kertas itu."
                         "Aku terkejut dengan teriakan Yeri."
                         show yerihappy at long_shake, center
@@ -8476,6 +8575,7 @@ label chapter3_start:
                         y "Coba yuk kita keluar dari sini."
                         hide yerinormal with dissolve
                         "Kami berdua keluar dari gudang."
+                        scene bg depantu dimension with dissolve
                         python:
                             renpy.notify("Depan Gudang")
                         "Suasana diluar gudang sangat sepi."
@@ -8598,10 +8698,12 @@ label chapter3_start:
                         p "Baiklah!"
                         p "Ayo kita kesana."
                         hide idlekevintalk with dissolve
+                        scene bg hallway dimension with dissolve
                         "Kami berlima bergegas menuju hall sekolah."
                         "Dalam perjalanan menuju hall sekolah."
                         "Aku berpikir dengan apa yang aku lakukan sebelumnya."
                         "Yaitu apakah semua akan baik-baik saja."
+                        scene bg corridordua dimension with dissolve
                         python:
                             renpy.notify("Hall Sekolah")
                         "Kami berlima akhirnya telah sampai ke hall sekolah."
@@ -8742,23 +8844,56 @@ label chapter3_start:
                         g "Bye bye."
                         hide obakelaugh with dissolve
                         "Sepertinya telah selesai semua ini."
+                        stop music fadeout 1.0
+                        "..."
+                        "END"
+                        stop music fadeout 1.0
                         scene bg district with dissolve
+                        play music towndeep fadeout 1.0
                         "..."
                         "..."
                         "..."
                         scene bg schoolyard with dissolve
                         "..."
+                        play sound noisezz volume 0.6
+                
+                        scene bg halaman dimension at short_shake
+                
                         "..."
+                
+                        scene bg schoolyard at short_shake
+                        play sound noisezz volume 0.6
                         "..."
                         scene bg hallway with dissolve
                         "..."
+
+                        scene bg corridor dimension at short_shake
+                        play sound noisezz volume 0.6
                         "..."
+                        scene bg hallway at short_shake
+                        play sound noisezz volume 0.6
                         "..."
                         scene bg hallway2 with dissolve
                         "..."
+                        scene bg corridordua dimension at short_shake
+                        play sound noisezz volume 0.6
                         "..."
+                        scene bg hallway2 at short_shake
+                        play sound noisezz volume 0.6
                         "..."
                         scene bg library with dissolve
+                        "..."
+                        scene bg library dimension at short_shake
+                        play sound noisezz volume 0.6
+                        "..."
+                        scene bg library at short_shake
+                        play sound noisezz volume 0.6
+                        "..."  
+                    
+                        scene bg black at short_shake
+                        stop music fadeout 1.0
+                        play sound noisezz volume 0.6
+                
                         "..."
                         "..."
                         "..."
@@ -8781,6 +8916,7 @@ label chapter3_start:
                         "..."
                         "..."
                         "..."
+                        play music bgmhrr fadeout 1.0
                         show obakelaugh with dissolve
                         g "Hey kau, kerja bagus."
                         hide obakelaugh
@@ -8821,10 +8957,16 @@ label chapter3_start:
                         hide idleobake
                         show obakelaugh
                         g "Sekali lagi terima kasih ya..."
+                        stop music fadeout 1.0
                         g "Yeri..."
-                        hide obakelaugh
-                        show yerismile with dissolve
+                        scene yerifull at short_shake
+                        play sound noisezz volume 0.6
                         y "Iya..."
+                        scene bg black at short_shake
+                        play sound noisezz volume 0.6
+                        "..."
+                        "NEUTRAL END"
+                        "..."
                         jump fixend2_done
                 label fixend2_done:
                 jump fixend_done
@@ -8975,6 +9117,7 @@ label chapter3_start:
                 "Apakah ini semua akan berakhir?"
                 hide obakeangry
                 show obakelaugh at long_shake, center
+                play sound effectsepi volume 0.2 fadeout 1.0
                 g "AHAHAHAHAHAHAHAHAHAHA"
                 g "KALIAN TIDAK AKAN BISA KABUR DARIKU!"
                 g "KENAPA TIDAK ADA YANG MAU BERTEMAN DENGANKU!"
@@ -8987,29 +9130,65 @@ label chapter3_start:
                 g "DAN INI SEMUA..."
                 g "KARENA DIRIMU!"
                 g "LEBIH BAIK KAU MENGHILANG!"
+                python:
+                    renpy.notify("Mendapatkan Diary 9")
+                    inventory.add(diary09)
+                hide obakeangry at short_shake
+                "..."
+                "..."
+                stop music fadeout 1.0
+                "..."
+                "END"
+                stop music fadeout 1.0
                 scene bg district with dissolve
+                play music towndeep fadeout 1.0
                 "..."
                 "..."
                 "..."
                 scene bg schoolyard with dissolve
                 "..."
+                play sound noisezz volume 0.6
+                
+                scene bg halaman dimension at short_shake
+                
                 "..."
+                
+                scene bg schoolyard at short_shake
+                play sound noisezz volume 0.6
                 "..."
                 scene bg hallway with dissolve
                 "..."
+
+                scene bg corridor dimension at short_shake
+                play sound noisezz volume 0.6
                 "..."
+                scene bg hallway at short_shake
+                play sound noisezz volume 0.6
                 "..."
                 scene bg hallway2 with dissolve
                 "..."
+                scene bg corridordua dimension at short_shake
+                play sound noisezz volume 0.6
                 "..."
+                scene bg hallway2 at short_shake
+                play sound noisezz volume 0.6
                 "..."
                 scene bg library with dissolve
                 "..."
+                scene bg library dimension at short_shake
+                play sound noisezz volume 0.6
                 "..."
-                "..."        
-                scene bg black with dissolve
+                scene bg library at short_shake
+                play sound noisezz volume 0.6
+                "..."  
+                    
+                scene bg black at short_shake
+                stop music fadeout 1.0
+                play sound noisezz volume 0.6
+                
+                "..."
+                "..."
                 play music bgmhrr
-                "..."
                 "..."
                 "..."
                 show obakeangry with dissolve
@@ -9020,10 +9199,10 @@ label chapter3_start:
                 hide idleobakeangry
                 show obakeangry 
                 g "Kau masih disini dasar bodoh!"
-                g "Tapi gapapa, aku hanya menepati janjiku karena kerjamu sangat bagus"
+                g "Tapi gapapa, aku hanya menepati janjiku karena kerjamu sangat bagus."
                 hide obakeangry
                 show idleobakeangry
-                u "Terimakasih, dengan ini utangku sudah lunas bukan?"
+                u "Terima kasih, dengan ini utangku sudah lunas bukan?"
                 hide idleobakeangry
                 show obakelaugh
                 g "Yaa, bahkan kau membawa orang yang lebih dari ekspektasiku."
@@ -9058,10 +9237,14 @@ label chapter3_start:
                 hide idleobake
                 show obakelaugh
                 g "Sudah pergi sana!"
+                
                 g "Sampai jumpa ya..."
+                stop music fadeout 1.0
                 g "Yeri..."
                 hide obakelaugh
-                show yerismile with dissolve
+                play sound noisezz volume 0.6
+                show yerismile at short_shake, center
+                
                 y "Iya..." 
                 "Yeri tersenyum dan meninggalkan tempat itu." 
                 hide yerismile with dissolve

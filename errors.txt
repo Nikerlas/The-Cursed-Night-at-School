@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 9023: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    g "Hey kau, kerja bagus."
+File "game/script.rpy", line 5918: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    play sound waterdrop loop
     ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Fri Dec 23 11:21:52 2022
+Fri Dec 23 23:25:39 2022

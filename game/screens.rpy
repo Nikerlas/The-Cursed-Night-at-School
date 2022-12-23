@@ -255,7 +255,7 @@ screen quick_menu():
             yalign 0.8
 
             imagebutton auto "/gui/phone/button/inventory_%s.png" action ShowMenu("inventory_screen")
-
+            textbutton _("Back") action Rollback()
         hbox:
             style_prefix "quick"
 
