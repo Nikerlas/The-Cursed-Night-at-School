@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 382: Line is indented, but the preceding spacing statement does not expect a block. Please check this line's indentation.
-    textbutton _("Load") action ShowMenu("Load")
+File "game/script.rpy", line 9023: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    g "Hey kau, kerja bagus."
     ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Thu Dec 22 11:02:37 2022
+Fri Dec 23 11:21:52 2022
