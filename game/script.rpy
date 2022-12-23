@@ -44,7 +44,6 @@ image bg canteen = "images/bg/canteen.jpg"
 image bg osisdepan = "images/bg/bg osisdepan.jpg"
 #BG RESMI
 image bg council normal= "images/bg/councilnormal.png"
-image bg councildimension= "images/bg/bg osis.jpg"
 
 image bg schoolyard morning = "images/bg/bg schoolyard morning.png"
 image bg schoolyard noon = "images/bg/bg schoolyard noon.png"
@@ -69,6 +68,14 @@ image bg way morning = "images/bg/bg scene morning.png"
 image bg way noon = "images/bg/bg scene noon.png"
 image bg way afternoon = "images/bg/bg scene afternoon.png"
 image bg way dimension = "images/bg/bg scene dimension.png"
+
+#BG DIMENSI TAMBAHAN
+image bg council dimension = "images/bg/bg osis.jpg"
+image bg library dimension = "images/bg/perpus-dimension.jpg"
+image bg corridor dimension = "images/bg/corridor-dimension.jpg"
+image bg halaman dimension = "images/bg/outschool-dimension.jpg"
+image bg councilfront dimension = "images/bg/bg-osisdepan-dimension.jpg" 
+image bg bathroom dimension = "images/bg/bathroom-dimension.jpg"
 
 #END BG
 
