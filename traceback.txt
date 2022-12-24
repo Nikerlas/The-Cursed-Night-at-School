@@ -1,64 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 8458, in script
-    "..."
-  File "game/screens.rpy", line 244, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 244, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 249, in execute
-    if show_quick_menu:
-  File "game/screens.rpy", line 249, in <module>
-    if show_quick_menu:
-NameError: name 'show_quick_menu' is not defined
+  File "renpy/common/00keymap.rpy", line 473, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 473, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 492, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 8458, in script
-    "..."
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 451, in visit_all
-    callback(self)
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\core.py", line 3804, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 462, in per_interact
-    self.update()
-  File "D:\Download\Programs\renpy-8.0.1-sdk\renpy\display\screen.py", line 653, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 244, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 244, in execute
-    screen quick_menu():
-  File "game/screens.rpy", line 249, in execute
-    if show_quick_menu:
-  File "game/screens.rpy", line 249, in <module>
-    if show_quick_menu:
-NameError: name 'show_quick_menu' is not defined
+  File "renpy/common/00keymap.rpy", line 473, in script
+    python hide:
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 473, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 492, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\loadsave.py", line 382, in save
+    roots = renpy.game.log.freeze(None)
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\rollback.py", line 1017, in freeze
+    self.complete(False)
+  File "C:\Users\LENOVO\Documents\renpy-8.0.1-sdk\renpy\rollback.py", line 584, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = delta
+AttributeError: 'NoneType' object has no attribute 'stores'
 
-Windows-10-10.0.22621 AMD64
+Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.1.22070801
 Cursed Night at School beta1.0
-Sat Dec 24 09:06:15 2022
+Sat Dec 24 11:35:09 2022

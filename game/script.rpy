@@ -82,6 +82,7 @@ image bg tu dimension = "images/bg/tu dimension.jpg"
 image bg administrasi dimension = "images/bg/administrasi.jpg"
 image bg kebun dimension = "images/bg/kebun dim.jpg"
 image bg gudang dimension = "images/bg/gudang dimension.jpg"
+image bg depantoiletperempuan dimension = "images/bg/depankamarmandi dimension.jpg"
 image yerifull = "images/bg/neutral.png"
 #END BG
 
@@ -4230,7 +4231,7 @@ label chapter3_start:
     scene bg osis with dissolve
 
     p "Ini diman-"
-    play music wind volume 1.5 fadeout 1.0
+    play music wind volume 1.8 fadeout 1.0
     "Aku sadar bahwa aku masih diruang OSIS."
 
     p "Kok aku bisa tidur disini yaa.."
@@ -5675,7 +5676,7 @@ label chapter3_start:
         "Tiba-tiba terdengar suara."
         #Suara klontang
         show yeriscared at long_shake, center
-        play sound kaleng
+        play sound kaleng volume 0.8
         "..."
         hide yeriscared
         show idleyeriscared
@@ -5872,7 +5873,7 @@ label chapter3_start:
         "Padahal aku berniat agar kita mengecek bersama Kevin dan Zaky juga."
         "Namun, Yeri sudah sangat amat penasaran."
         "Terpaksa aku pun mengikuti apa yang diinginkan oleh Yeri."
-        #scene bg depantoiletperempuan dimension
+        scene bg depantoiletperempuan dimension
         python: 
             renpy.notify("Depan Toilet Perempuan")
         "Kami bertiga telah sampai di depan kamar mandi Perempuan."
@@ -6561,6 +6562,7 @@ label chapter3_start:
         "Sunyi dan sepi sangat terasa."
         play sound ht loop
         "Tiba-tiba HT yang ada dimeja berbunyi."
+        scene bg osis with dissolve
         show citranormal with dissolve
         c "Ini kenapa?"
         stop sound
@@ -8455,16 +8457,22 @@ label chapter3_start:
                         scene bg black with dissolve
                         "Dan akhirnya mereka berlima dihukum dan dibawa kerumahnya masing masing."
                         "..."
-                        "..."
                         scene yerifull at short_shake
                         play sound noisezz volume 0.6
                         "..."
                         scene black at short_shake
                         play sound noisezz volume 0.6
                         "..."
-                        "..."
-                        "HAPPY END"
-                        "..."
+                       
+                        scene black #replace this with a fancy background
+                        with dissolve
+                        show happy:
+                            yanchor 0.5 ypos 0.5
+                            xanchor 0.5 xpos 0.5
+                        with dissolve
+                        with Pause(3)
+                        hide happy
+                        with dissolve
                         
                         
                         jump fixend_done
@@ -8852,7 +8860,7 @@ label chapter3_start:
                         "END"
                         stop music fadeout 1.0
                         scene bg district with dissolve
-                        play music towndeep fadeout 1.0
+                        play music towndeep volume 2.0 fadeout 1.0
                         "..."
                         "..."
                         "..."
@@ -8960,19 +8968,27 @@ label chapter3_start:
                         hide idleobake
                         show obakelaugh
                         g "Sekali lagi terima kasih ya..."
-                        stop music fadeout 1.0
+                        
                         g "Yeri..."
+                        stop music fadeout 1.0 
                         scene yerifull at short_shake
                         play sound noisezz volume 0.6
                         y "Iya..."
                         scene bg black at short_shake
                         play sound noisezz volume 0.6
                         "..."
-                        "NEUTRAL END"
-                        "..."
+                        scene black #replace this with a fancy background
+                        with dissolve
+                        show neutral:
+                            yanchor 0.5 ypos 0.5
+                            xanchor 0.5 xpos 0.5
+                        with dissolve
+                        with Pause(3)
+                        hide neutral
+                        with dissolve
                         jump fixend2_done
                 label fixend2_done:
-                call fixend_done
+                jump fixend_done
         label fixend_b:
                 p "Tidak, aku tidak percaya denganmu."
                 hide idleobakelaugh
@@ -9133,20 +9149,21 @@ label chapter3_start:
                 g "DAN INI SEMUA..."
                 g "KARENA DIRIMU!"
                 g "LEBIH BAIK KAU MENGHILANG!"
+                hide obakeangry
+                scene bg black at short_shake
+                stop music fadeout 1.0
+                play sound noisezz volume 0.6
                 python:
                     renpy.notify("Mendapatkan Diary 9")
                     inventory.add(diary09)
-                hide obakeangry at short_shake
-                "..."
-                "..."
-                stop music fadeout 1.0
+                
                 "..."
                 "END"
                 stop music fadeout 1.0
                 scene bg district with dissolve
-                play music towndeep fadeout 1.0
+                play music towndeep volume 2.0 fadeout 1.0
                 "..."
-                "..."
+                
                 "..."
                 scene bg schoolyard with dissolve
                 "..."
@@ -9242,21 +9259,19 @@ label chapter3_start:
                 g "Sudah pergi sana!"
                 
                 g "Sampai jumpa ya..."
-                stop music fadeout 1.0
-                g "Yeri..."
-                hide obakelaugh
-                play sound noisezz volume 0.6
-                show yerismile at short_shake, center
                 
-                y "Iya..." 
-                "Yeri tersenyum dan meninggalkan tempat itu." 
-                hide yerismile with dissolve
-                scene bg black with dissolve
-                "..."
-                "BAD END"
-                "..."
+                g "Yeri..."
                 stop music fadeout 1.0
+                scene yerifull at short_shake
+                play sound noisezz volume 0.6
+                y "Iya..."
+                scene bg black at short_shake
+                play sound noisezz volume 0.6
+                "..."
+                "Yeri tersenyum dan meninggalkan tempat itu." 
+                "..."
                 scene bg district with dissolve
+                play music town fadeout 1.0
                 "Yeri tiba tiba terbangun di depan sekolah dan banyak guru dan murid yang melihat Yeri disana."
                 "Singkat cerita Yeri dipanggil di ruang guru untuk di introgasi."  
                 scene bg schoolyard with dissolve
@@ -9270,6 +9285,18 @@ label chapter3_start:
                 "Sampai sampai pihak polisi pun menyerah untuk mencarinya mereka."                   
                 scene bg library with dissolve
                 "Tapi karena sudah 5 minggu polisi tidak menemukan petunjuk lagi, pihak polisi menutup kasusnya."
+                stop music fadeout 1.0
+                scene black with dissolve
+                "..."
+                scene black #replace this with a fancy background
+                with dissolve
+                show bad:
+                    yanchor 0.5 ypos 0.5
+                    xanchor 0.5 xpos 0.5
+                with dissolve
+                with Pause(3)
+                hide bad
+                with dissolve
                 jump fixend_done
     return
 
@@ -9277,15 +9304,7 @@ label fixend_done:
     $ show_quick_menu = False
     $ credits_speed = 10 #scrolling speed in seconds
     show screen disable_Lmouse()
-    scene black #replace this with a fancy background
-    with dissolve
-    show theend:
-        yanchor 0.5 ypos 0.5
-        xanchor 0.5 xpos 0.5
-    with dissolve
-    with Pause(1)
-    hide theend
-    with dissolve
+    
     show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
     with Pause(credits_speed)
     show thanks:
@@ -9328,6 +9347,9 @@ init:
     image cred = Text(credits_s, text_align=0.5)
     image theend = Text("{size=80}The end", text_align=0.5)
     image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
+    image neutral = Text("{size=80}Neutral End", text_align=0.5)
+    image happy = Text("{size=80}Happy End", text_align=0.5)
+    image bad = Text("{size=80}Bad End", text_align=0.5)
 
 label variabels:
     $ Inventory[0] = Items("Diary", 1, 1, 0, 0)
