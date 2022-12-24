@@ -241,6 +241,9 @@ define g_whisper = Character("Yuki", what_size=22)
 define s_a = Character("Satpam A")
 define s_b = Character("Satpam B")
 
+screen disable_Lmouse():
+    key "mouseup_1" action NullAction()
+
 label splashscreen:
     scene bg white
     with Pause(1)
@@ -8464,7 +8467,7 @@ label chapter3_start:
                         "..."
                         
                         
-                        jump fixend2_done
+                        jump fixend_done
                 label fixend2_b:
                         p "Namun kalau dipikir-pikir perkataanmu mungkin benar."
                         hide idleyerisad
@@ -8969,7 +8972,7 @@ label chapter3_start:
                         "..."
                         jump fixend2_done
                 label fixend2_done:
-                jump fixend_done
+                call fixend_done
         label fixend_b:
                 p "Tidak, aku tidak percaya denganmu."
                 hide idleobakelaugh
@@ -9268,8 +9271,63 @@ label chapter3_start:
                 scene bg library with dissolve
                 "Tapi karena sudah 5 minggu polisi tidak menemukan petunjuk lagi, pihak polisi menutup kasusnya."
                 jump fixend_done
-        label fixend_done:
     return
+
+label fixend_done:
+    $ show_quick_menu = False
+    $ credits_speed = 10 #scrolling speed in seconds
+    show screen disable_Lmouse()
+    scene black #replace this with a fancy background
+    with dissolve
+    show theend:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(1)
+    hide theend
+    with dissolve
+    show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    with Pause(credits_speed)
+    show thanks:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(1)
+    hide thanks
+    with dissolve
+    scene bg white
+    with Pause(1)
+
+    show seninterus with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    show cursed with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    return
+
+init python:
+    credits = ('Storyboard', 'Core'), ('Designer', 'Farannisa Citra Kinanti'), ('Designer', 'Vega Aisyawa'), ('Designer', 'M Reynard Dihyan'), ('Dialogue', 'sh1ne'), ('GUI', 'Nikerlas'), ('Programming', 'Nikerlas'), ('Programming', 'sh1ne'), ('Music', 'sh1ne')
+    credits_s = "{size=80}Credits\n\n"
+    d1 = ''
+    for d in credits:
+        if not d1==d[0]:
+            credits_s += "\n{size=40}" + d[0] + "\n"
+        credits_s += "{size=60}" + d[1] + "\n"
+        d1=d[0]
+    credits_s += "\n{size=40}Engine\n{size=60}Ren'py\n6.15.7.374" #Don't forget to set this to your Ren'py version
+    
+init:
+#    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
+    image cred = Text(credits_s, text_align=0.5)
+    image theend = Text("{size=80}The end", text_align=0.5)
+    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
 
 label variabels:
     $ Inventory[0] = Items("Diary", 1, 1, 0, 0)

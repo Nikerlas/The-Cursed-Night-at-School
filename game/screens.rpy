@@ -3,7 +3,7 @@
 ################################################################################
 
 init offset = -1
-
+default show_quick_menu = True
 
 ################################################################################
 ## Styles
@@ -246,7 +246,7 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
+    if show_quick_menu:
 
         hbox:
             style_prefix "quick"
@@ -255,7 +255,6 @@ screen quick_menu():
             yalign 0.8
 
             imagebutton auto "/gui/phone/button/inventory_%s.png" action ShowMenu("inventory_screen")
-            textbutton _("Back") action Rollback()
         hbox:
             style_prefix "quick"
 
@@ -2107,14 +2106,14 @@ init -1:
     image information = Text("DIARY")
     #Tooltips-inventory:
     image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Buku, Aku suka buku, Buku adalah teman pertamaku"))
-    image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary05=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary06=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary07=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary08=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary09=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
+    image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary05=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary06=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary07=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary08=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary09=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
 
 init -1 python:
     import renpy.store as store
@@ -2218,13 +2217,13 @@ init -1:
 
     image information = Text("DIARY")
     #Tooltips-inventory:
-    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Buku, Aku suka buku, Buku adalah teman pertamaku"))
-    image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary05=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary06=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary07=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary08=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    image tooltip_inventory_diary09=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Quis aliquip mollit sint esse consequat et non aute elit dolore deserunt qui id."))
-    
+    image tooltip_inventory_diary01=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di perpustakaan"))
+    image tooltip_inventory_diary02=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di kantin"))
+    image tooltip_inventory_diary03=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di laci meja"))
+    image tooltip_inventory_diary04=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di atas meja"))
+    image tooltip_inventory_diary05=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di ruang tu"))
+    image tooltip_inventory_diary06=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di bilik 6"))
+    image tooltip_inventory_diary07=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di buku"))
+    image tooltip_inventory_diary08=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di lemari"))
+    image tooltip_inventory_diary09=LiveComposite((1500, 73), (3,0), ImageReference("information"), (3,70), Text("Diary yang kamu temukan di akhir"))
+
